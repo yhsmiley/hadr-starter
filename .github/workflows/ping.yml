@@ -1,0 +1,12 @@
+# Temporary diagnostic — delete once Actions runs are confirmed working.
+name: Ping
+
+on:
+  push:
+  workflow_dispatch: {}
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Actions is alive on $GITHUB_REF"
