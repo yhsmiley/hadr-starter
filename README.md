@@ -2,6 +2,22 @@
 
 A monitoring agent for humanitarian assistance and disaster response (HADR).
 
+## What is HADR?
+
+Humanitarian Assistance and Disaster Response is the umbrella term for the work
+that follows a natural or man-made disaster — earthquakes, cyclones, floods,
+volcanic eruptions, droughts, conflict displacement. It spans the first hours of
+search and rescue through relief delivery and early recovery, and it is carried
+out by a mix of national agencies, militaries, UN bodies (such as OCHA) and NGOs.
+
+The part this project cares about is **situational awareness**: responders and
+planners need to know, as early and as accurately as possible, what happened,
+where, how severe it is, and who is affected. That picture is assembled from
+feeds like the ones in `feeds/` — instrument networks (USGS), multi-hazard alert
+systems (GDACS) and curated humanitarian reporting (ReliefWeb) — and is
+traditionally summarised in a *situation report* ("sitrep"). This repository is
+about building an agent that does that watching and summarising unattended.
+
 ## The end state
 
 By Wednesday afternoon this repository contains an agent that:
