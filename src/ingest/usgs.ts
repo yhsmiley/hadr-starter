@@ -49,6 +49,7 @@ function toFeedEvent(feature: UsgsFeature): FeedEvent {
     hazardType: "Earthquake",
     sourceIds: parseAliasIds(feature),
     episodeId: null,
+    glide: null, // USGS never carries a GLIDE number
     occurredAtUtc: new Date(feature.properties.time).toISOString(),
     place: feature.properties.place ?? feature.properties.title,
     location: { type: "Point", coordinates: feature.geometry.coordinates },

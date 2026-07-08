@@ -28,6 +28,7 @@ function quake(opts: {
     hazardType: "Earthquake",
     sourceIds: opts.ids,
     episodeId: null,
+    glide: null,
     occurredAtUtc: opts.occurredAtUtc,
     place: opts.place ?? `test place ${n}`,
     location: { type: "Point", coordinates: [opts.lon, opts.lat, 10] },
