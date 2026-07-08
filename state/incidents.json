@@ -195,7 +195,7 @@
     "glide": null,
     "impactEstimates": [],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "A magnitude 5.3 earthquake struck the Reykjanes Ridge on 7 July, part of a sequence that includes additional aftershocks."
   },
   {
     "id": "usgs-eq-2026-07-07-us6000talg",
@@ -337,7 +337,7 @@
       }
     ],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "A magnitude 5.4 earthquake occurred 162 km NNW of Tobelo, Indonesia on 7 July, followed by an aftershock."
   },
   {
     "id": "usgs-eq-2026-07-07-us6000talr",
@@ -411,7 +411,7 @@
     "glide": null,
     "impactEstimates": [],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "A magnitude 4.5 earthquake occurred 32 km NE of Yaguaraparo, Venezuela on 7 July."
   },
   {
     "id": "usgs-eq-2026-07-07-us6000tar3",
@@ -485,7 +485,7 @@
     "glide": null,
     "impactEstimates": [],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "A magnitude 4.9 earthquake occurred 298 km SSE of Ushuaia, Argentina on 7 July."
   },
   {
     "id": "usgs-eq-2026-07-07-us6000tara",
@@ -560,7 +560,7 @@
     "glide": null,
     "impactEstimates": [],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "A magnitude 4.5 earthquake occurred 81 km NNE of Adak, Alaska on 7 July."
   },
   {
     "id": "usgs-eq-2026-07-07-us6000tarc",
@@ -634,7 +634,7 @@
     "glide": null,
     "impactEstimates": [],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "A magnitude 5.3 earthquake struck 10 km WSW of Orotina, Costa Rica on 7 July."
   },
   {
     "id": "usgs-eq-2026-07-07-us6000tary",
@@ -708,7 +708,7 @@
     "glide": null,
     "impactEstimates": [],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "A magnitude 5.3 earthquake occurred 95 km WSW of Labuan, Indonesia on 7 July."
   },
   {
     "id": "usgs-eq-2026-07-07-us6000tasa",
@@ -788,7 +788,7 @@
       }
     ],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "A magnitude 4.9 earthquake occurred 88 km WNW of Hicks Bay, New Zealand on 7 July."
   },
   {
     "id": "usgs-eq-2026-07-07-us6000tase",
@@ -862,7 +862,7 @@
     "glide": null,
     "impactEstimates": [],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "A magnitude 4.5 earthquake occurred 7 km SSE of Calatagan, Philippines on 7 July."
   },
   {
     "id": "usgs-eq-2026-07-07-us6000tatd",
@@ -1060,7 +1060,7 @@
     "glide": null,
     "impactEstimates": [],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "A magnitude 5.1 earthquake struck near Changning, China on 7 July, part of a sequence that includes additional aftershocks."
   },
   {
     "id": "usgs-eq-2026-07-07-us6000tatn",
@@ -1134,7 +1134,7 @@
     "glide": null,
     "impactEstimates": [],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "A magnitude 4.9 earthquake occurred 21 km ESE of Karakenja, Tajikistan on 7 July."
   },
   {
     "id": "usgs-eq-2026-07-07-us6000tau8",
@@ -1208,7 +1208,7 @@
     "glide": null,
     "impactEstimates": [],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "A magnitude 4.6 earthquake occurred 132 km WNW of Ternate, Indonesia on 7 July."
   },
   {
     "id": "usgs-eq-2026-07-08-us6000tauv",
@@ -1282,6 +1282,6 @@
     "glide": null,
     "impactEstimates": [],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "A magnitude 4.7 earthquake occurred 61 km ENE of Olonkinbyen, Svalbard and Jan Mayen on 8 July."
   }
 ]
