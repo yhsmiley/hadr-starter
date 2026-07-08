@@ -1,0 +1,49 @@
+name: ReliefWeb health check
+
+# A7 (SLICES.md V3). Independent of sitrep.yml and the USGS/GDACS health
+# checks -- pings only ReliefWeb and updates only its own health file
+# (SHAPING.md A4.3), on ReliefWeb's own latency tier (ADR 0007: a few
+# times a day, confirmation-tier -- the slowest of the three).
+
+on:
+  schedule:
+    - cron: "0 */6 * * *" # every 6 hours -- ADR 0007's ReliefWeb cadence
+  workflow_dispatch: {}
+
+concurrency:
+  group: health-check-reliefweb
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  health-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - run: npm ci
+
+      - run: npm run health-check -- reliefweb
+
+      - name: Commit and push (A7.3)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add state/health-reliefweb.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "chore: reliefweb health check $(date -u +%Y-%m-%dT%H:%MZ)"
+          for i in 1 2 3; do
+            git pull --rebase origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && break
+            echo "Push attempt $i failed, retrying..."
+            sleep 5
+          done
