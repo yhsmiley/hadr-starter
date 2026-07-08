@@ -1,0 +1,63 @@
+name: Morning sitrep
+
+# Implements the shape .github/workflows/sitrep.yml.disabled specified:
+#   1. a deterministic script decides whether anything changed;
+#   2. a headless model call runs only if it did.
+# The model never decides whether to wake up -- scripts/sitrep.ts (step
+# "fuse" below) makes that call in code, and exposes it as a step output.
+
+on:
+  schedule:
+    - cron: "30 0 * * *" # 08:30 SGT (UTC+8) -- A1.1
+  workflow_dispatch: {}
+
+concurrency:
+  group: sitrep-daily
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  sitrep:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4 # A1.2
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - run: npm ci
+
+      # TODO 1 (done): ingest, fuse, write state, render a first pass of
+      # dashboard.html, and signal whether any Incident needs narrating.
+      - name: Ingest and fuse
+        id: fuse
+        run: npm run sitrep
+
+      # TODO 2 (done): headless Claude runs the sitrep skill, only if step
+      # "fuse" found an Incident with a pending narrative.
+      - name: Narrate via sitrep skill
+        if: steps.fuse.outputs.needs_narration == 'true'
+        uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          prompt: "/sitrep"
+
+      - name: Commit and push (A4.2)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add state/incidents.json state/raw dashboard.html
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "chore: update sitrep $(date -u +%Y-%m-%dT%H:%MZ)"
+          for i in 1 2 3; do
+            git pull --rebase origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && break
+            echo "Push attempt $i failed, retrying..."
+            sleep 5
+          done

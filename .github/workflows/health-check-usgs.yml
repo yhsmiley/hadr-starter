@@ -1,0 +1,49 @@
+name: USGS health check
+
+# A7 (SLICES.md V1: USGS only). Independent of sitrep.yml -- pings one
+# feed and updates only its own health file. Disjoint from sitrep.yml's
+# files (state/incidents.json, dashboard.html), so the two workflows'
+# commits can never collide (SHAPING.md A4.3).
+
+on:
+  schedule:
+    - cron: "*/5 * * * *" # every few minutes -- ADR 0007's USGS cadence
+  workflow_dispatch: {}
+
+concurrency:
+  group: health-check-usgs
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  health-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - run: npm ci
+
+      - run: npm run health-check -- usgs
+
+      - name: Commit and push (A7.3)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add state/health-usgs.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "chore: usgs health check $(date -u +%Y-%m-%dT%H:%MZ)"
+          for i in 1 2 3; do
+            git pull --rebase origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && break
+            echo "Push attempt $i failed, retrying..."
+            sleep 5
+          done
