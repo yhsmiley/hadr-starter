@@ -1,18 +1,17 @@
-name: USGS health check
+name: GDACS health check
 
-# A7 (SLICES.md). Independent of sitrep.yml and of every other feed's
-# health-check workflow -- pings one feed and updates only its own health
-# file. Disjoint from sitrep.yml's files (state/incidents.json,
-# dashboard.html) and from health-check-gdacs.yml's, so none of these
-# workflows' commits can ever collide (SHAPING.md A4.3).
+# A7 (SLICES.md V2). Independent of sitrep.yml and health-check-usgs.yml
+# -- pings only GDACS and updates only its own health file (SHAPING.md
+# A4.3), on GDACS's own latency tier (ADR 0007: hourly, triage-tier) --
+# not USGS's every-few-minutes cadence.
 
 on:
   schedule:
-    - cron: "*/5 * * * *" # every few minutes -- ADR 0007's USGS cadence
+    - cron: "0 * * * *" # hourly -- ADR 0007's GDACS cadence
   workflow_dispatch: {}
 
 concurrency:
-  group: health-check-usgs
+  group: health-check-gdacs
   cancel-in-progress: false
 
 permissions:
@@ -31,18 +30,18 @@ jobs:
 
       - run: npm ci
 
-      - run: npm run health-check -- usgs
+      - run: npm run health-check -- gdacs
 
       - name: Commit and push (A7.3)
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add state/health-usgs.json
+          git add state/health-gdacs.json
           if git diff --cached --quiet; then
             echo "No changes to commit"
             exit 0
           fi
-          git commit -m "chore: usgs health check $(date -u +%Y-%m-%dT%H:%MZ)"
+          git commit -m "chore: gdacs health check $(date -u +%Y-%m-%dT%H:%MZ)"
           for i in 1 2 3; do
             git pull --rebase origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && break
             echo "Push attempt $i failed, retrying..."
