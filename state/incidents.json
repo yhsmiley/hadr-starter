@@ -233,7 +233,7 @@
       }
     ],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Magnitude 5.8 earthquake in the Drake Passage off Chile on 7 July, followed by a smaller magnitude 4.9 event in the same sequence."
   },
   {
     "id": "gdacs-eq-2026-07-07-1550554",
@@ -538,7 +538,7 @@
       }
     ],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Magnitude 5.3 earthquake on the Reykjanes Ridge on 7 July, part of a sequence including additional magnitude 5.0 earthquakes."
   },
   {
     "id": "gdacs-eq-2026-07-07-1550568",
@@ -847,7 +847,7 @@
       }
     ],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Magnitude 5.4 earthquake near Tobelo, Indonesia on 7 July, followed by a smaller magnitude 4.5 aftershock in the same area."
   },
   {
     "id": "gdacs-eq-2026-07-07-1550582",
@@ -1008,7 +1008,7 @@
       }
     ],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Magnitude 4.5 earthquake near Yaguaraparo, Venezuela, at 127 km depth on 7 July."
   },
   {
     "id": "gdacs-eq-2026-07-07-1550633",
@@ -1282,6 +1282,130 @@
           },
           "id": "pr2026189000"
         }
+      },
+      {
+        "feed": "usgs",
+        "hazardType": "Earthquake",
+        "sourceIds": [
+          "pr2026188000"
+        ],
+        "episodeId": null,
+        "occurredAtUtc": "2026-07-07T08:02:11.400Z",
+        "place": "134 km NNE of Cruz Bay, U.S. Virgin Islands",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            -64.3028,
+            19.454,
+            87
+          ]
+        },
+        "estimate": {
+          "magnitude": 3.78,
+          "pagerAlert": null
+        },
+        "rawPayload": {
+          "type": "Feature",
+          "properties": {
+            "mag": 3.78,
+            "place": "134 km NNE of Cruz Bay, U.S. Virgin Islands",
+            "time": 1783411331400,
+            "updated": 1783420106594,
+            "tz": null,
+            "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr2026188000",
+            "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/pr2026188000.geojson",
+            "felt": null,
+            "cdi": null,
+            "mmi": null,
+            "alert": null,
+            "status": "reviewed",
+            "tsunami": 0,
+            "sig": 220,
+            "net": "pr",
+            "code": "2026188000",
+            "ids": ",pr2026188000,",
+            "sources": ",pr,",
+            "types": ",origin,phase-data,",
+            "nst": 8,
+            "dmin": 0.9686,
+            "rms": 0.28,
+            "gap": 300,
+            "magType": "md",
+            "type": "earthquake",
+            "title": "M 3.8 - 134 km NNE of Cruz Bay, U.S. Virgin Islands"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -64.3028,
+              19.454,
+              87
+            ]
+          },
+          "id": "pr2026188000"
+        }
+      },
+      {
+        "feed": "usgs",
+        "hazardType": "Earthquake",
+        "sourceIds": [
+          "pr71522958"
+        ],
+        "episodeId": null,
+        "occurredAtUtc": "2026-07-08T00:21:39.620Z",
+        "place": "14 km SE of Esperanza, Puerto Rico",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            -65.3893333333333,
+            17.9883333333333,
+            11.27
+          ]
+        },
+        "estimate": {
+          "magnitude": 2.59,
+          "pagerAlert": null
+        },
+        "rawPayload": {
+          "type": "Feature",
+          "properties": {
+            "mag": 2.59,
+            "place": "14 km SE of Esperanza, Puerto Rico",
+            "time": 1783470099620,
+            "updated": 1783475805210,
+            "tz": null,
+            "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr71522958",
+            "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/pr71522958.geojson",
+            "felt": null,
+            "cdi": null,
+            "mmi": null,
+            "alert": null,
+            "status": "reviewed",
+            "tsunami": 0,
+            "sig": 103,
+            "net": "pr",
+            "code": "71522958",
+            "ids": ",pr71522958,",
+            "sources": ",pr,",
+            "types": ",origin,phase-data,",
+            "nst": 14,
+            "dmin": 0.3332,
+            "rms": 0.53,
+            "gap": 162,
+            "magType": "md",
+            "type": "earthquake",
+            "title": "M 2.6 - 14 km SE of Esperanza, Puerto Rico"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -65.3893333333333,
+              17.9883333333333,
+              11.27
+            ]
+          },
+          "id": "pr71522958"
+        }
       }
     ],
     "state": "escalated",
@@ -1295,7 +1419,7 @@
       }
     ],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Magnitude 4.7 earthquake near the Virgin Islands on 7 July, part of a sequence of smaller quakes continuing into 8 July."
   },
   {
     "id": "gdacs-eq-2026-07-07-1550648",
@@ -1457,7 +1581,7 @@
       }
     ],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Magnitude 4.5 earthquake near Adak, Alaska, at 172 km depth on 7 July."
   },
   {
     "id": "gdacs-eq-2026-07-07-1550639",
@@ -1618,7 +1742,7 @@
       }
     ],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Magnitude 5.3 earthquake near Orotina, Costa Rica, at 48 km depth on 7 July."
   },
   {
     "id": "gdacs-eq-2026-07-07-1550650",
@@ -1779,7 +1903,7 @@
       }
     ],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Magnitude 5.3 earthquake near Labuan, Indonesia, at 35 km depth on 7 July."
   },
   {
     "id": "gdacs-eq-2026-07-07-1550654",
@@ -1945,7 +2069,7 @@
       }
     ],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Magnitude 4.9 earthquake near Hicks Bay, New Zealand, at 121 km depth on 7 July."
   },
   {
     "id": "gdacs-eq-2026-07-07-1550657",
@@ -2106,7 +2230,7 @@
       }
     ],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Magnitude 4.5 earthquake near Calatagan, Philippines, at 155 km depth on 7 July."
   },
   {
     "id": "gdacs-eq-2026-07-07-1550669",
@@ -2553,7 +2677,7 @@
       }
     ],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Magnitude 5.1 earthquake near Yibin, China on 7 July, part of a sequence of magnitude 4.6-5.0 aftershocks continuing into 8 July."
   },
   {
     "id": "usgs-eq-2026-07-07-us6000tatn",
@@ -2714,7 +2838,7 @@
       }
     ],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Magnitude 4.9 earthquake near Karakenja, Tajikistan, at 10 km depth on 7 July."
   },
   {
     "id": "gdacs-eq-2026-07-07-1550684",
@@ -2869,7 +2993,7 @@
       }
     ],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Magnitude 4.6 earthquake in the northern Molucca Sea near Ternate, Indonesia, at 49 km depth on 7 July."
   },
   {
     "id": "gdacs-eq-2026-07-08-1550718",
@@ -3024,6 +3148,6 @@
       }
     ],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Magnitude 4.7 earthquake in the Jan Mayen Island region on 8 July, at 10 km depth."
   }
 ]

@@ -2,7 +2,7 @@
   {
     "type": "FeatureCollection",
     "metadata": {
-      "generated": 1783492646000,
+      "generated": 1783492995000,
       "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_day.geojson",
       "title": "USGS Magnitude 4.5+ Earthquakes, Past Day",
       "status": 200,
@@ -663,7 +663,7 @@
   {
     "type": "FeatureCollection",
     "metadata": {
-      "generated": 1783492686000,
+      "generated": 1783493002000,
       "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson",
       "title": "USGS All Earthquakes, Past Day",
       "status": 200,
@@ -870,6 +870,46 @@
           ]
         },
         "id": "ci41289103"
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "mag": 4.3,
+          "place": "51 km NNW of Khandūd, Afghanistan",
+          "time": 1783491294818,
+          "updated": 1783492971040,
+          "tz": null,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tavd",
+          "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000tavd.geojson",
+          "felt": null,
+          "cdi": null,
+          "mmi": null,
+          "alert": null,
+          "status": "reviewed",
+          "tsunami": 0,
+          "sig": 284,
+          "net": "us",
+          "code": "6000tavd",
+          "ids": ",us6000tavd,",
+          "sources": ",us,",
+          "types": ",origin,phase-data,",
+          "nst": 48,
+          "dmin": 0.961,
+          "rms": 0.76,
+          "gap": 80,
+          "magType": "mb",
+          "type": "earthquake",
+          "title": "M 4.3 - 51 km NNW of Khandūd, Afghanistan"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            72.1298,
+            37.3926,
+            216.967
+          ]
+        },
+        "id": "us6000tavd"
       },
       {
         "type": "Feature",
@@ -10550,46 +10590,6 @@
           ]
         },
         "id": "hv74998306"
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "mag": 1,
-          "place": "3 km NNW of Loma Linda, CA",
-          "time": 1783406535990,
-          "updated": 1783406749933,
-          "tz": null,
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41288375",
-          "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/ci41288375.geojson",
-          "felt": null,
-          "cdi": null,
-          "mmi": null,
-          "alert": null,
-          "status": "automatic",
-          "tsunami": 0,
-          "sig": 15,
-          "net": "ci",
-          "code": "41288375",
-          "ids": ",ci41288375,",
-          "sources": ",ci,",
-          "types": ",nearby-cities,origin,phase-data,",
-          "nst": 59,
-          "dmin": 0.1086,
-          "rms": 0.18,
-          "gap": 24,
-          "magType": "ml",
-          "type": "earthquake",
-          "title": "M 1.0 - 3 km NNW of Loma Linda, CA"
-        },
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            -117.273333333333,
-            34.0723333333333,
-            16.65
-          ]
-        },
-        "id": "ci41288375"
       }
     ],
     "bbox": [
@@ -10598,7 +10598,7 @@
       -0.47,
       178.263,
       71.1194,
-      172.427
+      216.967
     ]
   }
 ]
