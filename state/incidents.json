@@ -3149,5 +3149,166 @@
     ],
     "erratumLog": [],
     "narrative": "Magnitude 4.7 earthquake in the Jan Mayen Island region on 8 July, at 10 km depth."
+  },
+  {
+    "id": "gdacs-eq-2026-07-08-1550728",
+    "hazardType": "Earthquake",
+    "memberEvents": [
+      {
+        "feed": "gdacs",
+        "hazardType": "Earthquake",
+        "sourceIds": [
+          "1550728"
+        ],
+        "episodeId": "1716944",
+        "occurredAtUtc": "2026-07-08T05:00:32.000Z",
+        "place": "Earthquake in Peru",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            -74.7855,
+            -10.7092
+          ]
+        },
+        "estimate": {
+          "magnitude": 4.7,
+          "gdacsAlertLevel": "Green"
+        },
+        "rawPayload": {
+          "type": "Feature",
+          "bbox": [
+            -74.7855,
+            -10.7092,
+            -74.7855,
+            -10.7092
+          ],
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -74.7855,
+              -10.7092
+            ]
+          },
+          "properties": {
+            "eventtype": "EQ",
+            "eventid": 1550728,
+            "episodeid": 1716944,
+            "eventname": "",
+            "glide": "",
+            "name": "Earthquake in Peru",
+            "description": "Earthquake in Peru",
+            "htmldescription": "Green M 4.7 Earthquake in Peru at: 08 Jul 2026 05:00:32.",
+            "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+            "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+            "url": {
+              "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=EQ&eventid=1550728&episodeid=1716944",
+              "report": "https://www.gdacs.org/report.aspx?eventid=1550728&episodeid=1716944&eventtype=EQ",
+              "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=EQ&eventid=1550728"
+            },
+            "alertlevel": "Green",
+            "alertscore": 1,
+            "episodealertlevel": "Green",
+            "episodealertscore": 0,
+            "istemporary": "false",
+            "iscurrent": "true",
+            "country": "Peru",
+            "fromdate": "2026-07-08T05:00:32",
+            "todate": "2026-07-08T05:00:32",
+            "datemodified": "2026-07-08T06:54:03",
+            "iso3": "PER",
+            "source": "NEIC",
+            "sourceid": "",
+            "polygonlabel": "Centroid",
+            "Class": "Point_Centroid",
+            "affectedcountries": [
+              {
+                "iso2": "PE",
+                "iso3": "PER",
+                "countryname": "Peru"
+              }
+            ],
+            "severitydata": {
+              "severity": 4.7,
+              "severitytext": "Magnitude 4.7M, Depth:10km",
+              "severityunit": "M"
+            }
+          }
+        }
+      },
+      {
+        "feed": "usgs",
+        "hazardType": "Earthquake",
+        "sourceIds": [
+          "us6000tauz"
+        ],
+        "episodeId": null,
+        "occurredAtUtc": "2026-07-08T05:00:32.411Z",
+        "place": "25 km NNE of Santa Rosa, Peru",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            -74.7855,
+            -10.7092,
+            10
+          ]
+        },
+        "estimate": {
+          "magnitude": 4.7,
+          "pagerAlert": null
+        },
+        "rawPayload": {
+          "type": "Feature",
+          "properties": {
+            "mag": 4.7,
+            "place": "25 km NNE of Santa Rosa, Peru",
+            "time": 1783486832411,
+            "updated": 1783493487040,
+            "tz": null,
+            "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tauz",
+            "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000tauz.geojson",
+            "felt": null,
+            "cdi": null,
+            "mmi": null,
+            "alert": null,
+            "status": "reviewed",
+            "tsunami": 0,
+            "sig": 340,
+            "net": "us",
+            "code": "6000tauz",
+            "ids": ",us6000tauz,",
+            "sources": ",us,",
+            "types": ",origin,phase-data,",
+            "nst": 39,
+            "dmin": 2.384,
+            "rms": 0.89,
+            "gap": 84,
+            "magType": "mb",
+            "type": "earthquake",
+            "title": "M 4.7 - 25 km NNE of Santa Rosa, Peru"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -74.7855,
+              -10.7092,
+              10
+            ]
+          },
+          "id": "us6000tauz"
+        }
+      }
+    ],
+    "state": "escalated",
+    "confidenceTier": "shared-sensor (USGS+GDACS)",
+    "glide": null,
+    "impactEstimates": [
+      {
+        "source": "gdacs",
+        "label": "Alert level",
+        "value": "Green"
+      }
+    ],
+    "erratumLog": [],
+    "narrative": "Magnitude 4.7 earthquake near Santa Rosa, Peru, at 10 km depth on 8 July."
   }
 ]
