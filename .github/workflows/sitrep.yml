@@ -51,9 +51,17 @@ jobs:
           prompt: "/sitrep"
 
       - name: Commit and push (A4.2)
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          # anthropics/claude-code-action reconfigures git credentials for
+          # its own OIDC flow and doesn't restore actions/checkout's
+          # token-based auth afterwards -- re-authenticate explicitly
+          # rather than relying on ambient credential state surviving a
+          # step that has no reason to preserve it.
+          git remote set-url origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
           git add state/incidents.json state/raw dashboard.html
           if git diff --cached --quiet; then
             echo "No changes to commit"
