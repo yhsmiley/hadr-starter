@@ -2,220 +2,901 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>HADR Monitor</title>
 <style>
-  body { font-family: system-ui, sans-serif; max-width: 760px; margin: 0 auto; padding: 32px 20px; color: #1a1a1a; background: #fafafa; }
-  header.page { margin-bottom: 24px; border-bottom: 1px solid #ddd; padding-bottom: 16px; }
-  h1 { font-size: 22px; margin: 0 0 4px; }
-  .freshness { color: #555; font-size: 14px; }
-  ul.health { list-style: none; padding: 0; margin: 8px 0 0; font-size: 14px; }
-  .health-ok { color: #1a7f37; }
-  .health-bad { color: #c0341d; font-weight: 600; }
-  .incident { border: 1px solid #ddd; border-radius: 6px; padding: 14px 16px; margin-bottom: 14px; background: #fff; }
-  .incident.closed { opacity: 0.6; }
-  .badge { display: inline-block; font-size: 12px; padding: 2px 8px; border-radius: 999px; margin-right: 6px; background: #eee; }
-  .badge-state.new { background: #d6e4ff; }
-  .badge-state.escalated { background: #ffe0b2; }
-  .badge-state.revised { background: #fff3b0; }
-  .badge-state.closed { background: #e0e0e0; }
-  .mag { font-weight: 700; margin-right: 8px; }
-  .place { color: #444; }
-  .narrative { margin: 10px 0; }
-  ul.impact { font-size: 14px; margin: 8px 0; padding-left: 18px; }
-  .impact-none { color: #888; font-size: 13px; font-style: italic; }
-  .erratum { background: #fff8e1; border-left: 3px solid #e8a33d; padding: 8px 12px; margin-top: 10px; font-size: 13px; }
-  .meta { color: #999; font-size: 12px; margin-top: 8px; }
-  .quiet { color: #555; }
+  :root {
+    --surface-page:   #f9f9f7;
+    --surface-card:   #fcfcfb;
+    --ink-primary:    #0b0b0b;
+    --ink-secondary:  #52514e;
+    --ink-muted:      #898781;
+    --border:         #e1e0d9;
+    --border-strong:  #c3c2b7;
+
+    --feed-usgs:      #2a78d6;
+    --feed-usgs-tint: #e7f0fc;
+    --feed-gdacs:     #1baf7a;
+    --feed-gdacs-tint:#e3f7ee;
+
+    /* Status hues per dataviz skill's fixed status palette. The raw
+       "warning" (#fab219) and "good" (#0ca30c) hexes are text-contrast-
+       unsafe on a light surface (documented 1.79 and 3.27 respectively)
+       -- using them as small badge text would be close to illegible.
+       Substituted with the palette's own text-safe variants: "good" ->
+       the documented success-text green (#006300); "warning" -> the
+       darker step from the same amber family used for categorical
+       slot 3's dark step (#c98500). Same semantic hue family, a shade
+       chosen for legibility as foreground text specifically. */
+    --status-new:          #2a78d6;
+    --status-new-tint:     #e7f0fc;
+    --status-escalated:      #9c6a00;
+    --status-escalated-tint: #fff2d6;
+    --status-deescalated:      #006300;
+    --status-deescalated-tint: #e5f6e5;
+    --status-revised:      #4a3aa7;
+    --status-revised-tint: #ece9fa;
+    --status-closed:       #898781;
+    --status-closed-tint:  #eeede9;
+
+    --erratum-accent: #c98500;
+    --erratum-tint:   #fff2d6;
+    --health-good:    #006300;
+    --health-bad:     #d03b3b;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --surface-page:   #0d0d0d;
+      --surface-card:   #1a1a19;
+      --ink-primary:    #ffffff;
+      --ink-secondary:  #c3c2b7;
+      --ink-muted:      #898781;
+      --border:         #2c2c2a;
+      --border-strong:  #383835;
+
+      --feed-usgs:      #3987e5;
+      --feed-usgs-tint: #152841;
+      --feed-gdacs:     #199e70;
+      --feed-gdacs-tint:#0f2b21;
+
+      /* Dark surface is far more forgiving to the raw status hexes
+         (documented 9.49 / 5.19 contrast) -- used directly here, unlike
+         the light-mode text-safe substitutes above. */
+      --status-new:          #3987e5;
+      --status-new-tint:     #152841;
+      --status-escalated:      #fab219;
+      --status-escalated-tint: #3a2c0c;
+      --status-deescalated:      #0ca30c;
+      --status-deescalated-tint: #123a12;
+      --status-revised:      #9085e9;
+      --status-revised-tint: #241f42;
+      --status-closed:       #a3a196;
+      --status-closed-tint:  #232320;
+
+      --erratum-accent: #e0a333;
+      --erratum-tint:   #3a2c0c;
+      --health-good:    #0ca30c;
+      --health-bad:     #e66767;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 32px 20px 64px;
+    color: var(--ink-primary);
+    background: var(--surface-page);
+  }
+  header.page {
+    margin-bottom: 28px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--border);
+  }
+  h1 {
+    font-size: 23px;
+    margin: 0 0 6px;
+    letter-spacing: -0.01em;
+  }
+  .freshness { color: var(--ink-secondary); font-size: 14px; }
+  ul.health {
+    list-style: none;
+    padding: 0;
+    margin: 14px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    font-size: 13.5px;
+  }
+  ul.health li { display: flex; align-items: center; gap: 6px; }
+  .feed-name { font-weight: 700; letter-spacing: 0.02em; color: var(--ink-secondary); }
+  .health-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 600;
+  }
+  .health-pill .dot { width: 7px; height: 7px; border-radius: 50%; }
+  .health-ok { color: var(--health-good); }
+  .health-ok .dot { background: var(--health-good); }
+  .health-bad { color: var(--health-bad); }
+  .health-bad .dot { background: var(--health-bad); }
+  .health-detail { color: var(--ink-muted); }
+
+  .incident {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin-bottom: 14px;
+    background: var(--surface-card);
+  }
+  .incident.is-closed { opacity: 0.65; }
+
+  header + .narrative { margin-top: 12px; }
+  .incident header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 10px;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+  .badge .dot { width: 6px; height: 6px; border-radius: 50%; }
+
+  .state-badge.state-new           { background: var(--status-new-tint);        color: var(--status-new); }
+  .state-badge.state-new .dot            { background: var(--status-new); }
+  .state-badge.state-escalated     { background: var(--status-escalated-tint);      color: var(--status-escalated); }
+  .state-badge.state-escalated .dot      { background: var(--status-escalated); }
+  .state-badge.state-de-escalated  { background: var(--status-deescalated-tint);      color: var(--status-deescalated); }
+  .state-badge.state-de-escalated .dot   { background: var(--status-deescalated); }
+  .state-badge.state-revised       { background: var(--status-revised-tint);     color: var(--status-revised); }
+  .state-badge.state-revised .dot        { background: var(--status-revised); }
+  .state-badge.state-closed,
+  .state-badge.state-deleted       { background: var(--status-closed-tint);      color: var(--status-closed); }
+  .state-badge.state-closed .dot,
+  .state-badge.state-deleted .dot        { background: var(--status-closed); }
+
+  .tier-badge {
+    background: transparent;
+    color: var(--ink-secondary);
+    border: 1px solid var(--border-strong);
+    font-weight: 500;
+  }
+
+  .mag { font-weight: 700; font-variant-numeric: tabular-nums; margin-left: 2px; }
+  .place { color: var(--ink-secondary); }
+
+  .narrative { margin: 0 0 10px; line-height: 1.5; }
+
+  ul.impact { list-style: none; font-size: 13.5px; margin: 0 0 10px; padding: 0; display: flex; flex-direction: column; gap: 4px; }
+  ul.impact li { display: flex; align-items: center; gap: 8px; }
+  .impact-none { color: var(--ink-muted); font-size: 13px; font-style: italic; margin: 0 0 10px; }
+  .feed-chip {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    padding: 2px 7px;
+    border-radius: 5px;
+  }
+  .feed-chip.feed-usgs, .feed-usgs .feed-chip { background: var(--feed-usgs-tint); color: var(--feed-usgs); }
+  .feed-chip.feed-gdacs, .feed-gdacs .feed-chip { background: var(--feed-gdacs-tint); color: var(--feed-gdacs); }
+
+  .erratum {
+    background: var(--erratum-tint);
+    border-left: 3px solid var(--erratum-accent);
+    padding: 10px 14px;
+    margin: 0 0 10px;
+    font-size: 13px;
+    border-radius: 0 6px 6px 0;
+  }
+  .erratum ul { margin: 6px 0 0; padding-left: 18px; }
+  .erratum .ts { color: var(--ink-muted); }
+
+  details.events-detail {
+    margin-top: 4px;
+    border-top: 1px solid var(--border);
+    padding-top: 10px;
+  }
+  details.events-detail summary {
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink-secondary);
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    user-select: none;
+  }
+  details.events-detail summary::-webkit-details-marker { display: none; }
+  details.events-detail summary::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 4px 0 4px 6px;
+    border-color: transparent transparent transparent var(--ink-muted);
+    transition: transform 0.15s ease;
+    flex: none;
+  }
+  details.events-detail[open] summary::before { transform: rotate(90deg); }
+  details.events-detail summary:hover { color: var(--ink-primary); }
+
+  .table-wrap { overflow-x: auto; margin-top: 10px; }
+  table.events-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  table.events-table th {
+    text-align: left;
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    padding: 0 10px 6px 0;
+    font-weight: 600;
+  }
+  table.events-table td {
+    padding: 6px 10px 6px 0;
+    border-top: 1px solid var(--border);
+    vertical-align: middle;
+  }
+  table.events-table td.tabular { font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .events-footer { margin: 10px 0 0; font-size: 12px; color: var(--ink-muted); }
+  .events-footer code { font-size: 11.5px; }
+
+  .quiet { color: var(--ink-secondary); }
 </style>
 </head>
 <body>
   <header class="page">
     <h1>HADR Monitor</h1>
-    <div class="freshness">Checked 8 Jul 2026, 2:48 pm SGT</div>
-    <ul class="health"><li><strong>USGS</strong>: <span class="health-ok">last reached 8 Jul 2026, 2:38 pm SGT</span></li><li><strong>GDACS</strong>: <span class="health-ok">last reached 8 Jul 2026, 2:38 pm SGT</span></li></ul>
+    <div class="freshness">Checked 8 Jul 2026, 3:04 pm SGT</div>
+    <ul class="health"><li class="feed-usgs"><span class="feed-name">USGS</span> <span class="health-pill health-ok"><span class="dot"></span>reachable</span> <span class="health-detail">last checked 8 Jul 2026, 2:38 pm SGT</span></li><li class="feed-gdacs"><span class="feed-name">GDACS</span> <span class="health-pill health-ok"><span class="dot"></span>reachable</span> <span class="health-detail">last checked 8 Jul 2026, 2:38 pm SGT</span></li></ul>
   </header>
   <main>
 
     <article class="incident">
       <header>
-        <span class="badge badge-state badge-escalated">escalated</span>
-        <span class="badge badge-tier">shared-sensor (USGS+GDACS)</span>
-        <span class="mag">M 5.8</span>
+        <span class="badge state-badge state-escalated"><span class="dot"></span>escalated</span>
+        <span class="badge tier-badge">shared-sensor (USGS+GDACS)</span>
+        <span class="mag">M&nbsp;5.8</span>
         <span class="place">298 km SSE of Ushuaia, Argentina</span>
       </header>
       <p class="narrative">Magnitude 5.8 earthquake in the Drake Passage off Chile on 7 July, followed by a smaller magnitude 4.9 event in the same sequence.</p>
-      <ul class="impact"><li><strong>GDACS Alert level:</strong> Green</li></ul>
+      <ul class="impact"><li class="feed-gdacs"><span class="feed-chip">GDACS</span> Alert level: <strong>Green</strong></li></ul>
       
-      <footer class="meta">3 event(s) on record &middot; id gdacs-eq-2026-07-07-1550528</footer>
+      
+    <details class="events-detail">
+      <summary>3 contributing events</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">7 Jul 2026, 9:26 am</td>
+      <td class="tabular">M 5.8</td>
+      <td class="tabular">57.33°S, 66.76°W</td>
+      <td>Alert: Green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">8 Jul 2026, 1:39 am</td>
+      <td class="tabular">M 4.9</td>
+      <td class="tabular">57.35°S, 66.82°W</td>
+      <td>Alert: Green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-usgs">USGS</span></td>
+      <td class="tabular">8 Jul 2026, 1:39 am</td>
+      <td class="tabular">M 4.9</td>
+      <td class="tabular">57.35°S, 66.82°W</td>
+      <td>—</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>gdacs-eq-2026-07-07-1550528</code></p>
+    </details>
     </article>
 
     <article class="incident">
       <header>
-        <span class="badge badge-state badge-escalated">escalated</span>
-        <span class="badge badge-tier">shared-sensor (USGS+GDACS)</span>
-        <span class="mag">M 5.4</span>
+        <span class="badge state-badge state-escalated"><span class="dot"></span>escalated</span>
+        <span class="badge tier-badge">shared-sensor (USGS+GDACS)</span>
+        <span class="mag">M&nbsp;5.4</span>
         <span class="place">172 km NNW of Tobelo, Indonesia</span>
       </header>
       <p class="narrative">Magnitude 5.4 earthquake near Tobelo, Indonesia on 7 July, followed by a smaller magnitude 4.5 aftershock in the same area.</p>
-      <ul class="impact"><li><strong>USGS PAGER alert:</strong> green</li><li><strong>GDACS Alert level:</strong> Green</li></ul>
+      <ul class="impact"><li class="feed-usgs"><span class="feed-chip">USGS</span> PAGER alert: <strong>green</strong></li><li class="feed-gdacs"><span class="feed-chip">GDACS</span> Alert level: <strong>Green</strong></li></ul>
       
-      <footer class="meta">4 event(s) on record &middot; id gdacs-eq-2026-07-07-1550568</footer>
+      
+    <details class="events-detail">
+      <summary>4 contributing events</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">7 Jul 2026, 3:16 pm</td>
+      <td class="tabular">M 5.4</td>
+      <td class="tabular">3.12°N, 127.56°E</td>
+      <td>Alert: Green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-usgs">USGS</span></td>
+      <td class="tabular">7 Jul 2026, 3:16 pm</td>
+      <td class="tabular">M 5.4</td>
+      <td class="tabular">3.12°N, 127.56°E</td>
+      <td>PAGER: green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">7 Jul 2026, 10:21 pm</td>
+      <td class="tabular">M 4.5</td>
+      <td class="tabular">3.11°N, 127.29°E</td>
+      <td>Alert: Green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-usgs">USGS</span></td>
+      <td class="tabular">7 Jul 2026, 10:21 pm</td>
+      <td class="tabular">M 4.5</td>
+      <td class="tabular">3.11°N, 127.29°E</td>
+      <td>—</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>gdacs-eq-2026-07-07-1550568</code></p>
+    </details>
     </article>
 
     <article class="incident">
       <header>
-        <span class="badge badge-state badge-escalated">escalated</span>
-        <span class="badge badge-tier">shared-sensor (USGS+GDACS)</span>
-        <span class="mag">M 5.3</span>
+        <span class="badge state-badge state-escalated"><span class="dot"></span>escalated</span>
+        <span class="badge tier-badge">shared-sensor (USGS+GDACS)</span>
+        <span class="mag">M&nbsp;5.3</span>
         <span class="place">Reykjanes Ridge</span>
       </header>
       <p class="narrative">Magnitude 5.3 earthquake on the Reykjanes Ridge on 7 July, part of a sequence including additional magnitude 5.0 earthquakes.</p>
-      <ul class="impact"><li><strong>GDACS Alert level:</strong> Green</li></ul>
+      <ul class="impact"><li class="feed-gdacs"><span class="feed-chip">GDACS</span> Alert level: <strong>Green</strong></li></ul>
       
-      <footer class="meta">4 event(s) on record &middot; id gdacs-eq-2026-07-07-1550554</footer>
+      
+    <details class="events-detail">
+      <summary>4 contributing events</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">7 Jul 2026, 1:00 pm</td>
+      <td class="tabular">M 5.0</td>
+      <td class="tabular">59.46°N, 30.25°W</td>
+      <td>Alert: Green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">7 Jul 2026, 1:55 pm</td>
+      <td class="tabular">M 5.3</td>
+      <td class="tabular">59.51°N, 30.25°W</td>
+      <td>Alert: Green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">7 Jul 2026, 4:30 pm</td>
+      <td class="tabular">M 5.0</td>
+      <td class="tabular">59.48°N, 30.37°W</td>
+      <td>Alert: Green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-usgs">USGS</span></td>
+      <td class="tabular">7 Jul 2026, 4:30 pm</td>
+      <td class="tabular">M 5.0</td>
+      <td class="tabular">59.48°N, 30.37°W</td>
+      <td>—</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>gdacs-eq-2026-07-07-1550554</code></p>
+    </details>
     </article>
 
     <article class="incident">
       <header>
-        <span class="badge badge-state badge-escalated">escalated</span>
-        <span class="badge badge-tier">shared-sensor (USGS+GDACS)</span>
-        <span class="mag">M 5.3</span>
+        <span class="badge state-badge state-escalated"><span class="dot"></span>escalated</span>
+        <span class="badge tier-badge">shared-sensor (USGS+GDACS)</span>
+        <span class="mag">M&nbsp;5.3</span>
         <span class="place">10 km WSW of Orotina, Costa Rica</span>
       </header>
       <p class="narrative">Magnitude 5.3 earthquake near Orotina, Costa Rica, at 48 km depth on 7 July.</p>
-      <ul class="impact"><li><strong>GDACS Alert level:</strong> Green</li></ul>
+      <ul class="impact"><li class="feed-gdacs"><span class="feed-chip">GDACS</span> Alert level: <strong>Green</strong></li></ul>
       
-      <footer class="meta">2 event(s) on record &middot; id gdacs-eq-2026-07-07-1550639</footer>
+      
+    <details class="events-detail">
+      <summary>2 contributing events</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">8 Jul 2026, 2:11 am</td>
+      <td class="tabular">M 5.3</td>
+      <td class="tabular">9.86°N, 84.60°W</td>
+      <td>Alert: Green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-usgs">USGS</span></td>
+      <td class="tabular">8 Jul 2026, 2:11 am</td>
+      <td class="tabular">M 5.3</td>
+      <td class="tabular">9.86°N, 84.60°W</td>
+      <td>—</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>gdacs-eq-2026-07-07-1550639</code></p>
+    </details>
     </article>
 
     <article class="incident">
       <header>
-        <span class="badge badge-state badge-escalated">escalated</span>
-        <span class="badge badge-tier">shared-sensor (USGS+GDACS)</span>
-        <span class="mag">M 5.3</span>
+        <span class="badge state-badge state-escalated"><span class="dot"></span>escalated</span>
+        <span class="badge tier-badge">shared-sensor (USGS+GDACS)</span>
+        <span class="mag">M&nbsp;5.3</span>
         <span class="place">95 km WSW of Labuan, Indonesia</span>
       </header>
       <p class="narrative">Magnitude 5.3 earthquake near Labuan, Indonesia, at 35 km depth on 7 July.</p>
-      <ul class="impact"><li><strong>GDACS Alert level:</strong> Green</li></ul>
+      <ul class="impact"><li class="feed-gdacs"><span class="feed-chip">GDACS</span> Alert level: <strong>Green</strong></li></ul>
       
-      <footer class="meta">2 event(s) on record &middot; id gdacs-eq-2026-07-07-1550650</footer>
+      
+    <details class="events-detail">
+      <summary>2 contributing events</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">8 Jul 2026, 3:44 am</td>
+      <td class="tabular">M 5.3</td>
+      <td class="tabular">6.77°S, 105.06°E</td>
+      <td>Alert: Green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-usgs">USGS</span></td>
+      <td class="tabular">8 Jul 2026, 3:44 am</td>
+      <td class="tabular">M 5.3</td>
+      <td class="tabular">6.77°S, 105.06°E</td>
+      <td>—</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>gdacs-eq-2026-07-07-1550650</code></p>
+    </details>
     </article>
 
     <article class="incident">
       <header>
-        <span class="badge badge-state badge-escalated">escalated</span>
-        <span class="badge badge-tier">shared-sensor (USGS+GDACS)</span>
-        <span class="mag">M 5.1</span>
+        <span class="badge state-badge state-escalated"><span class="dot"></span>escalated</span>
+        <span class="badge tier-badge">shared-sensor (USGS+GDACS)</span>
+        <span class="mag">M&nbsp;5.1</span>
         <span class="place">15 km NNE of Xunchang, China</span>
       </header>
       <p class="narrative">Magnitude 5.1 earthquake near Yibin, China on 7 July, part of a sequence of magnitude 4.6-5.0 aftershocks continuing into 8 July.</p>
-      <ul class="impact"><li><strong>GDACS Alert level:</strong> Green</li></ul>
+      <ul class="impact"><li class="feed-gdacs"><span class="feed-chip">GDACS</span> Alert level: <strong>Green</strong></li></ul>
       
-      <footer class="meta">6 event(s) on record &middot; id gdacs-eq-2026-07-07-1550669</footer>
+      
+    <details class="events-detail">
+      <summary>6 contributing events</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">8 Jul 2026, 6:12 am</td>
+      <td class="tabular">M 5.1</td>
+      <td class="tabular">28.59°N, 104.77°E</td>
+      <td>Alert: Green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-usgs">USGS</span></td>
+      <td class="tabular">8 Jul 2026, 6:12 am</td>
+      <td class="tabular">M 5.1</td>
+      <td class="tabular">28.57°N, 104.79°E</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">8 Jul 2026, 6:22 am</td>
+      <td class="tabular">M 4.6</td>
+      <td class="tabular">28.66°N, 104.71°E</td>
+      <td>Alert: Green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-usgs">USGS</span></td>
+      <td class="tabular">8 Jul 2026, 6:22 am</td>
+      <td class="tabular">M 4.6</td>
+      <td class="tabular">28.66°N, 104.71°E</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">8 Jul 2026, 10:08 am</td>
+      <td class="tabular">M 5.0</td>
+      <td class="tabular">28.59°N, 104.75°E</td>
+      <td>Alert: Green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-usgs">USGS</span></td>
+      <td class="tabular">8 Jul 2026, 10:08 am</td>
+      <td class="tabular">M 5.0</td>
+      <td class="tabular">28.59°N, 104.75°E</td>
+      <td>—</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>gdacs-eq-2026-07-07-1550669</code></p>
+    </details>
     </article>
 
     <article class="incident">
       <header>
-        <span class="badge badge-state badge-escalated">escalated</span>
-        <span class="badge badge-tier">shared-sensor (USGS+GDACS)</span>
-        <span class="mag">M 4.9</span>
+        <span class="badge state-badge state-escalated"><span class="dot"></span>escalated</span>
+        <span class="badge tier-badge">shared-sensor (USGS+GDACS)</span>
+        <span class="mag">M&nbsp;4.9</span>
         <span class="place">88 km WNW of Hicks Bay, New Zealand</span>
       </header>
       <p class="narrative">Magnitude 4.9 earthquake near Hicks Bay, New Zealand, at 121 km depth on 7 July.</p>
-      <ul class="impact"><li><strong>USGS PAGER alert:</strong> green</li><li><strong>GDACS Alert level:</strong> Green</li></ul>
+      <ul class="impact"><li class="feed-usgs"><span class="feed-chip">USGS</span> PAGER alert: <strong>green</strong></li><li class="feed-gdacs"><span class="feed-chip">GDACS</span> Alert level: <strong>Green</strong></li></ul>
       
-      <footer class="meta">2 event(s) on record &middot; id gdacs-eq-2026-07-07-1550654</footer>
+      
+    <details class="events-detail">
+      <summary>2 contributing events</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">8 Jul 2026, 4:33 am</td>
+      <td class="tabular">M 4.9</td>
+      <td class="tabular">37.22°S, 177.43°E</td>
+      <td>Alert: Green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-usgs">USGS</span></td>
+      <td class="tabular">8 Jul 2026, 4:33 am</td>
+      <td class="tabular">M 4.9</td>
+      <td class="tabular">37.22°S, 177.43°E</td>
+      <td>PAGER: green</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>gdacs-eq-2026-07-07-1550654</code></p>
+    </details>
     </article>
 
     <article class="incident">
       <header>
-        <span class="badge badge-state badge-escalated">escalated</span>
-        <span class="badge badge-tier">shared-sensor (USGS+GDACS)</span>
-        <span class="mag">M 4.9</span>
+        <span class="badge state-badge state-escalated"><span class="dot"></span>escalated</span>
+        <span class="badge tier-badge">shared-sensor (USGS+GDACS)</span>
+        <span class="mag">M&nbsp;4.9</span>
         <span class="place">Earthquake in Tajikistan</span>
       </header>
       <p class="narrative">Magnitude 4.9 earthquake near Karakenja, Tajikistan, at 10 km depth on 7 July.</p>
-      <ul class="impact"><li><strong>GDACS Alert level:</strong> Green</li></ul>
+      <ul class="impact"><li class="feed-gdacs"><span class="feed-chip">GDACS</span> Alert level: <strong>Green</strong></li></ul>
       
-      <footer class="meta">2 event(s) on record &middot; id usgs-eq-2026-07-07-us6000tatn</footer>
+      
+    <details class="events-detail">
+      <summary>2 contributing events</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-usgs">USGS</span></td>
+      <td class="tabular">8 Jul 2026, 6:42 am</td>
+      <td class="tabular">M 4.9</td>
+      <td class="tabular">39.15°N, 71.74°E</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">8 Jul 2026, 6:42 am</td>
+      <td class="tabular">M 4.9</td>
+      <td class="tabular">39.15°N, 71.74°E</td>
+      <td>Alert: Green</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>usgs-eq-2026-07-07-us6000tatn</code></p>
+    </details>
     </article>
 
     <article class="incident">
       <header>
-        <span class="badge badge-state badge-escalated">escalated</span>
-        <span class="badge badge-tier">shared-sensor (USGS+GDACS)</span>
-        <span class="mag">M 4.7</span>
+        <span class="badge state-badge state-escalated"><span class="dot"></span>escalated</span>
+        <span class="badge tier-badge">shared-sensor (USGS+GDACS)</span>
+        <span class="mag">M&nbsp;4.7</span>
         <span class="place">14 km SE of Esperanza, Puerto Rico</span>
       </header>
       <p class="narrative">Magnitude 4.7 earthquake near the Virgin Islands on 7 July, part of a sequence of smaller quakes continuing into 8 July.</p>
-      <ul class="impact"><li><strong>GDACS Alert level:</strong> Green</li></ul>
+      <ul class="impact"><li class="feed-gdacs"><span class="feed-chip">GDACS</span> Alert level: <strong>Green</strong></li></ul>
       
-      <footer class="meta">6 event(s) on record &middot; id gdacs-eq-2026-07-07-1550633</footer>
+      
+    <details class="events-detail">
+      <summary>6 contributing events</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-usgs">USGS</span></td>
+      <td class="tabular">7 Jul 2026, 4:02 pm</td>
+      <td class="tabular">M 3.8</td>
+      <td class="tabular">19.45°N, 64.30°W</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">8 Jul 2026, 1:25 am</td>
+      <td class="tabular">M 4.7</td>
+      <td class="tabular">19.64°N, 64.48°W</td>
+      <td>Alert: Green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-usgs">USGS</span></td>
+      <td class="tabular">8 Jul 2026, 1:25 am</td>
+      <td class="tabular">M 4.4</td>
+      <td class="tabular">19.67°N, 64.51°W</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-usgs">USGS</span></td>
+      <td class="tabular">8 Jul 2026, 4:37 am</td>
+      <td class="tabular">M 2.9</td>
+      <td class="tabular">18.90°N, 63.91°W</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-usgs">USGS</span></td>
+      <td class="tabular">8 Jul 2026, 8:21 am</td>
+      <td class="tabular">M 2.6</td>
+      <td class="tabular">17.99°N, 65.39°W</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-usgs">USGS</span></td>
+      <td class="tabular">8 Jul 2026, 9:07 am</td>
+      <td class="tabular">M 3.7</td>
+      <td class="tabular">18.94°N, 64.61°W</td>
+      <td>—</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>gdacs-eq-2026-07-07-1550633</code></p>
+    </details>
     </article>
 
     <article class="incident">
       <header>
-        <span class="badge badge-state badge-escalated">escalated</span>
-        <span class="badge badge-tier">shared-sensor (USGS+GDACS)</span>
-        <span class="mag">M 4.7</span>
+        <span class="badge state-badge state-escalated"><span class="dot"></span>escalated</span>
+        <span class="badge tier-badge">shared-sensor (USGS+GDACS)</span>
+        <span class="mag">M&nbsp;4.7</span>
         <span class="place">61 km ENE of Olonkinbyen, Svalbard and Jan Mayen</span>
       </header>
       <p class="narrative">Magnitude 4.7 earthquake in the Jan Mayen Island region on 8 July, at 10 km depth.</p>
-      <ul class="impact"><li><strong>GDACS Alert level:</strong> Green</li></ul>
+      <ul class="impact"><li class="feed-gdacs"><span class="feed-chip">GDACS</span> Alert level: <strong>Green</strong></li></ul>
       
-      <footer class="meta">2 event(s) on record &middot; id gdacs-eq-2026-07-08-1550718</footer>
+      
+    <details class="events-detail">
+      <summary>2 contributing events</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">8 Jul 2026, 12:21 pm</td>
+      <td class="tabular">M 4.7</td>
+      <td class="tabular">71.12°N, 7.13°W</td>
+      <td>Alert: Green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-usgs">USGS</span></td>
+      <td class="tabular">8 Jul 2026, 12:21 pm</td>
+      <td class="tabular">M 4.7</td>
+      <td class="tabular">71.12°N, 7.13°W</td>
+      <td>—</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>gdacs-eq-2026-07-08-1550718</code></p>
+    </details>
     </article>
 
     <article class="incident">
       <header>
-        <span class="badge badge-state badge-escalated">escalated</span>
-        <span class="badge badge-tier">shared-sensor (USGS+GDACS)</span>
-        <span class="mag">M 4.6</span>
+        <span class="badge state-badge state-escalated"><span class="dot"></span>escalated</span>
+        <span class="badge tier-badge">shared-sensor (USGS+GDACS)</span>
+        <span class="mag">M&nbsp;4.6</span>
         <span class="place">132 km WNW of Ternate, Indonesia</span>
       </header>
       <p class="narrative">Magnitude 4.6 earthquake in the northern Molucca Sea near Ternate, Indonesia, at 49 km depth on 7 July.</p>
-      <ul class="impact"><li><strong>GDACS Alert level:</strong> Green</li></ul>
+      <ul class="impact"><li class="feed-gdacs"><span class="feed-chip">GDACS</span> Alert level: <strong>Green</strong></li></ul>
       
-      <footer class="meta">2 event(s) on record &middot; id gdacs-eq-2026-07-07-1550684</footer>
+      
+    <details class="events-detail">
+      <summary>2 contributing events</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">8 Jul 2026, 7:35 am</td>
+      <td class="tabular">M 4.6</td>
+      <td class="tabular">1.40°N, 126.36°E</td>
+      <td>Alert: Green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-usgs">USGS</span></td>
+      <td class="tabular">8 Jul 2026, 7:35 am</td>
+      <td class="tabular">M 4.6</td>
+      <td class="tabular">1.40°N, 126.36°E</td>
+      <td>—</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>gdacs-eq-2026-07-07-1550684</code></p>
+    </details>
     </article>
 
     <article class="incident">
       <header>
-        <span class="badge badge-state badge-escalated">escalated</span>
-        <span class="badge badge-tier">shared-sensor (USGS+GDACS)</span>
-        <span class="mag">M 4.5</span>
+        <span class="badge state-badge state-escalated"><span class="dot"></span>escalated</span>
+        <span class="badge tier-badge">shared-sensor (USGS+GDACS)</span>
+        <span class="mag">M&nbsp;4.5</span>
         <span class="place">32 km NE of Yaguaraparo, Venezuela</span>
       </header>
       <p class="narrative">Magnitude 4.5 earthquake near Yaguaraparo, Venezuela, at 127 km depth on 7 July.</p>
-      <ul class="impact"><li><strong>GDACS Alert level:</strong> Green</li></ul>
+      <ul class="impact"><li class="feed-gdacs"><span class="feed-chip">GDACS</span> Alert level: <strong>Green</strong></li></ul>
       
-      <footer class="meta">2 event(s) on record &middot; id gdacs-eq-2026-07-07-1550582</footer>
+      
+    <details class="events-detail">
+      <summary>2 contributing events</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">7 Jul 2026, 4:41 pm</td>
+      <td class="tabular">M 4.5</td>
+      <td class="tabular">10.73°N, 62.58°W</td>
+      <td>Alert: Green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-usgs">USGS</span></td>
+      <td class="tabular">7 Jul 2026, 4:41 pm</td>
+      <td class="tabular">M 4.5</td>
+      <td class="tabular">10.73°N, 62.58°W</td>
+      <td>—</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>gdacs-eq-2026-07-07-1550582</code></p>
+    </details>
     </article>
 
     <article class="incident">
       <header>
-        <span class="badge badge-state badge-escalated">escalated</span>
-        <span class="badge badge-tier">shared-sensor (USGS+GDACS)</span>
-        <span class="mag">M 4.5</span>
+        <span class="badge state-badge state-escalated"><span class="dot"></span>escalated</span>
+        <span class="badge tier-badge">shared-sensor (USGS+GDACS)</span>
+        <span class="mag">M&nbsp;4.5</span>
         <span class="place">81 km NNE of Adak, Alaska</span>
       </header>
       <p class="narrative">Magnitude 4.5 earthquake near Adak, Alaska, at 172 km depth on 7 July.</p>
-      <ul class="impact"><li><strong>GDACS Alert level:</strong> Green</li></ul>
+      <ul class="impact"><li class="feed-gdacs"><span class="feed-chip">GDACS</span> Alert level: <strong>Green</strong></li></ul>
       
-      <footer class="meta">2 event(s) on record &middot; id gdacs-eq-2026-07-07-1550648</footer>
+      
+    <details class="events-detail">
+      <summary>2 contributing events</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">8 Jul 2026, 2:07 am</td>
+      <td class="tabular">M 4.5</td>
+      <td class="tabular">52.57°N, 176.28°W</td>
+      <td>Alert: Green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-usgs">USGS</span></td>
+      <td class="tabular">8 Jul 2026, 2:07 am</td>
+      <td class="tabular">M 4.5</td>
+      <td class="tabular">52.57°N, 176.28°W</td>
+      <td>—</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>gdacs-eq-2026-07-07-1550648</code></p>
+    </details>
     </article>
 
     <article class="incident">
       <header>
-        <span class="badge badge-state badge-escalated">escalated</span>
-        <span class="badge badge-tier">shared-sensor (USGS+GDACS)</span>
-        <span class="mag">M 4.5</span>
+        <span class="badge state-badge state-escalated"><span class="dot"></span>escalated</span>
+        <span class="badge tier-badge">shared-sensor (USGS+GDACS)</span>
+        <span class="mag">M&nbsp;4.5</span>
         <span class="place">7 km SSE of Calatagan, Philippines</span>
       </header>
       <p class="narrative">Magnitude 4.5 earthquake near Calatagan, Philippines, at 155 km depth on 7 July.</p>
-      <ul class="impact"><li><strong>GDACS Alert level:</strong> Green</li></ul>
+      <ul class="impact"><li class="feed-gdacs"><span class="feed-chip">GDACS</span> Alert level: <strong>Green</strong></li></ul>
       
-      <footer class="meta">2 event(s) on record &middot; id gdacs-eq-2026-07-07-1550657</footer>
+      
+    <details class="events-detail">
+      <summary>2 contributing events</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">8 Jul 2026, 4:37 am</td>
+      <td class="tabular">M 4.5</td>
+      <td class="tabular">13.77°N, 120.66°E</td>
+      <td>Alert: Green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-usgs">USGS</span></td>
+      <td class="tabular">8 Jul 2026, 4:37 am</td>
+      <td class="tabular">M 4.5</td>
+      <td class="tabular">13.77°N, 120.66°E</td>
+      <td>—</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>gdacs-eq-2026-07-07-1550657</code></p>
+    </details>
     </article>
   </main>
 </body>
