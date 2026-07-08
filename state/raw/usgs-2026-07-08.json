@@ -2,7 +2,7 @@
   {
     "type": "FeatureCollection",
     "metadata": {
-      "generated": 1783496322000,
+      "generated": 1783497017000,
       "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_day.geojson",
       "title": "USGS Magnitude 4.5+ Earthquakes, Past Day",
       "status": 200,
@@ -663,14 +663,54 @@
   {
     "type": "FeatureCollection",
     "metadata": {
-      "generated": 1783496349000,
+      "generated": 1783497005000,
       "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson",
       "title": "USGS All Earthquakes, Past Day",
       "status": 200,
       "api": "2.7.0",
-      "count": 250
+      "count": 247
     },
     "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "mag": 1.06,
+          "place": "6 km NW of The Geysers, CA",
+          "time": 1783496887670,
+          "updated": 1783496985531,
+          "tz": null,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75391856",
+          "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/nc75391856.geojson",
+          "felt": null,
+          "cdi": null,
+          "mmi": null,
+          "alert": null,
+          "status": "automatic",
+          "tsunami": 0,
+          "sig": 17,
+          "net": "nc",
+          "code": "75391856",
+          "ids": ",nc75391856,",
+          "sources": ",nc,",
+          "types": ",nearby-cities,origin,phase-data,",
+          "nst": 20,
+          "dmin": 0.009728,
+          "rms": 0.02,
+          "gap": 46,
+          "magType": "md",
+          "type": "earthquake",
+          "title": "M 1.1 - 6 km NW of The Geysers, CA"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -122.796501159668,
+            38.8176651000977,
+            2.26999998092651
+          ]
+        },
+        "id": "nc75391856"
+      },
       {
         "type": "Feature",
         "properties": {
@@ -757,21 +797,21 @@
           "mag": 3.31,
           "place": "13 km SE of Pāhala, Hawaii",
           "time": 1783494985320,
-          "updated": 1783496127712,
+          "updated": 1783496782078,
           "tz": null,
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv74998936",
           "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/hv74998936.geojson",
-          "felt": 13,
-          "cdi": 2.8,
+          "felt": 18,
+          "cdi": 2.7,
           "mmi": null,
           "alert": null,
           "status": "reviewed",
           "tsunami": 0,
-          "sig": 172,
+          "sig": 173,
           "net": "hv",
           "code": "74998936",
-          "ids": ",hv74998936,",
-          "sources": ",hv,",
+          "ids": ",hv74998936,us6000tavq,",
+          "sources": ",hv,us,",
           "types": ",dyfi,origin,phase-data,",
           "nst": 41,
           "dmin": 0.09058,
@@ -4557,17 +4597,17 @@
           "mag": 3.62,
           "place": "0 km W of Angwin, CA",
           "time": 1783459802490,
-          "updated": 1783487227047,
+          "updated": 1783496893584,
           "tz": null,
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75391596",
           "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/nc75391596.geojson",
-          "felt": 202,
+          "felt": 203,
           "cdi": 4.1,
           "mmi": 3.635,
           "alert": null,
           "status": "reviewed",
           "tsunami": 0,
-          "sig": 284,
+          "sig": 285,
           "net": "nc",
           "code": "75391596",
           "ids": ",nc75391596,us6000tasw,",
@@ -10510,166 +10550,6 @@
           ]
         },
         "id": "nc75391211"
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "mag": 1.3,
-          "place": "14 km SSE of Valdez, Alaska",
-          "time": 1783410603800,
-          "updated": 1783410683328,
-          "tz": null,
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026nhztwa",
-          "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/aka2026nhztwa.geojson",
-          "felt": null,
-          "cdi": null,
-          "mmi": null,
-          "alert": null,
-          "status": "automatic",
-          "tsunami": 0,
-          "sig": 26,
-          "net": "ak",
-          "code": "a2026nhztwa",
-          "ids": ",aka2026nhztwa,",
-          "sources": ",ak,",
-          "types": ",origin,phase-data,",
-          "nst": 16,
-          "dmin": 0.1,
-          "rms": 0.7,
-          "gap": 85,
-          "magType": "ml",
-          "type": "earthquake",
-          "title": "M 1.3 - 14 km SSE of Valdez, Alaska"
-        },
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            -146.212,
-            61.022,
-            21.2
-          ]
-        },
-        "id": "aka2026nhztwa"
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "mag": 1.6,
-          "place": "87 km W of Yakutat, Alaska",
-          "time": 1783410391667,
-          "updated": 1783410513268,
-          "tz": null,
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026nhzquc",
-          "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/aka2026nhzquc.geojson",
-          "felt": null,
-          "cdi": null,
-          "mmi": null,
-          "alert": null,
-          "status": "automatic",
-          "tsunami": 0,
-          "sig": 39,
-          "net": "ak",
-          "code": "a2026nhzquc",
-          "ids": ",aka2026nhzquc,",
-          "sources": ",ak,",
-          "types": ",origin,phase-data,",
-          "nst": 8,
-          "dmin": 0.6,
-          "rms": 0.4,
-          "gap": 201,
-          "magType": "ml",
-          "type": "earthquake",
-          "title": "M 1.6 - 87 km W of Yakutat, Alaska"
-        },
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            -141.246,
-            59.706,
-            16
-          ]
-        },
-        "id": "aka2026nhzquc"
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "mag": 1.05,
-          "place": "7 km NW of The Geysers, CA",
-          "time": 1783410142430,
-          "updated": 1783412540731,
-          "tz": null,
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75391206",
-          "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/nc75391206.geojson",
-          "felt": null,
-          "cdi": null,
-          "mmi": null,
-          "alert": null,
-          "status": "automatic",
-          "tsunami": 0,
-          "sig": 17,
-          "net": "nc",
-          "code": "75391206",
-          "ids": ",nc75391206,",
-          "sources": ",nc,",
-          "types": ",nearby-cities,origin,phase-data,scitech-link,",
-          "nst": 22,
-          "dmin": 0.003409,
-          "rms": 0.02,
-          "gap": 53,
-          "magType": "md",
-          "type": "earthquake",
-          "title": "M 1.1 - 7 km NW of The Geysers, CA"
-        },
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            -122.813667297363,
-            38.8253326416016,
-            2.02999997138977
-          ]
-        },
-        "id": "nc75391206"
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "mag": 1.2,
-          "place": "23 km W of Ivanof Bay, Alaska",
-          "time": 1783410063168,
-          "updated": 1783410128940,
-          "tz": null,
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026nhzmcj",
-          "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/aka2026nhzmcj.geojson",
-          "felt": null,
-          "cdi": null,
-          "mmi": null,
-          "alert": null,
-          "status": "automatic",
-          "tsunami": 0,
-          "sig": 22,
-          "net": "ak",
-          "code": "a2026nhzmcj",
-          "ids": ",aka2026nhzmcj,",
-          "sources": ",ak,",
-          "types": ",origin,phase-data,",
-          "nst": 10,
-          "dmin": 0.3,
-          "rms": 0.2,
-          "gap": 322,
-          "magType": "ml",
-          "type": "earthquake",
-          "title": "M 1.2 - 23 km W of Ivanof Bay, Alaska"
-        },
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            -159.864,
-            55.88,
-            11.1
-          ]
-        },
-        "id": "aka2026nhzmcj"
       }
     ],
     "bbox": [

@@ -3472,7 +3472,7 @@
       }
     ],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Flooding in the United States, ongoing since 19 May 2026."
   },
   {
     "id": "gdacs-flood-2026-06-06-1103933",
@@ -3572,7 +3572,7 @@
       }
     ],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Flooding in China, ongoing since 6 June 2026."
   },
   {
     "id": "gdacs-wildfire-2026-06-24-1029369",
@@ -4052,7 +4052,7 @@
         "description": "Re-merged with Incident gdacs-wildfire-2026-07-04-1029364 -- both now match the same window."
       }
     ],
-    "narrative": null
+    "narrative": "Forest fires in the Democratic Republic of the Congo, first detected 24 June 2026, with six related alerts through 4 July."
   },
   {
     "id": "gdacs-wildfire-2026-06-25-1029345",
@@ -4222,7 +4222,7 @@
       }
     ],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Forest fires in the Democratic Republic of the Congo, first detected 25 June 2026, with a further alert on 2 July."
   },
   {
     "id": "gdacs-wildfire-2026-06-25-1029325",
@@ -4392,7 +4392,7 @@
       }
     ],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Forest fires in the Democratic Republic of the Congo, first detected 25 June 2026, with a further alert on 6 July."
   },
   {
     "id": "gdacs-wildfire-2026-06-26-1029316",
@@ -4492,7 +4492,7 @@
       }
     ],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Forest fires in Canada, detected 26 June 2026."
   },
   {
     "id": "gdacs-wildfire-2026-06-26-1029238",
@@ -4907,6 +4907,88 @@
             }
           }
         }
+      },
+      {
+        "feed": "gdacs",
+        "hazardType": "Wildfire",
+        "sourceIds": [
+          "1029377"
+        ],
+        "episodeId": "1",
+        "glide": null,
+        "occurredAtUtc": "2026-07-02T00:00:00.000Z",
+        "place": "Forest fires in Canada",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            -78.1606,
+            51.6179
+          ]
+        },
+        "estimate": {
+          "gdacsAlertLevel": "Green",
+          "gdacsIsCurrent": true
+        },
+        "rawPayload": {
+          "type": "Feature",
+          "bbox": [
+            -78.1606,
+            51.6179,
+            -78.1606,
+            51.6179
+          ],
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -78.1606,
+              51.6179
+            ]
+          },
+          "properties": {
+            "eventtype": "WF",
+            "eventid": 1029377,
+            "episodeid": 1,
+            "eventname": "",
+            "glide": "",
+            "name": "Forest fires in Canada",
+            "description": "Forest fires in Canada",
+            "htmldescription": "Green Forest fires in Canada from: 02 Jul 2026 to: 07 Jul 2026.",
+            "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+            "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+            "url": {
+              "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029377&episodeid=1",
+              "report": "https://www.gdacs.org/report.aspx?eventid=1029377&episodeid=1&eventtype=WF",
+              "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029377"
+            },
+            "alertlevel": "Green",
+            "alertscore": 1,
+            "episodealertlevel": "Green",
+            "episodealertscore": 0.5,
+            "istemporary": "false",
+            "iscurrent": "true",
+            "country": "Canada",
+            "fromdate": "2026-07-02T00:00:00",
+            "todate": "2026-07-07T00:00:00",
+            "datemodified": "2026-07-08T03:08:13",
+            "iso3": "CAN",
+            "source": "GWIS",
+            "sourceid": "",
+            "polygonlabel": "Centroid",
+            "Class": "Point_Centroid",
+            "affectedcountries": [
+              {
+                "iso2": "CA",
+                "iso3": "CAN",
+                "countryname": "Canada"
+              }
+            ],
+            "severitydata": {
+              "severity": 5547,
+              "severitytext": "Green impact for forestfire in 5547 ha",
+              "severityunit": "ha"
+            }
+          }
+        }
       }
     ],
     "state": "escalated",
@@ -4929,9 +5011,14 @@
         "kind": "re-merged",
         "atUtc": "2026-07-08T07:39:18.792Z",
         "description": "Re-merged with Incident gdacs-wildfire-2026-07-02-1029377 -- both now match the same window."
+      },
+      {
+        "kind": "re-merged",
+        "atUtc": "2026-07-08T07:50:58.642Z",
+        "description": "Re-merged with Incident gdacs-wildfire-2026-07-02-1029377 -- both now match the same window."
       }
     ],
-    "narrative": null
+    "narrative": "Forest fires in Canada, first detected 26 June 2026, with six related alerts through 2 July."
   },
   {
     "id": "gdacs-wildfire-2026-06-26-1029357",
@@ -5025,7 +5112,7 @@
       }
     ],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Forest fires in Russia, detected 26 June 2026."
   },
   {
     "id": "gdacs-wildfire-2026-06-26-1029324",
@@ -5727,7 +5814,7 @@
       }
     ],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Forest fires in the Democratic Republic of the Congo, first detected 26 June 2026, with nine related alerts through 6 July."
   },
   {
     "id": "gdacs-wildfire-2026-06-26-1029321",
@@ -5821,7 +5908,7 @@
       }
     ],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Forest fires in Russia, detected 26 June 2026."
   },
   {
     "id": "gdacs-wildfire-2026-06-27-1029265",
@@ -5921,7 +6008,7 @@
       }
     ],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Forest fires in Canada, detected 27 June 2026."
   },
   {
     "id": "gdacs-wildfire-2026-06-27-1029264",
@@ -6021,7 +6108,7 @@
       }
     ],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Forest fires in Canada, detected 27 June 2026."
   },
   {
     "id": "gdacs-wildfire-2026-06-27-1029181",
@@ -6203,7 +6290,7 @@
       }
     ],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Forest fires in Canada, first detected 27 June 2026, with a further alert on 2 July."
   },
   {
     "id": "gdacs-wildfire-2026-06-27-1029350",
@@ -6303,7 +6390,7 @@
       }
     ],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Forest fires in Canada, detected 27 June 2026."
   },
   {
     "id": "gdacs-wildfire-2026-06-28-1029368",
@@ -6403,7 +6490,7 @@
       }
     ],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Forest fires in Zambia, detected 28 June 2026."
   },
   {
     "id": "gdacs-wildfire-2026-06-29-1029380",
@@ -6667,7 +6754,7 @@
       }
     ],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Forest fires in Angola, first detected 29 June 2026, with three related alerts through 5 July."
   },
   {
     "id": "gdacs-wildfire-2026-06-29-1029276",
@@ -6761,7 +6848,7 @@
       }
     ],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Forest fires in the Democratic Republic of the Congo, detected 29 June 2026."
   },
   {
     "id": "gdacs-wildfire-2026-06-29-1029196",
@@ -6861,7 +6948,7 @@
       }
     ],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Forest fires in the United States, detected 29 June 2026."
   },
   {
     "id": "gdacs-wildfire-2026-06-29-1029343",
@@ -6961,7 +7048,7 @@
       }
     ],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Forest fires in Angola, detected 29 June 2026."
   },
   {
     "id": "gdacs-wildfire-2026-06-29-1029323",
@@ -7055,7 +7142,7 @@
       }
     ],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Forest fires in the Democratic Republic of the Congo, detected 29 June 2026."
   },
   {
     "id": "gdacs-wildfire-2026-06-30-1029379",
@@ -7149,7 +7236,7 @@
       }
     ],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Forest fires in Russia, detected 30 June 2026."
   },
   {
     "id": "gdacs-wildfire-2026-06-30-1029378",
@@ -7331,7 +7418,7 @@
       }
     ],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Forest fires in Canada, first detected 30 June 2026, with a further alert on 5 July."
   },
   {
     "id": "gdacs-wildfire-2026-07-01-1029293",
@@ -7431,7 +7518,7 @@
       }
     ],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Forest fires in Brazil, detected 1 July 2026."
   },
   {
     "id": "gdacs-cyclone-2026-07-01-1001279",
@@ -7498,7 +7585,7 @@
             "country": "Guam, Northern Mariana Islands, Japan, Taiwan, China",
             "fromdate": "2026-07-01T00:00:00",
             "todate": "2026-07-08T00:00:00",
-            "datemodified": "2026-07-08T07:35:08",
+            "datemodified": "2026-07-08T07:50:05",
             "iso3": "CHN",
             "source": "JTWC",
             "sourceid": "",
@@ -7547,7 +7634,7 @@
       }
     ],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Tropical Cyclone BAVI-26 tracking across Guam, the Northern Mariana Islands, Japan, Taiwan and China since 1 July 2026."
   },
   {
     "id": "gdacs-wildfire-2026-07-01-1029365",
@@ -7647,7 +7734,7 @@
       }
     ],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Forest fires in Angola, detected 1 July 2026."
   },
   {
     "id": "gdacs-wildfire-2026-07-01-1029338",
@@ -7747,7 +7834,7 @@
       }
     ],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Forest fires in Zambia, detected 1 July 2026."
   },
   {
     "id": "gdacs-wildfire-2026-07-01-1029292",
@@ -7929,7 +8016,7 @@
       }
     ],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Forest fires in Australia, first detected 1 July 2026, with a further alert on 3 July."
   },
   {
     "id": "gdacs-flood-2026-07-01-1104000",
@@ -8029,7 +8116,7 @@
       }
     ],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Flooding in Peru, ongoing since 1 July 2026."
   },
   {
     "id": "gdacs-wildfire-2026-07-02-1029260",
@@ -8129,7 +8216,7 @@
       }
     ],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Forest fires in Portugal, detected 2 July 2026."
   },
   {
     "id": "gdacs-wildfire-2026-07-02-1029333",
@@ -8393,7 +8480,7 @@
       }
     ],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Forest fires in Australia, first detected 2 July 2026, with three related alerts through 7 July."
   },
   {
     "id": "gdacs-wildfire-2026-07-02-1029329",
@@ -8493,7 +8580,7 @@
       }
     ],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Forest fires in Australia, detected 2 July 2026."
   },
   {
     "id": "gdacs-wildfire-2026-07-02-1029328",
@@ -8757,7 +8844,7 @@
       }
     ],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Forest fires in Australia, first detected 2 July 2026, with three related alerts through 3 July."
   },
   {
     "id": "gdacs-wildfire-2026-07-02-1029291",
@@ -9021,7 +9108,7 @@
       }
     ],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Forest fires in Australia, first detected 2 July 2026, with three related alerts through 3 July."
   },
   {
     "id": "gdacs-wildfire-2026-07-03-1029375",
@@ -9115,7 +9202,7 @@
       }
     ],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Forest fires in Russia, detected 3 July 2026."
   },
   {
     "id": "gdacs-wildfire-2026-07-03-1029374",
@@ -9776,6 +9863,252 @@
             }
           }
         }
+      },
+      {
+        "feed": "gdacs",
+        "hazardType": "Wildfire",
+        "sourceIds": [
+          "1029374"
+        ],
+        "episodeId": "2",
+        "glide": null,
+        "occurredAtUtc": "2026-07-03T00:00:00.000Z",
+        "place": "Forest fires in Canada",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            -72.6112,
+            54.3772
+          ]
+        },
+        "estimate": {
+          "gdacsAlertLevel": "Green",
+          "gdacsIsCurrent": true
+        },
+        "rawPayload": {
+          "type": "Feature",
+          "bbox": [
+            -72.6112,
+            54.3772,
+            -72.6112,
+            54.3772
+          ],
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -72.6112,
+              54.3772
+            ]
+          },
+          "properties": {
+            "eventtype": "WF",
+            "eventid": 1029374,
+            "episodeid": 2,
+            "eventname": "",
+            "glide": "",
+            "name": "Forest fires in Canada",
+            "description": "Forest fires in Canada",
+            "htmldescription": "Green Forest fires in Canada from: 03 Jul 2026 to: 08 Jul 2026.",
+            "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+            "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+            "url": {
+              "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029374&episodeid=2",
+              "report": "https://www.gdacs.org/report.aspx?eventid=1029374&episodeid=2&eventtype=WF",
+              "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029374"
+            },
+            "alertlevel": "Green",
+            "alertscore": 1,
+            "episodealertlevel": "Green",
+            "episodealertscore": 0.5,
+            "istemporary": "false",
+            "iscurrent": "true",
+            "country": "Canada",
+            "fromdate": "2026-07-03T00:00:00",
+            "todate": "2026-07-08T00:00:00",
+            "datemodified": "2026-07-08T07:04:59",
+            "iso3": "CAN",
+            "source": "GWIS",
+            "sourceid": "",
+            "polygonlabel": "Centroid",
+            "Class": "Point_Centroid",
+            "affectedcountries": [
+              {
+                "iso2": "CA",
+                "iso3": "CAN",
+                "countryname": "Canada"
+              }
+            ],
+            "severitydata": {
+              "severity": 5105,
+              "severitytext": "Green impact for forestfire in 5105 ha",
+              "severityunit": "ha"
+            }
+          }
+        }
+      },
+      {
+        "feed": "gdacs",
+        "hazardType": "Wildfire",
+        "sourceIds": [
+          "1029373"
+        ],
+        "episodeId": "2",
+        "glide": null,
+        "occurredAtUtc": "2026-07-03T00:00:00.000Z",
+        "place": "Forest fires in Canada",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            -72.7773,
+            53.9065
+          ]
+        },
+        "estimate": {
+          "gdacsAlertLevel": "Green",
+          "gdacsIsCurrent": true
+        },
+        "rawPayload": {
+          "type": "Feature",
+          "bbox": [
+            -72.7773,
+            53.9065,
+            -72.7773,
+            53.9065
+          ],
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -72.7773,
+              53.9065
+            ]
+          },
+          "properties": {
+            "eventtype": "WF",
+            "eventid": 1029373,
+            "episodeid": 2,
+            "eventname": "",
+            "glide": "",
+            "name": "Forest fires in Canada",
+            "description": "Forest fires in Canada",
+            "htmldescription": "Green Forest fires in Canada from: 03 Jul 2026 to: 08 Jul 2026.",
+            "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+            "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+            "url": {
+              "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029373&episodeid=2",
+              "report": "https://www.gdacs.org/report.aspx?eventid=1029373&episodeid=2&eventtype=WF",
+              "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029373"
+            },
+            "alertlevel": "Green",
+            "alertscore": 1,
+            "episodealertlevel": "Green",
+            "episodealertscore": 0.5,
+            "istemporary": "false",
+            "iscurrent": "true",
+            "country": "Canada",
+            "fromdate": "2026-07-03T00:00:00",
+            "todate": "2026-07-08T00:00:00",
+            "datemodified": "2026-07-08T07:03:00",
+            "iso3": "CAN",
+            "source": "GWIS",
+            "sourceid": "",
+            "polygonlabel": "Centroid",
+            "Class": "Point_Centroid",
+            "affectedcountries": [
+              {
+                "iso2": "CA",
+                "iso3": "CAN",
+                "countryname": "Canada"
+              }
+            ],
+            "severitydata": {
+              "severity": 5095,
+              "severitytext": "Green impact for forestfire in 5095 ha",
+              "severityunit": "ha"
+            }
+          }
+        }
+      },
+      {
+        "feed": "gdacs",
+        "hazardType": "Wildfire",
+        "sourceIds": [
+          "1029376"
+        ],
+        "episodeId": "1",
+        "glide": null,
+        "occurredAtUtc": "2026-07-03T00:00:00.000Z",
+        "place": "Forest fires in Canada",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            -71.6921,
+            53.8041
+          ]
+        },
+        "estimate": {
+          "gdacsAlertLevel": "Green",
+          "gdacsIsCurrent": true
+        },
+        "rawPayload": {
+          "type": "Feature",
+          "bbox": [
+            -71.6921,
+            53.8041,
+            -71.6921,
+            53.8041
+          ],
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -71.6921,
+              53.8041
+            ]
+          },
+          "properties": {
+            "eventtype": "WF",
+            "eventid": 1029376,
+            "episodeid": 1,
+            "eventname": "",
+            "glide": "",
+            "name": "Forest fires in Canada",
+            "description": "Forest fires in Canada",
+            "htmldescription": "Green Forest fires in Canada from: 03 Jul 2026 to: 07 Jul 2026.",
+            "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+            "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+            "url": {
+              "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029376&episodeid=1",
+              "report": "https://www.gdacs.org/report.aspx?eventid=1029376&episodeid=1&eventtype=WF",
+              "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029376"
+            },
+            "alertlevel": "Green",
+            "alertscore": 1,
+            "episodealertlevel": "Green",
+            "episodealertscore": 0.5,
+            "istemporary": "false",
+            "iscurrent": "true",
+            "country": "Canada",
+            "fromdate": "2026-07-03T00:00:00",
+            "todate": "2026-07-07T00:00:00",
+            "datemodified": "2026-07-08T07:04:31",
+            "iso3": "CAN",
+            "source": "GWIS",
+            "sourceid": "",
+            "polygonlabel": "Centroid",
+            "Class": "Point_Centroid",
+            "affectedcountries": [
+              {
+                "iso2": "CA",
+                "iso3": "CAN",
+                "countryname": "Canada"
+              }
+            ],
+            "severitydata": {
+              "severity": 5838,
+              "severitytext": "Green impact for forestfire in 5838 ha",
+              "severityunit": "ha"
+            }
+          }
+        }
       }
     ],
     "state": "escalated",
@@ -9798,9 +10131,14 @@
         "kind": "re-merged",
         "atUtc": "2026-07-08T07:39:18.792Z",
         "description": "Re-merged with Incident gdacs-wildfire-2026-07-03-1029374 -- both now match the same window."
+      },
+      {
+        "kind": "re-merged",
+        "atUtc": "2026-07-08T07:50:58.642Z",
+        "description": "Re-merged with Incident gdacs-wildfire-2026-07-03-1029374 -- both now match the same window."
       }
     ],
-    "narrative": null
+    "narrative": "Forest fires in Canada, first detected 3 July 2026, with eleven related alerts through 5 July."
   },
   {
     "id": "gdacs-wildfire-2026-07-03-1029311",
@@ -9900,7 +10238,7 @@
       }
     ],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Forest fires in Brazil, detected 3 July 2026."
   },
   {
     "id": "gdacs-wildfire-2026-07-03-1029359",
@@ -10000,7 +10338,7 @@
       }
     ],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Forest fires in Canada, detected 3 July 2026."
   },
   {
     "id": "gdacs-wildfire-2026-07-03-1029300",
@@ -10182,7 +10520,7 @@
       }
     ],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Forest fires in Angola, first detected 3 July 2026, with a further alert on 5 July."
   },
   {
     "id": "gdacs-wildfire-2026-07-03-1029289",
@@ -10282,7 +10620,7 @@
       }
     ],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Forest fires in Australia, detected 3 July 2026."
   },
   {
     "id": "gdacs-wildfire-2026-07-04-1029358",
@@ -10382,7 +10720,7 @@
       }
     ],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Forest fires in Sudan, detected 4 July 2026."
   },
   {
     "id": "gdacs-wildfire-2026-07-04-1029372",
@@ -10564,7 +10902,7 @@
       }
     ],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Forest fires in Canada, first detected 4 July 2026, with a further alert on 5 July."
   },
   {
     "id": "gdacs-wildfire-2026-07-04-1029331",
@@ -10664,7 +11002,7 @@
       }
     ],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Forest fires in France, detected 4 July 2026."
   },
   {
     "id": "gdacs-flood-2026-07-05-1104006",
@@ -10764,7 +11102,7 @@
       }
     ],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Flooding in New Zealand, ongoing since 5 July 2026."
   },
   {
     "id": "gdacs-wildfire-2026-07-06-1029332",
@@ -10864,7 +11202,7 @@
       }
     ],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Forest fires in Australia, detected 6 July 2026."
   },
   {
     "id": "reliefweb-other-2026-03-15-ep-2026-000048-bgd",
@@ -10902,7 +11240,7 @@
     "glide": "EP-2026-000048-BGD",
     "impactEstimates": [],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Measles outbreak in Bangladesh, reported by ReliefWeb on 15 March 2026."
   },
   {
     "id": "reliefweb-flood-2026-03-15-fl-2026-000046-bwa",
@@ -10940,7 +11278,7 @@
     "glide": "FL-2026-000046-BWA",
     "impactEstimates": [],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Flooding in Botswana, reported by ReliefWeb on 15 March 2026."
   },
   {
     "id": "reliefweb-other-2026-03-24-fr-2026-000055-gnb",
@@ -10978,7 +11316,7 @@
     "glide": "FR-2026-000055-GNB",
     "impactEstimates": [],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Fire emergency in Guinea-Bissau, reported by ReliefWeb on 24 March 2026."
   },
   {
     "id": "reliefweb-other-2026-03-24-vw-2026-000054-lbr",
@@ -11016,7 +11354,7 @@
     "glide": "VW-2026-000054-LBR",
     "impactEstimates": [],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Windstorms in Liberia, reported by ReliefWeb on 24 March 2026."
   },
   {
     "id": "reliefweb-other-2026-03-24-fr-2026-000052-lbr",
@@ -11054,7 +11392,7 @@
     "glide": "FR-2026-000052-LBR",
     "impactEstimates": [],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Fires in Liberia, reported by ReliefWeb on 24 March 2026."
   },
   {
     "id": "reliefweb-flood-2026-03-25-fl-2026-000063-tza",
@@ -11092,7 +11430,7 @@
     "glide": "FL-2026-000063-TZA",
     "impactEstimates": [],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Floods and landslides in Tanzania, reported by ReliefWeb on 25 March 2026."
   },
   {
     "id": "reliefweb-flood-2026-03-25-ff-2026-000043-afg",
@@ -11130,7 +11468,7 @@
     "glide": "FF-2026-000043-AFG",
     "impactEstimates": [],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Flash flooding in Afghanistan, reported by ReliefWeb on 25 March 2026."
   },
   {
     "id": "reliefweb-flood-2026-03-27-fl-2026-000044-yem",
@@ -11168,7 +11506,7 @@
     "glide": "FL-2026-000044-YEM",
     "impactEstimates": [],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Flooding in Yemen, reported by ReliefWeb on 27 March 2026."
   },
   {
     "id": "reliefweb-cyclone-2026-04-06-tc-2026-000053-fji",
@@ -11206,7 +11544,7 @@
     "glide": "TC-2026-000053-FJI",
     "impactEstimates": [],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Tropical Cyclone Vaianu affecting Fiji, reported by ReliefWeb on 6 April 2026."
   },
   {
     "id": "reliefweb-cyclone-2026-04-06-tc-2026-000051-slb",
@@ -11244,7 +11582,7 @@
     "glide": "TC-2026-000051-SLB",
     "impactEstimates": [],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Tropical Cyclone Maila affecting Australia, Papua New Guinea and the Solomon Islands, reported by ReliefWeb on 6 April 2026."
   },
   {
     "id": "reliefweb-flood-2026-04-07-fl-2026-000087-dom",
@@ -11282,7 +11620,7 @@
     "glide": "FL-2026-000087-DOM",
     "impactEstimates": [],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Flooding in the Dominican Republic, reported by ReliefWeb on 7 April 2026."
   },
   {
     "id": "reliefweb-cyclone-2026-04-09-tc-2026-000050-fsm",
@@ -11320,7 +11658,7 @@
     "glide": "TC-2026-000050-FSM",
     "impactEstimates": [],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Typhoon Sinlaku affecting Guam, Micronesia and the Northern Mariana Islands, reported by ReliefWeb on 9 April 2026."
   },
   {
     "id": "reliefweb-other-2026-05-01-ep-2026-000085-lka",
@@ -11358,7 +11696,7 @@
     "glide": "EP-2026-000085-LKA",
     "impactEstimates": [],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Dengue outbreak in Sri Lanka, reported by ReliefWeb on 1 May 2026."
   },
   {
     "id": "reliefweb-other-2026-05-05-ep-2026-000071-cod",
@@ -11396,7 +11734,7 @@
     "glide": "EP-2026-000071-COD",
     "impactEstimates": [],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Ebola outbreak in the Democratic Republic of the Congo and Uganda, reported by ReliefWeb on 5 May 2026."
   },
   {
     "id": "reliefweb-flood-2026-05-20-fl-2026-000080-syr",
@@ -11434,7 +11772,7 @@
     "glide": "FL-2026-000080-SYR",
     "impactEstimates": [],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Flooding in Syria, reported by ReliefWeb on 20 May 2026."
   },
   {
     "id": "reliefweb-other-2026-06-06-st-2026-000086-arm",
@@ -11472,7 +11810,7 @@
     "glide": "ST-2026-000086-ARM",
     "impactEstimates": [],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Hailstorm in Armenia, reported by ReliefWeb on 6 June 2026."
   },
   {
     "id": "reliefweb-earthquake-2026-06-08-eq-2026-000083-phl",
@@ -11548,7 +11886,7 @@
     "glide": "EQ-2026-000093-VEN",
     "impactEstimates": [],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Earthquake activity in Venezuela, reported by ReliefWeb on 24 June 2026."
   },
   {
     "id": "reliefweb-other-2026-06-26-ep-2026-000107-caf",
@@ -11586,7 +11924,7 @@
     "glide": "EP-2026-000107-CAF",
     "impactEstimates": [],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Cholera outbreak in the Central African Republic, reported by ReliefWeb on 26 June 2026."
   },
   {
     "id": "reliefweb-flood-2026-06-27-fl-2026-000106-geo",
@@ -11624,6 +11962,6 @@
     "glide": "FL-2026-000106-GEO",
     "impactEstimates": [],
     "erratumLog": [],
-    "narrative": null
+    "narrative": "Flooding in Georgia, reported by ReliefWeb on 27 June 2026."
   }
 ]
