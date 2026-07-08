@@ -326,3 +326,40 @@ _Questions added mid-session go below this line, oldest first._
       polling for tracked Incidents specifically to get a reliable deletion
       signal, or is "we can't tell deleted from aged-out" an accepted,
       permanent limitation worth writing into ADR 0006 explicitly?
+
+## O — Discovered while building V2 (implementation-notes.md)
+
+- [x] **O1.** `feeds/gdacs.md`'s own open question 1 ("which colour drives
+      the sitrep — event `alertlevel` or `episodealertlevel`?") was never
+      actually resolved by any ADR — ADR 0001 settled matching
+      *granularity* (Event, not Episode) but not which colour field to
+      *read* for anything else.
+      **Resolved →** `alertlevel` (event-level), for consistency with ADR
+      0001's own Event-granularity principle — using the episode-level
+      field anywhere else in the codebase would contradict it. Documented
+      in `src/types.ts`'s `gdacsAlertLevel` field comment.
+- [x] **O2.** ADR 0003's allowlist names both magnitude and GDACS alert
+      colour as transition triggers, but never says what happens if a
+      single Event refetch changes both at once (a magnitude correction
+      arriving at the same time a GDACS colour worsens, say).
+      **Resolved →** Magnitude change takes precedence and is always
+      "revised" (+ erratum), even if the colour also changed in the same
+      refetch — a factual correction is more consequential to surface
+      than a severity update, and conflating the two would understate the
+      correction. Colour-only changes (no magnitude change) get
+      escalated/de-escalated with no erratum, since nothing published
+      earlier was *wrong*. See `src/fusion/fuse.ts`.
+- [x] **O3.** GDACS's `EVENTS4APP` list endpoint has no numeric magnitude
+      field for earthquakes — it's embedded in free text
+      (`htmldescription`, e.g. "Green M 4.6 Earthquake..."). Without it,
+      a GDACS-only Incident's severity would default to 0 in the sitrep's
+      sort, burying real earthquakes at the bottom regardless of actual
+      magnitude.
+      **Resolved →** Parse it out with a regex (`/\bM\s*([\d.]+)\b/`) in
+      `src/ingest/gdacs.ts`, undefined if the pattern doesn't match rather
+      than guessing. This is a real dependency on GDACS's free-text
+      format staying stable — `feeds/gdacs.md` finding 4 already warns
+      `EVENTS4APP` has "no version contract, no docs; it can change shape
+      silently," which applies doubly to a regex over prose. Worth
+      revisiting if GDACS's per-event detail endpoint (`url.details`)
+      ever gets pulled in — it likely has a structured magnitude field.

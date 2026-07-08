@@ -51,6 +51,40 @@ Kept by the agent, reviewed by you. One entry per working block.
   an impact estimate (ADR 0005) and is excluded from A5's input entirely,
   rendered directly by `src/render/dashboard.ts` instead.
 
+- **2026-07-08 — V2 build (Slice 2, `SLICES.md`).** Added the GDACS
+  earthquake adapter and turned on real cross-feed matching. The core
+  matching engine (`src/fusion/match.ts`) needed **zero changes** -- it
+  was already written generically over `FeedEvent.feed`, not hardcoded to
+  USGS, so cross-feed matching (time/geo window only, since USGS and
+  GDACS ids can never overlap) worked the first time it was exercised.
+  Three real decisions this build needed that weren't fully pinned down
+  upstream, logged in full as `QUESTIONS.md` O1-O3:
+  - GDACS's own open question ("`alertlevel` or `episodealertlevel`?")
+    was never actually resolved by any ADR -- resolved to `alertlevel`
+    (event-level), matching ADR 0001's own Event-granularity principle.
+  - Magnitude-change vs. colour-change precedence when both change in the
+    same refetch: magnitude wins (always "revised" + erratum), since a
+    factual correction is more consequential than a severity update.
+  - GDACS's list endpoint has no numeric magnitude field for earthquakes
+    -- parsed out of `htmldescription` free text with a regex. A real,
+    acknowledged dependency on GDACS's undocumented prose format staying
+    stable (`feeds/gdacs.md` finding 4's "no version contract" warning
+    applies doubly here).
+  Also extended: `Incident.impactEstimates` now shows USGS PAGER alert
+  and GDACS's colour side by side when both exist (never blended, ADR
+  0005); `assignConfidenceTier` does real feed-composition logic instead
+  of a hardcoded return; a second intraday health-check workflow
+  (`health-check-gdacs.yml`) on GDACS's own hourly cadence, independent
+  of USGS's every-few-minutes one.
+- **Verified against live data:** every Incident produced by a real run
+  came back `shared-sensor (USGS+GDACS)` -- confirmed with exact
+  coordinate/timestamp matches that USGS and GDACS really do report the
+  same earthquakes (GDACS sources from NEIC, same as USGS -- REQS.md's
+  founding thesis, now demonstrated in production). Also caught GDACS's
+  ~100-feature cap firing for real on a live response (ADR 0006's
+  truncation-risk warning), and confirmed a genuine mainshock->aftershock
+  pair 16 hours apart still aggregated correctly across both feeds.
+
 ## Open questions
 
 - **USGS deletion detection is not implemented**, despite SLICES.md V1
