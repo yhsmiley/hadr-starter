@@ -48,10 +48,16 @@ export interface FeedEvent {
     type: "Point";
     coordinates: [number, number, number?]; // [lon, lat, depthKm?]
   };
-  /** Feed-native estimate, carried through unmodified (ADR 0005). */
+  /** Feed-native estimate, carried through unmodified (ADR 0005). Fields
+   *  are feed-specific by design -- there is no canonical merged impact
+   *  number (ADR 0005 / ADR 0003's per-source-field diffing). */
   estimate: {
     magnitude?: number;
-    pagerAlert?: "green" | "yellow" | "orange" | "red" | null;
+    pagerAlert?: "green" | "yellow" | "orange" | "red" | null; // USGS
+    /** GDACS's own `alertlevel` (event-level, never `episodealertlevel`
+     *  -- ADR 0001 matches at Event granularity, so anything else this
+     *  codebase reads off a GDACS Event uses the same granularity). */
+    gdacsAlertLevel?: "Green" | "Orange" | "Red" | null;
   };
   rawPayload: unknown;
 }

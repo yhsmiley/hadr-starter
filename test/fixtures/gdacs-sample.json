@@ -1,0 +1,61 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [141.845, 40.4353] },
+      "properties": {
+        "eventtype": "EQ",
+        "eventid": 1550421,
+        "episodeid": 1716583,
+        "glide": "",
+        "name": "Earthquake in Japan",
+        "htmldescription": "Green M 4.6 Earthquake in Japan at: 06 Jul 2026 11:29:36.",
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.0,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Japan",
+        "fromdate": "2026-07-06T11:29:36",
+        "todate": "2026-07-06T11:29:36",
+        "datemodified": "2026-07-06T12:09:48",
+        "iso3": "JPN",
+        "source": "NEIC",
+        "url": {
+          "report": "https://www.gdacs.org/report.aspx?eventid=1550421&episodeid=1716583&eventtype=EQ",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=EQ&eventid=1550421"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [130.0, 15.0] },
+      "properties": {
+        "eventtype": "TC",
+        "eventid": 1550500,
+        "episodeid": 1716600,
+        "glide": "",
+        "name": "Tropical Cyclone BAVI-26",
+        "htmldescription": "Red Tropical Cyclone BAVI-26",
+        "alertlevel": "Red",
+        "alertscore": 3,
+        "episodealertlevel": "Orange",
+        "episodealertscore": 2.0,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Philippines",
+        "fromdate": "2026-07-05T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-06T12:09:48",
+        "iso3": "PHL",
+        "source": "JTWC",
+        "url": {
+          "report": "https://www.gdacs.org/report.aspx?eventid=1550500&episodeid=1716600&eventtype=TC",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=TC&eventid=1550500"
+        }
+      }
+    }
+  ]
+}

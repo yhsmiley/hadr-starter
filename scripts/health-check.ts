@@ -1,24 +1,27 @@
-// A7 entrypoint (SLICES.md V1: USGS only). Pings one feed, records
+// A7 entrypoint (SLICES.md V2: USGS + GDACS). Pings one feed, records
 // success/failure into that feed's own health file, and does nothing
 // else -- no fusion, no Incident processing. Runs independently of and
-// far more often than scripts/sitrep.ts (A1).
+// on its own cadence, separate from scripts/sitrep.ts (A1).
 import { readHealth, writeHealth } from "../src/store/healthStore";
 import { Feed } from "../src/types";
 
-const USGS_PING_URL =
-  "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_day.geojson";
+const PING_URLS: Partial<Record<Feed, string>> = {
+  usgs: "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_day.geojson",
+  gdacs: "https://www.gdacs.org/gdacsapi/api/events/geteventlist/EVENTS4APP",
+};
 
 async function main(): Promise<void> {
   const feed = (process.argv[2] ?? "usgs") as Feed;
-  if (feed !== "usgs") {
+  const url = PING_URLS[feed];
+  if (!url) {
     throw new Error(
-      `Health check for feed "${feed}" is dormant in V1 (SLICES.md) -- only usgs is live`
+      `Health check for feed "${feed}" is dormant (SLICES.md) -- live feeds: ${Object.keys(PING_URLS).join(", ")}`
     );
   }
 
   const nowUtc = new Date().toISOString();
   try {
-    const res = await fetch(USGS_PING_URL);
+    const res = await fetch(url);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     await res.json();
     await writeHealth({ feed, lastSuccessAtUtc: nowUtc, lastAttemptAtUtc: nowUtc, lastError: null });
