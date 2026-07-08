@@ -5071,6 +5071,88 @@
             }
           }
         }
+      },
+      {
+        "feed": "gdacs",
+        "hazardType": "Wildfire",
+        "sourceIds": [
+          "1029377"
+        ],
+        "episodeId": "1",
+        "glide": null,
+        "occurredAtUtc": "2026-07-02T00:00:00.000Z",
+        "place": "Forest fires in Canada",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            -78.1606,
+            51.6179
+          ]
+        },
+        "estimate": {
+          "gdacsAlertLevel": "Green",
+          "gdacsIsCurrent": true
+        },
+        "rawPayload": {
+          "type": "Feature",
+          "bbox": [
+            -78.1606,
+            51.6179,
+            -78.1606,
+            51.6179
+          ],
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -78.1606,
+              51.6179
+            ]
+          },
+          "properties": {
+            "eventtype": "WF",
+            "eventid": 1029377,
+            "episodeid": 1,
+            "eventname": "",
+            "glide": "",
+            "name": "Forest fires in Canada",
+            "description": "Forest fires in Canada",
+            "htmldescription": "Green Forest fires in Canada from: 02 Jul 2026 to: 07 Jul 2026.",
+            "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+            "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+            "url": {
+              "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029377&episodeid=1",
+              "report": "https://www.gdacs.org/report.aspx?eventid=1029377&episodeid=1&eventtype=WF",
+              "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029377"
+            },
+            "alertlevel": "Green",
+            "alertscore": 1,
+            "episodealertlevel": "Green",
+            "episodealertscore": 0.5,
+            "istemporary": "false",
+            "iscurrent": "true",
+            "country": "Canada",
+            "fromdate": "2026-07-02T00:00:00",
+            "todate": "2026-07-07T00:00:00",
+            "datemodified": "2026-07-08T03:08:13",
+            "iso3": "CAN",
+            "source": "GWIS",
+            "sourceid": "",
+            "polygonlabel": "Centroid",
+            "Class": "Point_Centroid",
+            "affectedcountries": [
+              {
+                "iso2": "CA",
+                "iso3": "CAN",
+                "countryname": "Canada"
+              }
+            ],
+            "severitydata": {
+              "severity": 5547,
+              "severitytext": "Green impact for forestfire in 5547 ha",
+              "severityunit": "ha"
+            }
+          }
+        }
       }
     ],
     "state": "escalated",
@@ -5103,9 +5185,14 @@
         "kind": "re-merged",
         "atUtc": "2026-07-08T08:08:51.878Z",
         "description": "Re-merged with Incident gdacs-wildfire-2026-07-02-1029377 -- both now match the same window."
+      },
+      {
+        "kind": "re-merged",
+        "atUtc": "2026-07-08T08:24:43.763Z",
+        "description": "Re-merged with Incident gdacs-wildfire-2026-07-02-1029377 -- both now match the same window."
       }
     ],
-    "narrative": "Forest fires in Canada, tracked by GDACS at Green alert level, grouping seven related fire events; a correction has since been applied to this record."
+    "narrative": "Forest fires in Canada, first detected 26 June 2026, with further related alerts on 2 July."
   },
   {
     "id": "gdacs-wildfire-2026-06-26-1029357",
@@ -7617,14 +7704,14 @@
         "sourceIds": [
           "1001279"
         ],
-        "episodeId": "29",
-        "glide": "TC-2026-000099-GUM",
+        "episodeId": "30",
+        "glide": null,
         "occurredAtUtc": "2026-07-01T00:00:00.000Z",
         "place": "Tropical Cyclone BAVI-26",
         "location": {
           "type": "Point",
           "coordinates": [
-            134.1,
+            133,
             16.9
           ]
         },
@@ -7635,32 +7722,32 @@
         "rawPayload": {
           "type": "Feature",
           "bbox": [
-            134.1,
+            133,
             16.9,
-            134.1,
+            133,
             16.9
           ],
           "geometry": {
             "type": "Point",
             "coordinates": [
-              134.1,
+              133,
               16.9
             ]
           },
           "properties": {
             "eventtype": "TC",
             "eventid": 1001279,
-            "episodeid": 29,
+            "episodeid": 30,
             "eventname": "BAVI-26",
-            "glide": "TC-2026-000099-GUM",
+            "glide": "",
             "name": "Tropical Cyclone BAVI-26",
             "description": "Tropical Cyclone BAVI-26",
             "htmldescription": "Red Tropical Cyclone BAVI-26 in Guam, Northern Mariana Islands, Japan, Taiwan, China from: 01 Jul 2026  to: 08 Jul 2026 .",
             "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Red/TC.png",
             "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Red/TC.png",
             "url": {
-              "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=TC&eventid=1001279&episodeid=29",
-              "report": "https://www.gdacs.org/report.aspx?eventid=1001279&episodeid=29&eventtype=TC",
+              "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=TC&eventid=1001279&episodeid=30",
+              "report": "https://www.gdacs.org/report.aspx?eventid=1001279&episodeid=30&eventtype=TC",
               "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=TC&eventid=1001279"
             },
             "alertlevel": "Red",
@@ -7671,8 +7758,8 @@
             "iscurrent": "true",
             "country": "Guam, Northern Mariana Islands, Japan, Taiwan, China",
             "fromdate": "2026-07-01T00:00:00",
-            "todate": "2026-07-08T00:00:00",
-            "datemodified": "2026-07-08T07:50:05",
+            "todate": "2026-07-08T06:00:00",
+            "datemodified": "2026-07-08T08:20:05",
             "iso3": "CHN",
             "source": "JTWC",
             "sourceid": "",
@@ -10442,6 +10529,252 @@
             }
           }
         }
+      },
+      {
+        "feed": "gdacs",
+        "hazardType": "Wildfire",
+        "sourceIds": [
+          "1029374"
+        ],
+        "episodeId": "2",
+        "glide": null,
+        "occurredAtUtc": "2026-07-03T00:00:00.000Z",
+        "place": "Forest fires in Canada",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            -72.6112,
+            54.3772
+          ]
+        },
+        "estimate": {
+          "gdacsAlertLevel": "Green",
+          "gdacsIsCurrent": true
+        },
+        "rawPayload": {
+          "type": "Feature",
+          "bbox": [
+            -72.6112,
+            54.3772,
+            -72.6112,
+            54.3772
+          ],
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -72.6112,
+              54.3772
+            ]
+          },
+          "properties": {
+            "eventtype": "WF",
+            "eventid": 1029374,
+            "episodeid": 2,
+            "eventname": "",
+            "glide": "",
+            "name": "Forest fires in Canada",
+            "description": "Forest fires in Canada",
+            "htmldescription": "Green Forest fires in Canada from: 03 Jul 2026 to: 08 Jul 2026.",
+            "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+            "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+            "url": {
+              "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029374&episodeid=2",
+              "report": "https://www.gdacs.org/report.aspx?eventid=1029374&episodeid=2&eventtype=WF",
+              "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029374"
+            },
+            "alertlevel": "Green",
+            "alertscore": 1,
+            "episodealertlevel": "Green",
+            "episodealertscore": 0.5,
+            "istemporary": "false",
+            "iscurrent": "true",
+            "country": "Canada",
+            "fromdate": "2026-07-03T00:00:00",
+            "todate": "2026-07-08T00:00:00",
+            "datemodified": "2026-07-08T07:04:59",
+            "iso3": "CAN",
+            "source": "GWIS",
+            "sourceid": "",
+            "polygonlabel": "Centroid",
+            "Class": "Point_Centroid",
+            "affectedcountries": [
+              {
+                "iso2": "CA",
+                "iso3": "CAN",
+                "countryname": "Canada"
+              }
+            ],
+            "severitydata": {
+              "severity": 5105,
+              "severitytext": "Green impact for forestfire in 5105 ha",
+              "severityunit": "ha"
+            }
+          }
+        }
+      },
+      {
+        "feed": "gdacs",
+        "hazardType": "Wildfire",
+        "sourceIds": [
+          "1029373"
+        ],
+        "episodeId": "2",
+        "glide": null,
+        "occurredAtUtc": "2026-07-03T00:00:00.000Z",
+        "place": "Forest fires in Canada",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            -72.7773,
+            53.9065
+          ]
+        },
+        "estimate": {
+          "gdacsAlertLevel": "Green",
+          "gdacsIsCurrent": true
+        },
+        "rawPayload": {
+          "type": "Feature",
+          "bbox": [
+            -72.7773,
+            53.9065,
+            -72.7773,
+            53.9065
+          ],
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -72.7773,
+              53.9065
+            ]
+          },
+          "properties": {
+            "eventtype": "WF",
+            "eventid": 1029373,
+            "episodeid": 2,
+            "eventname": "",
+            "glide": "",
+            "name": "Forest fires in Canada",
+            "description": "Forest fires in Canada",
+            "htmldescription": "Green Forest fires in Canada from: 03 Jul 2026 to: 08 Jul 2026.",
+            "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+            "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+            "url": {
+              "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029373&episodeid=2",
+              "report": "https://www.gdacs.org/report.aspx?eventid=1029373&episodeid=2&eventtype=WF",
+              "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029373"
+            },
+            "alertlevel": "Green",
+            "alertscore": 1,
+            "episodealertlevel": "Green",
+            "episodealertscore": 0.5,
+            "istemporary": "false",
+            "iscurrent": "true",
+            "country": "Canada",
+            "fromdate": "2026-07-03T00:00:00",
+            "todate": "2026-07-08T00:00:00",
+            "datemodified": "2026-07-08T07:03:00",
+            "iso3": "CAN",
+            "source": "GWIS",
+            "sourceid": "",
+            "polygonlabel": "Centroid",
+            "Class": "Point_Centroid",
+            "affectedcountries": [
+              {
+                "iso2": "CA",
+                "iso3": "CAN",
+                "countryname": "Canada"
+              }
+            ],
+            "severitydata": {
+              "severity": 5095,
+              "severitytext": "Green impact for forestfire in 5095 ha",
+              "severityunit": "ha"
+            }
+          }
+        }
+      },
+      {
+        "feed": "gdacs",
+        "hazardType": "Wildfire",
+        "sourceIds": [
+          "1029376"
+        ],
+        "episodeId": "1",
+        "glide": null,
+        "occurredAtUtc": "2026-07-03T00:00:00.000Z",
+        "place": "Forest fires in Canada",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            -71.6921,
+            53.8041
+          ]
+        },
+        "estimate": {
+          "gdacsAlertLevel": "Green",
+          "gdacsIsCurrent": true
+        },
+        "rawPayload": {
+          "type": "Feature",
+          "bbox": [
+            -71.6921,
+            53.8041,
+            -71.6921,
+            53.8041
+          ],
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -71.6921,
+              53.8041
+            ]
+          },
+          "properties": {
+            "eventtype": "WF",
+            "eventid": 1029376,
+            "episodeid": 1,
+            "eventname": "",
+            "glide": "",
+            "name": "Forest fires in Canada",
+            "description": "Forest fires in Canada",
+            "htmldescription": "Green Forest fires in Canada from: 03 Jul 2026 to: 07 Jul 2026.",
+            "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+            "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+            "url": {
+              "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029376&episodeid=1",
+              "report": "https://www.gdacs.org/report.aspx?eventid=1029376&episodeid=1&eventtype=WF",
+              "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029376"
+            },
+            "alertlevel": "Green",
+            "alertscore": 1,
+            "episodealertlevel": "Green",
+            "episodealertscore": 0.5,
+            "istemporary": "false",
+            "iscurrent": "true",
+            "country": "Canada",
+            "fromdate": "2026-07-03T00:00:00",
+            "todate": "2026-07-07T00:00:00",
+            "datemodified": "2026-07-08T07:04:31",
+            "iso3": "CAN",
+            "source": "GWIS",
+            "sourceid": "",
+            "polygonlabel": "Centroid",
+            "Class": "Point_Centroid",
+            "affectedcountries": [
+              {
+                "iso2": "CA",
+                "iso3": "CAN",
+                "countryname": "Canada"
+              }
+            ],
+            "severitydata": {
+              "severity": 5838,
+              "severitytext": "Green impact for forestfire in 5838 ha",
+              "severityunit": "ha"
+            }
+          }
+        }
       }
     ],
     "state": "escalated",
@@ -10474,9 +10807,14 @@
         "kind": "re-merged",
         "atUtc": "2026-07-08T08:08:51.878Z",
         "description": "Re-merged with Incident gdacs-wildfire-2026-07-03-1029374 -- both now match the same window."
+      },
+      {
+        "kind": "re-merged",
+        "atUtc": "2026-07-08T08:24:43.763Z",
+        "description": "Re-merged with Incident gdacs-wildfire-2026-07-03-1029374 -- both now match the same window."
       }
     ],
-    "narrative": "Forest fires in Canada, tracked by GDACS at Green alert level, grouping fourteen related fire events; a correction has since been applied to this record."
+    "narrative": "Forest fires in Canada, first detected 3 July 2026, with further related alerts through 5 July."
   },
   {
     "id": "gdacs-wildfire-2026-07-03-1029311",
@@ -12301,5 +12639,80 @@
     "impactEstimates": [],
     "erratumLog": [],
     "narrative": "Flooding in Georgia, reported by ReliefWeb on 27 June 2026."
+  },
+  {
+    "id": "usgs-earthquake-2026-07-08-us6000tavs",
+    "hazardType": "Earthquake",
+    "memberEvents": [
+      {
+        "feed": "usgs",
+        "hazardType": "Earthquake",
+        "sourceIds": [
+          "us6000tavs"
+        ],
+        "episodeId": null,
+        "glide": null,
+        "occurredAtUtc": "2026-07-08T07:35:51.628Z",
+        "place": "8 km ENE of Noda, Japan",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            141.8982,
+            40.1437,
+            58.199
+          ]
+        },
+        "estimate": {
+          "magnitude": 4.7,
+          "pagerAlert": null
+        },
+        "rawPayload": {
+          "type": "Feature",
+          "properties": {
+            "mag": 4.7,
+            "place": "8 km ENE of Noda, Japan",
+            "time": 1783496151628,
+            "updated": 1783499006040,
+            "tz": null,
+            "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tavs",
+            "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000tavs.geojson",
+            "felt": null,
+            "cdi": null,
+            "mmi": null,
+            "alert": null,
+            "status": "reviewed",
+            "tsunami": 0,
+            "sig": 340,
+            "net": "us",
+            "code": "6000tavs",
+            "ids": ",us6000tavs,",
+            "sources": ",us,",
+            "types": ",origin,phase-data,",
+            "nst": 53,
+            "dmin": 0.906,
+            "rms": 0.84,
+            "gap": 169,
+            "magType": "mb",
+            "type": "earthquake",
+            "title": "M 4.7 - 8 km ENE of Noda, Japan"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              141.8982,
+              40.1437,
+              58.199
+            ]
+          },
+          "id": "us6000tavs"
+        }
+      }
+    ],
+    "state": "new",
+    "confidenceTier": "single-source (USGS)",
+    "glide": null,
+    "impactEstimates": [],
+    "erratumLog": [],
+    "narrative": "Magnitude 4.7 earthquake near Noda, Japan, at 58 km depth on 8 July."
   }
 ]
