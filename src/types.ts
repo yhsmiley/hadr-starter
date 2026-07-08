@@ -40,6 +40,13 @@ export interface FeedEvent {
   sourceIds: string[];
   /** GDACS only; always null for USGS. */
   episodeId: string | null;
+  /** GLIDE number, when the feed carries one (GDACS: mostly empty per
+   *  feeds/gdacs.md finding 7; ReliefWeb: reliably present per
+   *  feeds/reliefweb.md finding 5; USGS: never). ADR 0001: GLIDE is only
+   *  ever a late-confirmation signal on an already-matched Incident, never
+   *  the primary matching key -- this field is what lets a ReliefWeb
+   *  arrival find and confirm an existing Incident (A3.7). */
+  glide: string | null;
   occurredAtUtc: string; // ISO 8601, UTC
   /** Human-readable location, e.g. USGS's "9 km NNE of Avalon, CA" --
    *  narration needs this without reaching into feed-specific rawPayload. */
@@ -58,6 +65,11 @@ export interface FeedEvent {
      *  -- ADR 0001 matches at Event granularity, so anything else this
      *  codebase reads off a GDACS Event uses the same granularity). */
     gdacsAlertLevel?: "Green" | "Orange" | "Red" | null;
+    /** GDACS's `iscurrent` -- the closing-authority signal for every
+     *  ongoing hazard type (ADR 0003): Cyclone/Flood/Volcano/Drought/
+     *  Wildfire close when GDACS itself marks the event non-current, not
+     *  on a quiet-period timer like Earthquake. */
+    gdacsIsCurrent?: boolean;
   };
   rawPayload: unknown;
 }

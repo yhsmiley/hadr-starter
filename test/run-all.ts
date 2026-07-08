@@ -4,11 +4,15 @@
 import * as fusion from "./fusion.test";
 import * as ingest from "./ingest.test";
 import * as gdacsIngest from "./gdacs-ingest.test";
+import * as v3Fusion from "./v3-fusion.test";
+import * as reliefwebIngest from "./reliefweb-ingest.test";
 
 const tests: Array<[string, () => Promise<void>]> = [
   ["fusion.test.ts", fusion.run],
   ["ingest.test.ts", ingest.run],
   ["gdacs-ingest.test.ts", gdacsIngest.run],
+  ["v3-fusion.test.ts", v3Fusion.run],
+  ["reliefweb-ingest.test.ts", reliefwebIngest.run],
 ];
 
 async function main(): Promise<void> {

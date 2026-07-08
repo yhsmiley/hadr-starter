@@ -1,6 +1,5 @@
 // Fixture source: feeds/gdacs.md's own example payload, plus one
-// Cyclone feature to exercise the V2 eventtype filter (SLICES.md: only
-// eventtype=EQ is live until V3).
+// Cyclone feature to exercise V3's full eventtype taxonomy (ADR 0008).
 import assert from "assert";
 import { readFileSync } from "fs";
 import path from "path";
@@ -18,18 +17,24 @@ export async function run(): Promise<void> {
   try {
     const { events } = await fetchGdacsEvents();
 
-    assert.strictEqual(events.length, 1, "non-earthquake eventtype (TC) must be filtered out in V2");
+    assert.strictEqual(events.length, 2, "V3: every known eventtype is ingested, not just EQ");
 
-    const [event] = events;
-    assert.strictEqual(event.feed, "gdacs");
-    assert.strictEqual(event.hazardType, "Earthquake");
-    assert.deepStrictEqual(event.sourceIds, ["1550421"], "eventid, not episodeid, is the identity (ADR 0001)");
-    assert.strictEqual(event.episodeId, "1716583");
-    assert.strictEqual(event.place, "Earthquake in Japan");
-    assert.strictEqual(event.estimate.magnitude, 4.6, "magnitude must be parsed out of htmldescription");
-    assert.strictEqual(event.estimate.gdacsAlertLevel, "Green", "must use event-level alertlevel, never episodealertlevel");
+    const [quake, cyclone] = events;
+    assert.strictEqual(quake.feed, "gdacs");
+    assert.strictEqual(quake.hazardType, "Earthquake");
+    assert.deepStrictEqual(quake.sourceIds, ["1550421"], "eventid, not episodeid, is the identity (ADR 0001)");
+    assert.strictEqual(quake.episodeId, "1716583");
+    assert.strictEqual(quake.place, "Earthquake in Japan");
+    assert.strictEqual(quake.estimate.magnitude, 4.6, "magnitude must be parsed out of htmldescription");
+    assert.strictEqual(quake.estimate.gdacsAlertLevel, "Green", "must use event-level alertlevel, never episodealertlevel");
+    assert.strictEqual(quake.estimate.gdacsIsCurrent, true);
+    assert.strictEqual(quake.glide, null, "empty glide string must normalize to null");
     // Naive-but-UTC (feeds/README.md finding 7) -- must not be parsed as local time.
-    assert.strictEqual(event.occurredAtUtc, "2026-07-06T11:29:36.000Z");
+    assert.strictEqual(quake.occurredAtUtc, "2026-07-06T11:29:36.000Z");
+
+    assert.strictEqual(cyclone.hazardType, "Cyclone", "ADR 0008: TC maps to the Cyclone hazard type");
+    assert.strictEqual(cyclone.estimate.magnitude, undefined, "cyclones carry no 'M x.x' magnitude text");
+    assert.strictEqual(cyclone.estimate.gdacsAlertLevel, "Red", "must use event-level alertlevel, never episodealertlevel");
   } finally {
     global.fetch = realFetch;
   }

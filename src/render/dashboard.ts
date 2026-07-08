@@ -8,7 +8,7 @@
 // Color use follows the dataviz skill's method: status colors (good/
 // warning/critical) encode Incident *state* and nothing else; the fixed
 // categorical order encodes *feed identity* (USGS = slot 1 blue, GDACS =
-// slot 2 aqua -- ReliefWeb takes slot 3 in V3); confidence tier gets a
+// slot 2 aqua, ReliefWeb = slot 3 yellow); confidence tier gets a
 // neutral outline treatment so it's never mistaken for either. Every
 // color pairs with a text label (the "relief rule" for the low-contrast
 // slots) -- nothing here means anything by color alone.
@@ -22,8 +22,32 @@ function escapeHtml(s: string): string {
     .replace(/"/g, "&quot;");
 }
 
+/** V3: not every hazard type carries a magnitude (only Earthquake does).
+ *  ADR 0002's "sorted by severity only" promise needs a comparable value
+ *  across hazard types, so GDACS's own alert level substitutes as a
+ *  proxy when magnitude is absent -- a judgment call (implementation-
+ *  notes.md), not a spec: the two scales aren't truly commensurable, but
+ *  this keeps a Red-alert wildfire from silently sorting as "0 severity"
+ *  behind every earthquake. */
+const GDACS_ALERT_SEVERITY: Record<string, number> = { Green: 2, Orange: 5, Red: 8 };
+
+function magnitudeOf(incident: Incident): number | null {
+  const magnitudes = incident.memberEvents
+    .map((e) => e.estimate.magnitude)
+    .filter((m): m is number => m !== undefined);
+  return magnitudes.length > 0 ? Math.max(...magnitudes) : null;
+}
+
 function severity(incident: Incident): number {
-  return Math.max(0, ...incident.memberEvents.map((e) => e.estimate.magnitude ?? 0));
+  const magnitude = magnitudeOf(incident);
+  if (magnitude !== null) return magnitude;
+  const alertLevels = incident.memberEvents
+    .map((e) => e.estimate.gdacsAlertLevel)
+    .filter((a): a is "Green" | "Orange" | "Red" => !!a);
+  if (alertLevels.length > 0) {
+    return Math.max(...alertLevels.map((a) => GDACS_ALERT_SEVERITY[a] ?? 0));
+  }
+  return 0;
 }
 
 function formatSgt(iso: string): string {
@@ -91,7 +115,7 @@ function renderMemberRow(event: Incident["memberEvents"][number]): string {
     <tr>
       <td><span class="feed-chip feed-${event.feed}">${event.feed.toUpperCase()}</span></td>
       <td class="tabular">${formatSgt(event.occurredAtUtc)}</td>
-      <td class="tabular">M ${event.estimate.magnitude?.toFixed(1) ?? "?"}</td>
+      <td class="tabular">${event.estimate.magnitude !== undefined ? `M ${event.estimate.magnitude.toFixed(1)}` : "—"}</td>
       <td class="tabular">${formatCoords(event.location.coordinates)}</td>
       <td>${detail}</td>
     </tr>`;
@@ -131,8 +155,17 @@ function narrativeFor(incident: Incident): string {
   return incident.narrative ?? "(awaiting narration)";
 }
 
+/** Only Earthquake carries a real magnitude -- every other hazard type
+ *  shows its hazard type instead of a fabricated "M 0.0" (a real display
+ *  bug caught by rendering V3's live multi-hazard output and looking at
+ *  it, not just by the numbers compiling). */
+function renderSeverityBadge(incident: Incident): string {
+  const magnitude = magnitudeOf(incident);
+  if (magnitude !== null) return `<span class="mag">M&nbsp;${magnitude.toFixed(1)}</span>`;
+  return `<span class="hazard-type">${escapeHtml(incident.hazardType)}</span>`;
+}
+
 function renderIncident(incident: Incident): string {
-  const mag = severity(incident);
   const anchor = incident.memberEvents[incident.memberEvents.length - 1];
   const closed = incident.state === "closed" ? " is-closed" : "";
   return `
@@ -140,7 +173,7 @@ function renderIncident(incident: Incident): string {
       <header>
         <span class="badge state-badge state-${incident.state}"><span class="dot"></span>${STATE_LABEL[incident.state]}</span>
         <span class="badge tier-badge">${escapeHtml(incident.confidenceTier)}</span>
-        <span class="mag">M&nbsp;${mag.toFixed(1)}</span>
+        ${renderSeverityBadge(incident)}
         <span class="place">${escapeHtml(anchor.place)}</span>
       </header>
       <p class="narrative">${escapeHtml(narrativeFor(incident))}</p>
@@ -183,6 +216,12 @@ export function renderDashboard(params: {
     --feed-usgs-tint: #e7f0fc;
     --feed-gdacs:     #1baf7a;
     --feed-gdacs-tint:#e3f7ee;
+    /* Categorical slot 3 (yellow). Raw #eda100 is the palette's own hue
+       but text-contrast-unsafe as small chip text (same "relief rule" as
+       the status colors below) -- substituted with the same text-safe
+       amber step already used for --status-escalated. */
+    --feed-reliefweb:      #9c6a00;
+    --feed-reliefweb-tint: #fdf0d9;
 
     /* Status hues per dataviz skill's fixed status palette. The raw
        "warning" (#fab219) and "good" (#0ca30c) hexes are text-contrast-
@@ -223,6 +262,10 @@ export function renderDashboard(params: {
       --feed-usgs-tint: #152841;
       --feed-gdacs:     #199e70;
       --feed-gdacs-tint:#0f2b21;
+      /* Categorical slot 3's own dark step -- validated as a set at
+         >=3:1 on the dark surface (references/palette.md), used directly. */
+      --feed-reliefweb:      #c98500;
+      --feed-reliefweb-tint: #332708;
 
       /* Dark surface is far more forgiving to the raw status hexes
          (documented 9.49 / 5.19 contrast) -- used directly here, unlike
@@ -338,6 +381,7 @@ export function renderDashboard(params: {
   }
 
   .mag { font-weight: 700; font-variant-numeric: tabular-nums; margin-left: 2px; }
+  .hazard-type { font-weight: 700; margin-left: 2px; }
   .place { color: var(--ink-secondary); }
 
   .narrative { margin: 0 0 10px; line-height: 1.5; }
@@ -354,6 +398,7 @@ export function renderDashboard(params: {
   }
   .feed-chip.feed-usgs, .feed-usgs .feed-chip { background: var(--feed-usgs-tint); color: var(--feed-usgs); }
   .feed-chip.feed-gdacs, .feed-gdacs .feed-chip { background: var(--feed-gdacs-tint); color: var(--feed-gdacs); }
+  .feed-chip.feed-reliefweb, .feed-reliefweb .feed-chip { background: var(--feed-reliefweb-tint); color: var(--feed-reliefweb); }
 
   .erratum {
     background: var(--erratum-tint);

@@ -14,7 +14,7 @@ const DASHBOARD_PATH = path.join(__dirname, "..", "..", "..", "dashboard.html");
 // One health line per feed with a live A7 job. Grows alongside the
 // ingestion adapters, same rollout order as SLICES.md (V1: usgs; V2:
 // + gdacs; V3: + reliefweb).
-const LIVE_FEEDS: Feed[] = ["usgs", "gdacs"];
+const LIVE_FEEDS: Feed[] = ["usgs", "gdacs", "reliefweb"];
 
 async function readHealthOrPending(feed: Feed, nowUtc: string): Promise<FeedHealth> {
   return (
