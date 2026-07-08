@@ -1,130 +1,467 @@
 [
   {
-    "id": "usgs-eq-2026-07-07-us6000takw",
+    "id": "gdacs-eq-2026-07-07-1550528",
     "hazardType": "Earthquake",
     "memberEvents": [
       {
-        "feed": "usgs",
+        "feed": "gdacs",
         "hazardType": "Earthquake",
         "sourceIds": [
-          "us6000takw"
+          "1550528"
         ],
-        "episodeId": null,
-        "occurredAtUtc": "2026-07-07T05:00:43.964Z",
-        "place": "Reykjanes Ridge",
+        "episodeId": "1716719",
+        "occurredAtUtc": "2026-07-07T01:26:45.000Z",
+        "place": "Earthquake in Chile",
         "location": {
           "type": "Point",
           "coordinates": [
-            -30.2505,
-            59.4631,
-            10
+            -66.7593,
+            -57.3319
           ]
         },
         "estimate": {
-          "magnitude": 5,
-          "pagerAlert": null
+          "magnitude": 5.8,
+          "gdacsAlertLevel": "Green"
         },
         "rawPayload": {
           "type": "Feature",
-          "properties": {
-            "mag": 5,
-            "place": "Reykjanes Ridge",
-            "time": 1783400443964,
-            "updated": 1783401356040,
-            "tz": null,
-            "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000takw",
-            "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000takw.geojson",
-            "felt": null,
-            "cdi": null,
-            "mmi": null,
-            "alert": null,
-            "status": "reviewed",
-            "tsunami": 0,
-            "sig": 385,
-            "net": "us",
-            "code": "6000takw",
-            "ids": ",us6000takw,",
-            "sources": ",us,",
-            "types": ",origin,phase-data,",
-            "nst": 81,
-            "dmin": 6.751,
-            "rms": 0.72,
-            "gap": 54,
-            "magType": "mb",
-            "type": "earthquake",
-            "title": "M 5.0 - Reykjanes Ridge"
-          },
+          "bbox": [
+            -66.7593,
+            -57.3319,
+            -66.7593,
+            -57.3319
+          ],
           "geometry": {
             "type": "Point",
             "coordinates": [
-              -30.2505,
-              59.4631,
-              10
+              -66.7593,
+              -57.3319
             ]
           },
-          "id": "us6000takw"
+          "properties": {
+            "eventtype": "EQ",
+            "eventid": 1550528,
+            "episodeid": 1716719,
+            "eventname": "",
+            "glide": "",
+            "name": "Earthquake in Chile",
+            "description": "Earthquake in Chile",
+            "htmldescription": "Green M 5.8 Earthquake in Chile at: 07 Jul 2026 01:26:45.",
+            "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+            "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+            "url": {
+              "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=EQ&eventid=1550528&episodeid=1716719",
+              "report": "https://www.gdacs.org/report.aspx?eventid=1550528&episodeid=1716719&eventtype=EQ",
+              "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=EQ&eventid=1550528"
+            },
+            "alertlevel": "Green",
+            "alertscore": 1,
+            "episodealertlevel": "Green",
+            "episodealertscore": 0,
+            "istemporary": "false",
+            "iscurrent": "true",
+            "country": "Chile",
+            "fromdate": "2026-07-07T01:26:45",
+            "todate": "2026-07-07T01:26:45",
+            "datemodified": "2026-07-08T02:08:33",
+            "iso3": "CHL",
+            "source": "NEIC",
+            "sourceid": "",
+            "polygonlabel": "Centroid",
+            "Class": "Point_Centroid",
+            "affectedcountries": [
+              {
+                "iso2": "CL",
+                "iso3": "CHL",
+                "countryname": "Chile"
+              }
+            ],
+            "severitydata": {
+              "severity": 5.8,
+              "severitytext": "Magnitude 5.8M, Depth:10km",
+              "severityunit": "M"
+            }
+          }
+        }
+      },
+      {
+        "feed": "gdacs",
+        "hazardType": "Earthquake",
+        "sourceIds": [
+          "1550638"
+        ],
+        "episodeId": "1716821",
+        "occurredAtUtc": "2026-07-07T17:39:56.000Z",
+        "place": "Earthquake in Drake Passage",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            -66.8183,
+            -57.3541
+          ]
+        },
+        "estimate": {
+          "magnitude": 4.9,
+          "gdacsAlertLevel": "Green"
+        },
+        "rawPayload": {
+          "type": "Feature",
+          "bbox": [
+            -66.8183,
+            -57.3541,
+            -66.8183,
+            -57.3541
+          ],
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -66.8183,
+              -57.3541
+            ]
+          },
+          "properties": {
+            "eventtype": "EQ",
+            "eventid": 1550638,
+            "episodeid": 1716821,
+            "eventname": "",
+            "glide": "",
+            "name": "Earthquake in Drake Passage",
+            "description": "Earthquake in Drake Passage",
+            "htmldescription": "Green M 4.9 Earthquake in Drake Passage at: 07 Jul 2026 17:39:56.",
+            "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+            "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+            "url": {
+              "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=EQ&eventid=1550638&episodeid=1716821",
+              "report": "https://www.gdacs.org/report.aspx?eventid=1550638&episodeid=1716821&eventtype=EQ",
+              "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=EQ&eventid=1550638"
+            },
+            "alertlevel": "Green",
+            "alertscore": 1,
+            "episodealertlevel": "Green",
+            "episodealertscore": 0,
+            "istemporary": "false",
+            "iscurrent": "true",
+            "country": "Drake Passage",
+            "fromdate": "2026-07-07T17:39:56",
+            "todate": "2026-07-07T17:39:56",
+            "datemodified": "2026-07-07T18:22:42",
+            "iso3": "",
+            "source": "NEIC",
+            "sourceid": "",
+            "polygonlabel": "Centroid",
+            "Class": "Point_Centroid",
+            "affectedcountries": [],
+            "severitydata": {
+              "severity": 4.9,
+              "severitytext": "Magnitude 4.9M, Depth:10km",
+              "severityunit": "M"
+            }
+          }
         }
       },
       {
         "feed": "usgs",
         "hazardType": "Earthquake",
         "sourceIds": [
-          "us6000tal2"
+          "us6000tar3"
         ],
         "episodeId": null,
-        "occurredAtUtc": "2026-07-07T05:55:40.352Z",
-        "place": "Reykjanes Ridge",
+        "occurredAtUtc": "2026-07-07T17:39:56.121Z",
+        "place": "298 km SSE of Ushuaia, Argentina",
         "location": {
           "type": "Point",
           "coordinates": [
-            -30.2483,
-            59.5106,
+            -66.8183,
+            -57.3541,
             10
           ]
         },
         "estimate": {
-          "magnitude": 5.3,
+          "magnitude": 4.9,
           "pagerAlert": null
         },
         "rawPayload": {
           "type": "Feature",
           "properties": {
-            "mag": 5.3,
-            "place": "Reykjanes Ridge",
-            "time": 1783403740352,
-            "updated": 1783404784040,
+            "mag": 4.9,
+            "place": "298 km SSE of Ushuaia, Argentina",
+            "time": 1783445996121,
+            "updated": 1783448425040,
             "tz": null,
-            "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tal2",
-            "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000tal2.geojson",
+            "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tar3",
+            "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000tar3.geojson",
             "felt": null,
             "cdi": null,
             "mmi": null,
             "alert": null,
             "status": "reviewed",
             "tsunami": 0,
-            "sig": 432,
+            "sig": 369,
             "net": "us",
-            "code": "6000tal2",
-            "ids": ",us6000tal2,",
+            "code": "6000tar3",
+            "ids": ",us6000tar3,",
             "sources": ",us,",
             "types": ",origin,phase-data,",
-            "nst": 80,
-            "dmin": 6.711,
-            "rms": 0.68,
-            "gap": 54,
-            "magType": "mww",
+            "nst": 29,
+            "dmin": 2.47,
+            "rms": 0.87,
+            "gap": 133,
+            "magType": "mb",
             "type": "earthquake",
-            "title": "M 5.3 - Reykjanes Ridge"
+            "title": "M 4.9 - 298 km SSE of Ushuaia, Argentina"
           },
           "geometry": {
             "type": "Point",
             "coordinates": [
-              -30.2483,
-              59.5106,
+              -66.8183,
+              -57.3541,
               10
             ]
           },
-          "id": "us6000tal2"
+          "id": "us6000tar3"
+        }
+      }
+    ],
+    "state": "escalated",
+    "confidenceTier": "shared-sensor (USGS+GDACS)",
+    "glide": null,
+    "impactEstimates": [
+      {
+        "source": "gdacs",
+        "label": "Alert level",
+        "value": "Green"
+      }
+    ],
+    "erratumLog": [],
+    "narrative": null
+  },
+  {
+    "id": "gdacs-eq-2026-07-07-1550554",
+    "hazardType": "Earthquake",
+    "memberEvents": [
+      {
+        "feed": "gdacs",
+        "hazardType": "Earthquake",
+        "sourceIds": [
+          "1550554"
+        ],
+        "episodeId": "1716731",
+        "occurredAtUtc": "2026-07-07T05:00:43.000Z",
+        "place": "Earthquake in Reykjanes Ridge",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            -30.2505,
+            59.4631
+          ]
+        },
+        "estimate": {
+          "magnitude": 5,
+          "gdacsAlertLevel": "Green"
+        },
+        "rawPayload": {
+          "type": "Feature",
+          "bbox": [
+            -30.2505,
+            59.4631,
+            -30.2505,
+            59.4631
+          ],
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -30.2505,
+              59.4631
+            ]
+          },
+          "properties": {
+            "eventtype": "EQ",
+            "eventid": 1550554,
+            "episodeid": 1716731,
+            "eventname": "",
+            "glide": "",
+            "name": "Earthquake in Reykjanes Ridge",
+            "description": "Earthquake in Reykjanes Ridge",
+            "htmldescription": "Green M 5 Earthquake in Reykjanes Ridge at: 07 Jul 2026 05:00:43.",
+            "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+            "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+            "url": {
+              "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=EQ&eventid=1550554&episodeid=1716731",
+              "report": "https://www.gdacs.org/report.aspx?eventid=1550554&episodeid=1716731&eventtype=EQ",
+              "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=EQ&eventid=1550554"
+            },
+            "alertlevel": "Green",
+            "alertscore": 1,
+            "episodealertlevel": "Green",
+            "episodealertscore": 0,
+            "istemporary": "false",
+            "iscurrent": "true",
+            "country": "Reykjanes Ridge",
+            "fromdate": "2026-07-07T05:00:43",
+            "todate": "2026-07-07T05:00:43",
+            "datemodified": "2026-07-07T05:18:23",
+            "iso3": "",
+            "source": "NEIC",
+            "sourceid": "",
+            "polygonlabel": "Centroid",
+            "Class": "Point_Centroid",
+            "affectedcountries": [],
+            "severitydata": {
+              "severity": 5,
+              "severitytext": "Magnitude 5M, Depth:10km",
+              "severityunit": "M"
+            }
+          }
+        }
+      },
+      {
+        "feed": "gdacs",
+        "hazardType": "Earthquake",
+        "sourceIds": [
+          "1550559"
+        ],
+        "episodeId": "1716735",
+        "occurredAtUtc": "2026-07-07T05:55:40.000Z",
+        "place": "Earthquake in Reykjanes Ridge",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            -30.2483,
+            59.5106
+          ]
+        },
+        "estimate": {
+          "magnitude": 5.3,
+          "gdacsAlertLevel": "Green"
+        },
+        "rawPayload": {
+          "type": "Feature",
+          "bbox": [
+            -30.2483,
+            59.5106,
+            -30.2483,
+            59.5106
+          ],
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -30.2483,
+              59.5106
+            ]
+          },
+          "properties": {
+            "eventtype": "EQ",
+            "eventid": 1550559,
+            "episodeid": 1716735,
+            "eventname": "",
+            "glide": "",
+            "name": "Earthquake in Reykjanes Ridge",
+            "description": "Earthquake in Reykjanes Ridge",
+            "htmldescription": "Green M 5.3 Earthquake in Reykjanes Ridge at: 07 Jul 2026 05:55:40.",
+            "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+            "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+            "url": {
+              "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=EQ&eventid=1550559&episodeid=1716735",
+              "report": "https://www.gdacs.org/report.aspx?eventid=1550559&episodeid=1716735&eventtype=EQ",
+              "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=EQ&eventid=1550559"
+            },
+            "alertlevel": "Green",
+            "alertscore": 1,
+            "episodealertlevel": "Green",
+            "episodealertscore": 0,
+            "istemporary": "false",
+            "iscurrent": "true",
+            "country": "Reykjanes Ridge",
+            "fromdate": "2026-07-07T05:55:40",
+            "todate": "2026-07-07T05:55:40",
+            "datemodified": "2026-07-07T06:16:23",
+            "iso3": "",
+            "source": "NEIC",
+            "sourceid": "",
+            "polygonlabel": "Centroid",
+            "Class": "Point_Centroid",
+            "affectedcountries": [],
+            "severitydata": {
+              "severity": 5.3,
+              "severitytext": "Magnitude 5.3M, Depth:10km",
+              "severityunit": "M"
+            }
+          }
+        }
+      },
+      {
+        "feed": "gdacs",
+        "hazardType": "Earthquake",
+        "sourceIds": [
+          "1550574"
+        ],
+        "episodeId": "1716751",
+        "occurredAtUtc": "2026-07-07T08:30:56.000Z",
+        "place": "Earthquake in Reykjanes Ridge",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            -30.3683,
+            59.4768
+          ]
+        },
+        "estimate": {
+          "magnitude": 5,
+          "gdacsAlertLevel": "Green"
+        },
+        "rawPayload": {
+          "type": "Feature",
+          "bbox": [
+            -30.3683,
+            59.4768,
+            -30.3683,
+            59.4768
+          ],
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -30.3683,
+              59.4768
+            ]
+          },
+          "properties": {
+            "eventtype": "EQ",
+            "eventid": 1550574,
+            "episodeid": 1716751,
+            "eventname": "",
+            "glide": "",
+            "name": "Earthquake in Reykjanes Ridge",
+            "description": "Earthquake in Reykjanes Ridge",
+            "htmldescription": "Green M 5 Earthquake in Reykjanes Ridge at: 07 Jul 2026 08:30:56.",
+            "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+            "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+            "url": {
+              "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=EQ&eventid=1550574&episodeid=1716751",
+              "report": "https://www.gdacs.org/report.aspx?eventid=1550574&episodeid=1716751&eventtype=EQ",
+              "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=EQ&eventid=1550574"
+            },
+            "alertlevel": "Green",
+            "alertscore": 1,
+            "episodealertlevel": "Green",
+            "episodealertscore": 0,
+            "istemporary": "false",
+            "iscurrent": "true",
+            "country": "Reykjanes Ridge",
+            "fromdate": "2026-07-07T08:30:56",
+            "todate": "2026-07-07T08:30:56",
+            "datemodified": "2026-07-07T08:52:44",
+            "iso3": "",
+            "source": "NEIC",
+            "sourceid": "",
+            "polygonlabel": "Centroid",
+            "Class": "Point_Centroid",
+            "affectedcountries": [],
+            "severitydata": {
+              "severity": 5,
+              "severitytext": "Magnitude 5M, Depth:10km",
+              "severityunit": "M"
+            }
+          }
         }
       },
       {
@@ -191,16 +528,103 @@
       }
     ],
     "state": "escalated",
-    "confidenceTier": "single-source (USGS)",
+    "confidenceTier": "shared-sensor (USGS+GDACS)",
     "glide": null,
-    "impactEstimates": [],
+    "impactEstimates": [
+      {
+        "source": "gdacs",
+        "label": "Alert level",
+        "value": "Green"
+      }
+    ],
     "erratumLog": [],
-    "narrative": "A magnitude 5.3 earthquake struck the Reykjanes Ridge on 7 July, part of a sequence that includes additional aftershocks."
+    "narrative": null
   },
   {
-    "id": "usgs-eq-2026-07-07-us6000talg",
+    "id": "gdacs-eq-2026-07-07-1550568",
     "hazardType": "Earthquake",
     "memberEvents": [
+      {
+        "feed": "gdacs",
+        "hazardType": "Earthquake",
+        "sourceIds": [
+          "1550568"
+        ],
+        "episodeId": "1716745",
+        "occurredAtUtc": "2026-07-07T07:16:26.000Z",
+        "place": "Earthquake in Indonesia",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            127.5573,
+            3.1239
+          ]
+        },
+        "estimate": {
+          "magnitude": 5.4,
+          "gdacsAlertLevel": "Green"
+        },
+        "rawPayload": {
+          "type": "Feature",
+          "bbox": [
+            127.5573,
+            3.1239,
+            127.5573,
+            3.1239
+          ],
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              127.5573,
+              3.1239
+            ]
+          },
+          "properties": {
+            "eventtype": "EQ",
+            "eventid": 1550568,
+            "episodeid": 1716745,
+            "eventname": "",
+            "glide": "",
+            "name": "Earthquake in Indonesia",
+            "description": "Earthquake in Indonesia",
+            "htmldescription": "Green M 5.4 Earthquake in Indonesia at: 07 Jul 2026 07:16:26.",
+            "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+            "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+            "url": {
+              "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=EQ&eventid=1550568&episodeid=1716745",
+              "report": "https://www.gdacs.org/report.aspx?eventid=1550568&episodeid=1716745&eventtype=EQ",
+              "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=EQ&eventid=1550568"
+            },
+            "alertlevel": "Green",
+            "alertscore": 1,
+            "episodealertlevel": "Green",
+            "episodealertscore": 0,
+            "istemporary": "false",
+            "iscurrent": "true",
+            "country": "Indonesia",
+            "fromdate": "2026-07-07T07:16:26",
+            "todate": "2026-07-07T07:16:26",
+            "datemodified": "2026-07-07T09:53:02",
+            "iso3": "IDN",
+            "source": "NEIC",
+            "sourceid": "",
+            "polygonlabel": "Centroid",
+            "Class": "Point_Centroid",
+            "affectedcountries": [
+              {
+                "iso2": "ID",
+                "iso3": "IDN",
+                "countryname": "Indonesia"
+              }
+            ],
+            "severitydata": {
+              "severity": 5.4,
+              "severitytext": "Magnitude 5.4M, Depth:36.821km",
+              "severityunit": "M"
+            }
+          }
+        }
+      },
       {
         "feed": "usgs",
         "hazardType": "Earthquake",
@@ -261,6 +685,87 @@
             ]
           },
           "id": "us6000talg"
+        }
+      },
+      {
+        "feed": "gdacs",
+        "hazardType": "Earthquake",
+        "sourceIds": [
+          "1550615"
+        ],
+        "episodeId": "1716796",
+        "occurredAtUtc": "2026-07-07T14:21:22.000Z",
+        "place": "Earthquake in Indonesia",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            127.2906,
+            3.1116
+          ]
+        },
+        "estimate": {
+          "magnitude": 4.5,
+          "gdacsAlertLevel": "Green"
+        },
+        "rawPayload": {
+          "type": "Feature",
+          "bbox": [
+            127.2906,
+            3.1116,
+            127.2906,
+            3.1116
+          ],
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              127.2906,
+              3.1116
+            ]
+          },
+          "properties": {
+            "eventtype": "EQ",
+            "eventid": 1550615,
+            "episodeid": 1716796,
+            "eventname": "",
+            "glide": "",
+            "name": "Earthquake in Indonesia",
+            "description": "Earthquake in Indonesia",
+            "htmldescription": "Green M 4.5 Earthquake in Indonesia at: 07 Jul 2026 14:21:22.",
+            "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+            "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+            "url": {
+              "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=EQ&eventid=1550615&episodeid=1716796",
+              "report": "https://www.gdacs.org/report.aspx?eventid=1550615&episodeid=1716796&eventtype=EQ",
+              "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=EQ&eventid=1550615"
+            },
+            "alertlevel": "Green",
+            "alertscore": 1,
+            "episodealertlevel": "Green",
+            "episodealertscore": 0,
+            "istemporary": "false",
+            "iscurrent": "true",
+            "country": "Indonesia",
+            "fromdate": "2026-07-07T14:21:22",
+            "todate": "2026-07-07T14:21:22",
+            "datemodified": "2026-07-07T15:05:42",
+            "iso3": "IDN",
+            "source": "NEIC",
+            "sourceid": "",
+            "polygonlabel": "Centroid",
+            "Class": "Point_Centroid",
+            "affectedcountries": [
+              {
+                "iso2": "ID",
+                "iso3": "IDN",
+                "countryname": "Indonesia"
+              }
+            ],
+            "severitydata": {
+              "severity": 4.5,
+              "severitytext": "Magnitude 4.5M, Depth:35km",
+              "severityunit": "M"
+            }
+          }
         }
       },
       {
@@ -327,22 +832,108 @@
       }
     ],
     "state": "escalated",
-    "confidenceTier": "single-source (USGS)",
+    "confidenceTier": "shared-sensor (USGS+GDACS)",
     "glide": null,
     "impactEstimates": [
       {
         "source": "usgs",
         "label": "PAGER alert",
         "value": "green"
+      },
+      {
+        "source": "gdacs",
+        "label": "Alert level",
+        "value": "Green"
       }
     ],
     "erratumLog": [],
-    "narrative": "A magnitude 5.4 earthquake occurred 162 km NNW of Tobelo, Indonesia on 7 July, followed by an aftershock."
+    "narrative": null
   },
   {
-    "id": "usgs-eq-2026-07-07-us6000talr",
+    "id": "gdacs-eq-2026-07-07-1550582",
     "hazardType": "Earthquake",
     "memberEvents": [
+      {
+        "feed": "gdacs",
+        "hazardType": "Earthquake",
+        "sourceIds": [
+          "1550582"
+        ],
+        "episodeId": "1716761",
+        "occurredAtUtc": "2026-07-07T08:41:37.000Z",
+        "place": "Earthquake in Venezuela",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            -62.58,
+            10.7321
+          ]
+        },
+        "estimate": {
+          "magnitude": 4.5,
+          "gdacsAlertLevel": "Green"
+        },
+        "rawPayload": {
+          "type": "Feature",
+          "bbox": [
+            -62.58,
+            10.7321,
+            -62.58,
+            10.7321
+          ],
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -62.58,
+              10.7321
+            ]
+          },
+          "properties": {
+            "eventtype": "EQ",
+            "eventid": 1550582,
+            "episodeid": 1716761,
+            "eventname": "",
+            "glide": "",
+            "name": "Earthquake in Venezuela",
+            "description": "Earthquake in Venezuela",
+            "htmldescription": "Green M 4.5 Earthquake in Venezuela at: 07 Jul 2026 08:41:37.",
+            "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+            "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+            "url": {
+              "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=EQ&eventid=1550582&episodeid=1716761",
+              "report": "https://www.gdacs.org/report.aspx?eventid=1550582&episodeid=1716761&eventtype=EQ",
+              "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=EQ&eventid=1550582"
+            },
+            "alertlevel": "Green",
+            "alertscore": 1,
+            "episodealertlevel": "Green",
+            "episodealertscore": 0,
+            "istemporary": "false",
+            "iscurrent": "true",
+            "country": "Venezuela",
+            "fromdate": "2026-07-07T08:41:37",
+            "todate": "2026-07-07T08:41:37",
+            "datemodified": "2026-07-07T11:03:42",
+            "iso3": "VEN",
+            "source": "NEIC",
+            "sourceid": "",
+            "polygonlabel": "Centroid",
+            "Class": "Point_Centroid",
+            "affectedcountries": [
+              {
+                "iso2": "VE",
+                "iso3": "VEN",
+                "countryname": "Venezuela"
+              }
+            ],
+            "severitydata": {
+              "severity": 4.5,
+              "severitytext": "Magnitude 4.5M, Depth:126.81km",
+              "severityunit": "M"
+            }
+          }
+        }
+      },
       {
         "feed": "usgs",
         "hazardType": "Earthquake",
@@ -406,91 +997,391 @@
         }
       }
     ],
-    "state": "new",
-    "confidenceTier": "single-source (USGS)",
+    "state": "escalated",
+    "confidenceTier": "shared-sensor (USGS+GDACS)",
     "glide": null,
-    "impactEstimates": [],
+    "impactEstimates": [
+      {
+        "source": "gdacs",
+        "label": "Alert level",
+        "value": "Green"
+      }
+    ],
     "erratumLog": [],
-    "narrative": "A magnitude 4.5 earthquake occurred 32 km NE of Yaguaraparo, Venezuela on 7 July."
+    "narrative": null
   },
   {
-    "id": "usgs-eq-2026-07-07-us6000tar3",
+    "id": "gdacs-eq-2026-07-07-1550633",
     "hazardType": "Earthquake",
     "memberEvents": [
+      {
+        "feed": "gdacs",
+        "hazardType": "Earthquake",
+        "sourceIds": [
+          "1550633"
+        ],
+        "episodeId": "1716813",
+        "occurredAtUtc": "2026-07-07T17:25:35.000Z",
+        "place": "Earthquake in British Virgin Is.",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            -64.4759,
+            19.6403
+          ]
+        },
+        "estimate": {
+          "magnitude": 4.7,
+          "gdacsAlertLevel": "Green"
+        },
+        "rawPayload": {
+          "type": "Feature",
+          "bbox": [
+            -64.4759,
+            19.6403,
+            -64.4759,
+            19.6403
+          ],
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -64.4759,
+              19.6403
+            ]
+          },
+          "properties": {
+            "eventtype": "EQ",
+            "eventid": 1550633,
+            "episodeid": 1716813,
+            "eventname": "",
+            "glide": "",
+            "name": "Earthquake in British Virgin Is.",
+            "description": "Earthquake in British Virgin Is.",
+            "htmldescription": "Green M 4.7 Earthquake in British Virgin Is. at: 07 Jul 2026 17:25:35.",
+            "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+            "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+            "url": {
+              "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=EQ&eventid=1550633&episodeid=1716813",
+              "report": "https://www.gdacs.org/report.aspx?eventid=1550633&episodeid=1716813&eventtype=EQ",
+              "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=EQ&eventid=1550633"
+            },
+            "alertlevel": "Green",
+            "alertscore": 1,
+            "episodealertlevel": "Green",
+            "episodealertscore": 0,
+            "istemporary": "false",
+            "iscurrent": "true",
+            "country": "British Virgin Is.",
+            "fromdate": "2026-07-07T17:25:35",
+            "todate": "2026-07-07T17:25:35",
+            "datemodified": "2026-07-07T18:05:42",
+            "iso3": "VGB",
+            "source": "NEIC",
+            "sourceid": "",
+            "polygonlabel": "Centroid",
+            "Class": "Point_Centroid",
+            "affectedcountries": [
+              {
+                "iso2": "VG",
+                "iso3": "VGB",
+                "countryname": "British Virgin Is."
+              }
+            ],
+            "severitydata": {
+              "severity": 4.7,
+              "severitytext": "Magnitude 4.7M, Depth:10km",
+              "severityunit": "M"
+            }
+          }
+        }
+      },
       {
         "feed": "usgs",
         "hazardType": "Earthquake",
         "sourceIds": [
-          "us6000tar3"
+          "pr2026188002",
+          "us6000taqu"
         ],
         "episodeId": null,
-        "occurredAtUtc": "2026-07-07T17:39:56.121Z",
-        "place": "298 km SSE of Ushuaia, Argentina",
+        "occurredAtUtc": "2026-07-07T17:25:39.900Z",
+        "place": "150 km NNE of Cruz Bay, U.S. Virgin Islands",
         "location": {
           "type": "Point",
           "coordinates": [
-            -66.8183,
-            -57.3541,
-            10
+            -64.5113,
+            19.6656,
+            45
           ]
         },
         "estimate": {
-          "magnitude": 4.9,
+          "magnitude": 4.41,
           "pagerAlert": null
         },
         "rawPayload": {
           "type": "Feature",
           "properties": {
-            "mag": 4.9,
-            "place": "298 km SSE of Ushuaia, Argentina",
-            "time": 1783445996121,
-            "updated": 1783448425040,
+            "mag": 4.41,
+            "place": "150 km NNE of Cruz Bay, U.S. Virgin Islands",
+            "time": 1783445139900,
+            "updated": 1783447063801,
             "tz": null,
-            "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tar3",
-            "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000tar3.geojson",
+            "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr2026188002",
+            "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/pr2026188002.geojson",
             "felt": null,
             "cdi": null,
             "mmi": null,
             "alert": null,
             "status": "reviewed",
             "tsunami": 0,
-            "sig": 369,
-            "net": "us",
-            "code": "6000tar3",
-            "ids": ",us6000tar3,",
-            "sources": ",us,",
+            "sig": 299,
+            "net": "pr",
+            "code": "2026188002",
+            "ids": ",us6000taqu,pr2026188002,",
+            "sources": ",us,pr,",
             "types": ",origin,phase-data,",
-            "nst": 29,
-            "dmin": 2.47,
-            "rms": 0.87,
-            "gap": 133,
-            "magType": "mb",
+            "nst": 16,
+            "dmin": 1.1801,
+            "rms": 0.33,
+            "gap": 294,
+            "magType": "md",
             "type": "earthquake",
-            "title": "M 4.9 - 298 km SSE of Ushuaia, Argentina"
+            "title": "M 4.4 - 150 km NNE of Cruz Bay, U.S. Virgin Islands"
           },
           "geometry": {
             "type": "Point",
             "coordinates": [
-              -66.8183,
-              -57.3541,
-              10
+              -64.5113,
+              19.6656,
+              45
             ]
           },
-          "id": "us6000tar3"
+          "id": "pr2026188002"
+        }
+      },
+      {
+        "feed": "usgs",
+        "hazardType": "Earthquake",
+        "sourceIds": [
+          "pr71522953"
+        ],
+        "episodeId": null,
+        "occurredAtUtc": "2026-07-07T20:37:00.890Z",
+        "place": "112 km NE of Cruz Bay, U.S. Virgin Islands",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            -63.9108333333333,
+            18.8975,
+            16.56
+          ]
+        },
+        "estimate": {
+          "magnitude": 2.93,
+          "pagerAlert": null
+        },
+        "rawPayload": {
+          "type": "Feature",
+          "properties": {
+            "mag": 2.93,
+            "place": "112 km NE of Cruz Bay, U.S. Virgin Islands",
+            "time": 1783456620890,
+            "updated": 1783459406240,
+            "tz": null,
+            "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr71522953",
+            "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/pr71522953.geojson",
+            "felt": null,
+            "cdi": null,
+            "mmi": null,
+            "alert": null,
+            "status": "reviewed",
+            "tsunami": 0,
+            "sig": 132,
+            "net": "pr",
+            "code": "71522953",
+            "ids": ",pr71522953,",
+            "sources": ",pr,",
+            "types": ",origin,phase-data,",
+            "nst": 4,
+            "dmin": 0.6174,
+            "rms": 0.29,
+            "gap": 344,
+            "magType": "md",
+            "type": "earthquake",
+            "title": "M 2.9 - 112 km NE of Cruz Bay, U.S. Virgin Islands"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -63.9108333333333,
+              18.8975,
+              16.56
+            ]
+          },
+          "id": "pr71522953"
+        }
+      },
+      {
+        "feed": "usgs",
+        "hazardType": "Earthquake",
+        "sourceIds": [
+          "pr2026189000",
+          "us6000taub"
+        ],
+        "episodeId": null,
+        "occurredAtUtc": "2026-07-08T01:07:04.290Z",
+        "place": "69 km NNE of Cruz Bay, U.S. Virgin Islands",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            -64.6125,
+            18.9381,
+            5
+          ]
+        },
+        "estimate": {
+          "magnitude": 3.67,
+          "pagerAlert": null
+        },
+        "rawPayload": {
+          "type": "Feature",
+          "properties": {
+            "mag": 3.67,
+            "place": "69 km NNE of Cruz Bay, U.S. Virgin Islands",
+            "time": 1783472824290,
+            "updated": 1783474304270,
+            "tz": null,
+            "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr2026189000",
+            "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/pr2026189000.geojson",
+            "felt": null,
+            "cdi": null,
+            "mmi": null,
+            "alert": null,
+            "status": "reviewed",
+            "tsunami": 0,
+            "sig": 207,
+            "net": "pr",
+            "code": "2026189000",
+            "ids": ",us6000taub,pr2026189000,",
+            "sources": ",us,pr,",
+            "types": ",origin,phase-data,",
+            "nst": 21,
+            "dmin": 0.4944,
+            "rms": 0.48,
+            "gap": 255,
+            "magType": "md",
+            "type": "earthquake",
+            "title": "M 3.7 - 69 km NNE of Cruz Bay, U.S. Virgin Islands"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -64.6125,
+              18.9381,
+              5
+            ]
+          },
+          "id": "pr2026189000"
         }
       }
     ],
-    "state": "new",
-    "confidenceTier": "single-source (USGS)",
+    "state": "escalated",
+    "confidenceTier": "shared-sensor (USGS+GDACS)",
     "glide": null,
-    "impactEstimates": [],
+    "impactEstimates": [
+      {
+        "source": "gdacs",
+        "label": "Alert level",
+        "value": "Green"
+      }
+    ],
     "erratumLog": [],
-    "narrative": "A magnitude 4.9 earthquake occurred 298 km SSE of Ushuaia, Argentina on 7 July."
+    "narrative": null
   },
   {
-    "id": "usgs-eq-2026-07-07-us6000tara",
+    "id": "gdacs-eq-2026-07-07-1550648",
     "hazardType": "Earthquake",
     "memberEvents": [
+      {
+        "feed": "gdacs",
+        "hazardType": "Earthquake",
+        "sourceIds": [
+          "1550648"
+        ],
+        "episodeId": "1716833",
+        "occurredAtUtc": "2026-07-07T18:07:41.000Z",
+        "place": "Earthquake in United States",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            -176.2826,
+            52.5711
+          ]
+        },
+        "estimate": {
+          "magnitude": 4.5,
+          "gdacsAlertLevel": "Green"
+        },
+        "rawPayload": {
+          "type": "Feature",
+          "bbox": [
+            -176.2826,
+            52.5711,
+            -176.2826,
+            52.5711
+          ],
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -176.2826,
+              52.5711
+            ]
+          },
+          "properties": {
+            "eventtype": "EQ",
+            "eventid": 1550648,
+            "episodeid": 1716833,
+            "eventname": "",
+            "glide": "",
+            "name": "Earthquake in United States",
+            "description": "Earthquake in United States",
+            "htmldescription": "Green M 4.5 Earthquake in United States at: 07 Jul 2026 18:07:41.",
+            "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+            "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+            "url": {
+              "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=EQ&eventid=1550648&episodeid=1716833",
+              "report": "https://www.gdacs.org/report.aspx?eventid=1550648&episodeid=1716833&eventtype=EQ",
+              "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=EQ&eventid=1550648"
+            },
+            "alertlevel": "Green",
+            "alertscore": 1,
+            "episodealertlevel": "Green",
+            "episodealertscore": 0,
+            "istemporary": "false",
+            "iscurrent": "true",
+            "country": "United States",
+            "fromdate": "2026-07-07T18:07:41",
+            "todate": "2026-07-07T18:07:41",
+            "datemodified": "2026-07-07T19:37:02",
+            "iso3": "USA",
+            "source": "NEIC",
+            "sourceid": "",
+            "polygonlabel": "Centroid",
+            "Class": "Point_Centroid",
+            "affectedcountries": [
+              {
+                "iso2": "US",
+                "iso3": "USA",
+                "countryname": "United States"
+              }
+            ],
+            "severitydata": {
+              "severity": 4.5,
+              "severitytext": "Magnitude 4.5M, Depth:172.427km",
+              "severityunit": "M"
+            }
+          }
+        }
+      },
       {
         "feed": "usgs",
         "hazardType": "Earthquake",
@@ -555,17 +1446,104 @@
         }
       }
     ],
-    "state": "new",
-    "confidenceTier": "single-source (USGS)",
+    "state": "escalated",
+    "confidenceTier": "shared-sensor (USGS+GDACS)",
     "glide": null,
-    "impactEstimates": [],
+    "impactEstimates": [
+      {
+        "source": "gdacs",
+        "label": "Alert level",
+        "value": "Green"
+      }
+    ],
     "erratumLog": [],
-    "narrative": "A magnitude 4.5 earthquake occurred 81 km NNE of Adak, Alaska on 7 July."
+    "narrative": null
   },
   {
-    "id": "usgs-eq-2026-07-07-us6000tarc",
+    "id": "gdacs-eq-2026-07-07-1550639",
     "hazardType": "Earthquake",
     "memberEvents": [
+      {
+        "feed": "gdacs",
+        "hazardType": "Earthquake",
+        "sourceIds": [
+          "1550639"
+        ],
+        "episodeId": "1716823",
+        "occurredAtUtc": "2026-07-07T18:11:32.000Z",
+        "place": "Earthquake in Costa Rica",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            -84.6042,
+            9.8644
+          ]
+        },
+        "estimate": {
+          "magnitude": 5.3,
+          "gdacsAlertLevel": "Green"
+        },
+        "rawPayload": {
+          "type": "Feature",
+          "bbox": [
+            -84.6042,
+            9.8644,
+            -84.6042,
+            9.8644
+          ],
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -84.6042,
+              9.8644
+            ]
+          },
+          "properties": {
+            "eventtype": "EQ",
+            "eventid": 1550639,
+            "episodeid": 1716823,
+            "eventname": "",
+            "glide": "",
+            "name": "Earthquake in Costa Rica",
+            "description": "Earthquake in Costa Rica",
+            "htmldescription": "Green M 5.3 Earthquake in Costa Rica at: 07 Jul 2026 18:11:32.",
+            "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+            "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+            "url": {
+              "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=EQ&eventid=1550639&episodeid=1716823",
+              "report": "https://www.gdacs.org/report.aspx?eventid=1550639&episodeid=1716823&eventtype=EQ",
+              "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=EQ&eventid=1550639"
+            },
+            "alertlevel": "Green",
+            "alertscore": 1,
+            "episodealertlevel": "Green",
+            "episodealertscore": 0,
+            "istemporary": "false",
+            "iscurrent": "true",
+            "country": "Costa Rica",
+            "fromdate": "2026-07-07T18:11:32",
+            "todate": "2026-07-07T18:11:32",
+            "datemodified": "2026-07-07T18:51:43",
+            "iso3": "CRI",
+            "source": "NEIC",
+            "sourceid": "",
+            "polygonlabel": "Centroid",
+            "Class": "Point_Centroid",
+            "affectedcountries": [
+              {
+                "iso2": "CR",
+                "iso3": "CRI",
+                "countryname": "Costa Rica"
+              }
+            ],
+            "severitydata": {
+              "severity": 5.3,
+              "severitytext": "Magnitude 5.3M, Depth:47.784km",
+              "severityunit": "M"
+            }
+          }
+        }
+      },
       {
         "feed": "usgs",
         "hazardType": "Earthquake",
@@ -593,11 +1571,11 @@
             "mag": 5.3,
             "place": "10 km WSW of Orotina, Costa Rica",
             "time": 1783447892787,
-            "updated": 1783481776826,
+            "updated": 1783490360922,
             "tz": null,
             "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tarc",
             "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000tarc.geojson",
-            "felt": 27,
+            "felt": 28,
             "cdi": 4.3,
             "mmi": null,
             "alert": null,
@@ -629,17 +1607,104 @@
         }
       }
     ],
-    "state": "new",
-    "confidenceTier": "single-source (USGS)",
+    "state": "escalated",
+    "confidenceTier": "shared-sensor (USGS+GDACS)",
     "glide": null,
-    "impactEstimates": [],
+    "impactEstimates": [
+      {
+        "source": "gdacs",
+        "label": "Alert level",
+        "value": "Green"
+      }
+    ],
     "erratumLog": [],
-    "narrative": "A magnitude 5.3 earthquake struck 10 km WSW of Orotina, Costa Rica on 7 July."
+    "narrative": null
   },
   {
-    "id": "usgs-eq-2026-07-07-us6000tary",
+    "id": "gdacs-eq-2026-07-07-1550650",
     "hazardType": "Earthquake",
     "memberEvents": [
+      {
+        "feed": "gdacs",
+        "hazardType": "Earthquake",
+        "sourceIds": [
+          "1550650"
+        ],
+        "episodeId": "1716837",
+        "occurredAtUtc": "2026-07-07T19:44:52.000Z",
+        "place": "Earthquake in Indonesia",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            105.0646,
+            -6.7717
+          ]
+        },
+        "estimate": {
+          "magnitude": 5.3,
+          "gdacsAlertLevel": "Green"
+        },
+        "rawPayload": {
+          "type": "Feature",
+          "bbox": [
+            105.0646,
+            -6.7717,
+            105.0646,
+            -6.7717
+          ],
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              105.0646,
+              -6.7717
+            ]
+          },
+          "properties": {
+            "eventtype": "EQ",
+            "eventid": 1550650,
+            "episodeid": 1716837,
+            "eventname": "",
+            "glide": "",
+            "name": "Earthquake in Indonesia",
+            "description": "Earthquake in Indonesia",
+            "htmldescription": "Green M 5.3 Earthquake in Indonesia at: 07 Jul 2026 19:44:52.",
+            "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+            "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+            "url": {
+              "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=EQ&eventid=1550650&episodeid=1716837",
+              "report": "https://www.gdacs.org/report.aspx?eventid=1550650&episodeid=1716837&eventtype=EQ",
+              "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=EQ&eventid=1550650"
+            },
+            "alertlevel": "Green",
+            "alertscore": 1,
+            "episodealertlevel": "Green",
+            "episodealertscore": 0,
+            "istemporary": "false",
+            "iscurrent": "true",
+            "country": "Indonesia",
+            "fromdate": "2026-07-07T19:44:52",
+            "todate": "2026-07-07T19:44:52",
+            "datemodified": "2026-07-07T20:25:02",
+            "iso3": "IDN",
+            "source": "NEIC",
+            "sourceid": "",
+            "polygonlabel": "Centroid",
+            "Class": "Point_Centroid",
+            "affectedcountries": [
+              {
+                "iso2": "ID",
+                "iso3": "IDN",
+                "countryname": "Indonesia"
+              }
+            ],
+            "severitydata": {
+              "severity": 5.3,
+              "severitytext": "Magnitude 5.3M, Depth:35km",
+              "severityunit": "M"
+            }
+          }
+        }
+      },
       {
         "feed": "usgs",
         "hazardType": "Earthquake",
@@ -703,17 +1768,104 @@
         }
       }
     ],
-    "state": "new",
-    "confidenceTier": "single-source (USGS)",
+    "state": "escalated",
+    "confidenceTier": "shared-sensor (USGS+GDACS)",
     "glide": null,
-    "impactEstimates": [],
+    "impactEstimates": [
+      {
+        "source": "gdacs",
+        "label": "Alert level",
+        "value": "Green"
+      }
+    ],
     "erratumLog": [],
-    "narrative": "A magnitude 5.3 earthquake occurred 95 km WSW of Labuan, Indonesia on 7 July."
+    "narrative": null
   },
   {
-    "id": "usgs-eq-2026-07-07-us6000tasa",
+    "id": "gdacs-eq-2026-07-07-1550654",
     "hazardType": "Earthquake",
     "memberEvents": [
+      {
+        "feed": "gdacs",
+        "hazardType": "Earthquake",
+        "sourceIds": [
+          "1550654"
+        ],
+        "episodeId": "1716843",
+        "occurredAtUtc": "2026-07-07T20:33:15.000Z",
+        "place": "Earthquake in New Zealand",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            177.4292,
+            -37.2165
+          ]
+        },
+        "estimate": {
+          "magnitude": 4.9,
+          "gdacsAlertLevel": "Green"
+        },
+        "rawPayload": {
+          "type": "Feature",
+          "bbox": [
+            177.4292,
+            -37.2165,
+            177.4292,
+            -37.2165
+          ],
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              177.4292,
+              -37.2165
+            ]
+          },
+          "properties": {
+            "eventtype": "EQ",
+            "eventid": 1550654,
+            "episodeid": 1716843,
+            "eventname": "",
+            "glide": "",
+            "name": "Earthquake in New Zealand",
+            "description": "Earthquake in New Zealand",
+            "htmldescription": "Green M 4.9 Earthquake in New Zealand at: 07 Jul 2026 20:33:15.",
+            "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+            "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+            "url": {
+              "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=EQ&eventid=1550654&episodeid=1716843",
+              "report": "https://www.gdacs.org/report.aspx?eventid=1550654&episodeid=1716843&eventtype=EQ",
+              "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=EQ&eventid=1550654"
+            },
+            "alertlevel": "Green",
+            "alertscore": 1,
+            "episodealertlevel": "Green",
+            "episodealertscore": 0,
+            "istemporary": "false",
+            "iscurrent": "true",
+            "country": "New Zealand",
+            "fromdate": "2026-07-07T20:33:15",
+            "todate": "2026-07-07T20:33:15",
+            "datemodified": "2026-07-07T23:00:30",
+            "iso3": "NZL",
+            "source": "NEIC",
+            "sourceid": "",
+            "polygonlabel": "Centroid",
+            "Class": "Point_Centroid",
+            "affectedcountries": [
+              {
+                "iso2": "NZ",
+                "iso3": "NZL",
+                "countryname": "New Zealand"
+              }
+            ],
+            "severitydata": {
+              "severity": 4.9,
+              "severitytext": "Magnitude 4.9M, Depth:121.41km",
+              "severityunit": "M"
+            }
+          }
+        }
+      },
       {
         "feed": "usgs",
         "hazardType": "Earthquake",
@@ -777,23 +1929,109 @@
         }
       }
     ],
-    "state": "new",
-    "confidenceTier": "single-source (USGS)",
+    "state": "escalated",
+    "confidenceTier": "shared-sensor (USGS+GDACS)",
     "glide": null,
     "impactEstimates": [
       {
         "source": "usgs",
         "label": "PAGER alert",
         "value": "green"
+      },
+      {
+        "source": "gdacs",
+        "label": "Alert level",
+        "value": "Green"
       }
     ],
     "erratumLog": [],
-    "narrative": "A magnitude 4.9 earthquake occurred 88 km WNW of Hicks Bay, New Zealand on 7 July."
+    "narrative": null
   },
   {
-    "id": "usgs-eq-2026-07-07-us6000tase",
+    "id": "gdacs-eq-2026-07-07-1550657",
     "hazardType": "Earthquake",
     "memberEvents": [
+      {
+        "feed": "gdacs",
+        "hazardType": "Earthquake",
+        "sourceIds": [
+          "1550657"
+        ],
+        "episodeId": "1716846",
+        "occurredAtUtc": "2026-07-07T20:37:40.000Z",
+        "place": "Earthquake in Philippines",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            120.6627,
+            13.7713
+          ]
+        },
+        "estimate": {
+          "magnitude": 4.5,
+          "gdacsAlertLevel": "Green"
+        },
+        "rawPayload": {
+          "type": "Feature",
+          "bbox": [
+            120.6627,
+            13.7713,
+            120.6627,
+            13.7713
+          ],
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              120.6627,
+              13.7713
+            ]
+          },
+          "properties": {
+            "eventtype": "EQ",
+            "eventid": 1550657,
+            "episodeid": 1716846,
+            "eventname": "",
+            "glide": "",
+            "name": "Earthquake in Philippines",
+            "description": "Earthquake in Philippines",
+            "htmldescription": "Green M 4.5 Earthquake in Philippines at: 07 Jul 2026 20:37:40.",
+            "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+            "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+            "url": {
+              "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=EQ&eventid=1550657&episodeid=1716846",
+              "report": "https://www.gdacs.org/report.aspx?eventid=1550657&episodeid=1716846&eventtype=EQ",
+              "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=EQ&eventid=1550657"
+            },
+            "alertlevel": "Green",
+            "alertscore": 1,
+            "episodealertlevel": "Green",
+            "episodealertscore": 0,
+            "istemporary": "false",
+            "iscurrent": "true",
+            "country": "Philippines",
+            "fromdate": "2026-07-07T20:37:40",
+            "todate": "2026-07-07T20:37:40",
+            "datemodified": "2026-07-07T21:18:02",
+            "iso3": "PHL",
+            "source": "NEIC",
+            "sourceid": "",
+            "polygonlabel": "Centroid",
+            "Class": "Point_Centroid",
+            "affectedcountries": [
+              {
+                "iso2": "PH",
+                "iso3": "PHL",
+                "countryname": "Philippines"
+              }
+            ],
+            "severitydata": {
+              "severity": 4.5,
+              "severitytext": "Magnitude 4.5M, Depth:155.427km",
+              "severityunit": "M"
+            }
+          }
+        }
+      },
       {
         "feed": "usgs",
         "hazardType": "Earthquake",
@@ -857,17 +2095,104 @@
         }
       }
     ],
-    "state": "new",
-    "confidenceTier": "single-source (USGS)",
+    "state": "escalated",
+    "confidenceTier": "shared-sensor (USGS+GDACS)",
     "glide": null,
-    "impactEstimates": [],
+    "impactEstimates": [
+      {
+        "source": "gdacs",
+        "label": "Alert level",
+        "value": "Green"
+      }
+    ],
     "erratumLog": [],
-    "narrative": "A magnitude 4.5 earthquake occurred 7 km SSE of Calatagan, Philippines on 7 July."
+    "narrative": null
   },
   {
-    "id": "usgs-eq-2026-07-07-us6000tatd",
+    "id": "gdacs-eq-2026-07-07-1550669",
     "hazardType": "Earthquake",
     "memberEvents": [
+      {
+        "feed": "gdacs",
+        "hazardType": "Earthquake",
+        "sourceIds": [
+          "1550669"
+        ],
+        "episodeId": "1716860",
+        "occurredAtUtc": "2026-07-07T22:12:29.000Z",
+        "place": "Earthquake in China",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            104.7718,
+            28.5899
+          ]
+        },
+        "estimate": {
+          "magnitude": 5.1,
+          "gdacsAlertLevel": "Green"
+        },
+        "rawPayload": {
+          "type": "Feature",
+          "bbox": [
+            104.7718,
+            28.5899,
+            104.7718,
+            28.5899
+          ],
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              104.7718,
+              28.5899
+            ]
+          },
+          "properties": {
+            "eventtype": "EQ",
+            "eventid": 1550669,
+            "episodeid": 1716860,
+            "eventname": "",
+            "glide": "",
+            "name": "Earthquake in China",
+            "description": "Earthquake in China",
+            "htmldescription": "Green M 5.1 Earthquake in China at: 07 Jul 2026 22:12:29.",
+            "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+            "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+            "url": {
+              "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=EQ&eventid=1550669&episodeid=1716860",
+              "report": "https://www.gdacs.org/report.aspx?eventid=1550669&episodeid=1716860&eventtype=EQ",
+              "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=EQ&eventid=1550669"
+            },
+            "alertlevel": "Green",
+            "alertscore": 1,
+            "episodealertlevel": "Green",
+            "episodealertscore": 0.181860137739503,
+            "istemporary": "false",
+            "iscurrent": "true",
+            "country": "China",
+            "fromdate": "2026-07-07T22:12:29",
+            "todate": "2026-07-07T22:12:29",
+            "datemodified": "2026-07-07T22:52:43",
+            "iso3": "CHN",
+            "source": "NEIC",
+            "sourceid": "",
+            "polygonlabel": "Centroid",
+            "Class": "Point_Centroid",
+            "affectedcountries": [
+              {
+                "iso2": "CN",
+                "iso3": "CHN",
+                "countryname": "China"
+              }
+            ],
+            "severitydata": {
+              "severity": 5.1,
+              "severitytext": "Magnitude 5.1M, Depth:10km",
+              "severityunit": "M"
+            }
+          }
+        }
+      },
       {
         "feed": "usgs",
         "hazardType": "Earthquake",
@@ -931,6 +2256,87 @@
         }
       },
       {
+        "feed": "gdacs",
+        "hazardType": "Earthquake",
+        "sourceIds": [
+          "1550674"
+        ],
+        "episodeId": "1716865",
+        "occurredAtUtc": "2026-07-07T22:22:13.000Z",
+        "place": "Earthquake in China",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            104.7122,
+            28.6565
+          ]
+        },
+        "estimate": {
+          "magnitude": 4.6,
+          "gdacsAlertLevel": "Green"
+        },
+        "rawPayload": {
+          "type": "Feature",
+          "bbox": [
+            104.7122,
+            28.6565,
+            104.7122,
+            28.6565
+          ],
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              104.7122,
+              28.6565
+            ]
+          },
+          "properties": {
+            "eventtype": "EQ",
+            "eventid": 1550674,
+            "episodeid": 1716865,
+            "eventname": "",
+            "glide": "",
+            "name": "Earthquake in China",
+            "description": "Earthquake in China",
+            "htmldescription": "Green M 4.6 Earthquake in China at: 07 Jul 2026 22:22:13.",
+            "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+            "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+            "url": {
+              "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=EQ&eventid=1550674&episodeid=1716865",
+              "report": "https://www.gdacs.org/report.aspx?eventid=1550674&episodeid=1716865&eventtype=EQ",
+              "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=EQ&eventid=1550674"
+            },
+            "alertlevel": "Green",
+            "alertscore": 1,
+            "episodealertlevel": "Green",
+            "episodealertscore": 0,
+            "istemporary": "false",
+            "iscurrent": "true",
+            "country": "China",
+            "fromdate": "2026-07-07T22:22:13",
+            "todate": "2026-07-07T22:22:13",
+            "datemodified": "2026-07-07T23:02:24",
+            "iso3": "CHN",
+            "source": "NEIC",
+            "sourceid": "",
+            "polygonlabel": "Centroid",
+            "Class": "Point_Centroid",
+            "affectedcountries": [
+              {
+                "iso2": "CN",
+                "iso3": "CHN",
+                "countryname": "China"
+              }
+            ],
+            "severitydata": {
+              "severity": 4.6,
+              "severitytext": "Magnitude 4.6M, Depth:10km",
+              "severityunit": "M"
+            }
+          }
+        }
+      },
+      {
         "feed": "usgs",
         "hazardType": "Earthquake",
         "sourceIds": [
@@ -990,6 +2396,87 @@
             ]
           },
           "id": "us6000tati"
+        }
+      },
+      {
+        "feed": "gdacs",
+        "hazardType": "Earthquake",
+        "sourceIds": [
+          "1550709"
+        ],
+        "episodeId": "1716905",
+        "occurredAtUtc": "2026-07-08T02:08:48.000Z",
+        "place": "Earthquake in China",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            104.7549,
+            28.5871
+          ]
+        },
+        "estimate": {
+          "magnitude": 5,
+          "gdacsAlertLevel": "Green"
+        },
+        "rawPayload": {
+          "type": "Feature",
+          "bbox": [
+            104.7549,
+            28.5871,
+            104.7549,
+            28.5871
+          ],
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              104.7549,
+              28.5871
+            ]
+          },
+          "properties": {
+            "eventtype": "EQ",
+            "eventid": 1550709,
+            "episodeid": 1716905,
+            "eventname": "",
+            "glide": "",
+            "name": "Earthquake in China",
+            "description": "Earthquake in China",
+            "htmldescription": "Green M 5 Earthquake in China at: 08 Jul 2026 02:08:48.",
+            "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+            "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+            "url": {
+              "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=EQ&eventid=1550709&episodeid=1716905",
+              "report": "https://www.gdacs.org/report.aspx?eventid=1550709&episodeid=1716905&eventtype=EQ",
+              "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=EQ&eventid=1550709"
+            },
+            "alertlevel": "Green",
+            "alertscore": 1,
+            "episodealertlevel": "Green",
+            "episodealertscore": 0.01,
+            "istemporary": "false",
+            "iscurrent": "true",
+            "country": "China",
+            "fromdate": "2026-07-08T02:08:48",
+            "todate": "2026-07-08T02:08:48",
+            "datemodified": "2026-07-08T02:49:03",
+            "iso3": "CHN",
+            "source": "NEIC",
+            "sourceid": "",
+            "polygonlabel": "Centroid",
+            "Class": "Point_Centroid",
+            "affectedcountries": [
+              {
+                "iso2": "CN",
+                "iso3": "CHN",
+                "countryname": "China"
+              }
+            ],
+            "severitydata": {
+              "severity": 5,
+              "severitytext": "Magnitude 5M, Depth:10km",
+              "severityunit": "M"
+            }
+          }
         }
       },
       {
@@ -1056,11 +2543,17 @@
       }
     ],
     "state": "escalated",
-    "confidenceTier": "single-source (USGS)",
+    "confidenceTier": "shared-sensor (USGS+GDACS)",
     "glide": null,
-    "impactEstimates": [],
+    "impactEstimates": [
+      {
+        "source": "gdacs",
+        "label": "Alert level",
+        "value": "Green"
+      }
+    ],
     "erratumLog": [],
-    "narrative": "A magnitude 5.1 earthquake struck near Changning, China on 7 July, part of a sequence that includes additional aftershocks."
+    "narrative": null
   },
   {
     "id": "usgs-eq-2026-07-07-us6000tatn",
@@ -1127,19 +2620,181 @@
           },
           "id": "us6000tatn"
         }
+      },
+      {
+        "feed": "gdacs",
+        "hazardType": "Earthquake",
+        "sourceIds": [
+          "1550675"
+        ],
+        "episodeId": "1716888",
+        "occurredAtUtc": "2026-07-07T22:42:39.000Z",
+        "place": "Earthquake in Tajikistan",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            71.7429,
+            39.1463
+          ]
+        },
+        "estimate": {
+          "magnitude": 4.9,
+          "gdacsAlertLevel": "Green"
+        },
+        "rawPayload": {
+          "type": "Feature",
+          "bbox": [
+            71.7429,
+            39.1463,
+            71.7429,
+            39.1463
+          ],
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              71.7429,
+              39.1463
+            ]
+          },
+          "properties": {
+            "eventtype": "EQ",
+            "eventid": 1550675,
+            "episodeid": 1716888,
+            "eventname": "",
+            "glide": "",
+            "name": "Earthquake in Tajikistan",
+            "description": "Earthquake in Tajikistan",
+            "htmldescription": "Green M 4.9 Earthquake in Tajikistan at: 07 Jul 2026 22:42:39.",
+            "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+            "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+            "url": {
+              "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=EQ&eventid=1550675&episodeid=1716888",
+              "report": "https://www.gdacs.org/report.aspx?eventid=1550675&episodeid=1716888&eventtype=EQ",
+              "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=EQ&eventid=1550675"
+            },
+            "alertlevel": "Green",
+            "alertscore": 1,
+            "episodealertlevel": "Green",
+            "episodealertscore": 0,
+            "istemporary": "false",
+            "iscurrent": "true",
+            "country": "Tajikistan",
+            "fromdate": "2026-07-07T22:42:39",
+            "todate": "2026-07-07T22:42:39",
+            "datemodified": "2026-07-08T01:33:57",
+            "iso3": "TJK",
+            "source": "NEIC",
+            "sourceid": "",
+            "polygonlabel": "Centroid",
+            "Class": "Point_Centroid",
+            "affectedcountries": [
+              {
+                "iso2": "TJ",
+                "iso3": "TJK",
+                "countryname": "Tajikistan"
+              }
+            ],
+            "severitydata": {
+              "severity": 4.9,
+              "severitytext": "Magnitude 4.9M, Depth:10km",
+              "severityunit": "M"
+            }
+          }
+        }
       }
     ],
-    "state": "new",
-    "confidenceTier": "single-source (USGS)",
+    "state": "escalated",
+    "confidenceTier": "shared-sensor (USGS+GDACS)",
     "glide": null,
-    "impactEstimates": [],
+    "impactEstimates": [
+      {
+        "source": "gdacs",
+        "label": "Alert level",
+        "value": "Green"
+      }
+    ],
     "erratumLog": [],
-    "narrative": "A magnitude 4.9 earthquake occurred 21 km ESE of Karakenja, Tajikistan on 7 July."
+    "narrative": null
   },
   {
-    "id": "usgs-eq-2026-07-07-us6000tau8",
+    "id": "gdacs-eq-2026-07-07-1550684",
     "hazardType": "Earthquake",
     "memberEvents": [
+      {
+        "feed": "gdacs",
+        "hazardType": "Earthquake",
+        "sourceIds": [
+          "1550684"
+        ],
+        "episodeId": "1716889",
+        "occurredAtUtc": "2026-07-07T23:35:51.000Z",
+        "place": "Earthquake in Northern Molucca Sea",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            126.3577,
+            1.3973
+          ]
+        },
+        "estimate": {
+          "magnitude": 4.6,
+          "gdacsAlertLevel": "Green"
+        },
+        "rawPayload": {
+          "type": "Feature",
+          "bbox": [
+            126.3577,
+            1.3973,
+            126.3577,
+            1.3973
+          ],
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              126.3577,
+              1.3973
+            ]
+          },
+          "properties": {
+            "eventtype": "EQ",
+            "eventid": 1550684,
+            "episodeid": 1716889,
+            "eventname": "",
+            "glide": "",
+            "name": "Earthquake in Northern Molucca Sea",
+            "description": "Earthquake in Northern Molucca Sea",
+            "htmldescription": "Green M 4.6 Earthquake in Northern Molucca Sea at: 07 Jul 2026 23:35:51.",
+            "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+            "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+            "url": {
+              "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=EQ&eventid=1550684&episodeid=1716889",
+              "report": "https://www.gdacs.org/report.aspx?eventid=1550684&episodeid=1716889&eventtype=EQ",
+              "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=EQ&eventid=1550684"
+            },
+            "alertlevel": "Green",
+            "alertscore": 1,
+            "episodealertlevel": "Green",
+            "episodealertscore": 0,
+            "istemporary": "false",
+            "iscurrent": "true",
+            "country": "Northern Molucca Sea",
+            "fromdate": "2026-07-07T23:35:51",
+            "todate": "2026-07-07T23:35:51",
+            "datemodified": "2026-07-08T01:42:12",
+            "iso3": "",
+            "source": "NEIC",
+            "sourceid": "",
+            "polygonlabel": "Centroid",
+            "Class": "Point_Centroid",
+            "affectedcountries": [],
+            "severitydata": {
+              "severity": 4.6,
+              "severitytext": "Magnitude 4.6M, Depth:49.277km",
+              "severityunit": "M"
+            }
+          }
+        }
+      },
       {
         "feed": "usgs",
         "hazardType": "Earthquake",
@@ -1203,17 +2858,98 @@
         }
       }
     ],
-    "state": "new",
-    "confidenceTier": "single-source (USGS)",
+    "state": "escalated",
+    "confidenceTier": "shared-sensor (USGS+GDACS)",
     "glide": null,
-    "impactEstimates": [],
+    "impactEstimates": [
+      {
+        "source": "gdacs",
+        "label": "Alert level",
+        "value": "Green"
+      }
+    ],
     "erratumLog": [],
-    "narrative": "A magnitude 4.6 earthquake occurred 132 km WNW of Ternate, Indonesia on 7 July."
+    "narrative": null
   },
   {
-    "id": "usgs-eq-2026-07-08-us6000tauv",
+    "id": "gdacs-eq-2026-07-08-1550718",
     "hazardType": "Earthquake",
     "memberEvents": [
+      {
+        "feed": "gdacs",
+        "hazardType": "Earthquake",
+        "sourceIds": [
+          "1550718"
+        ],
+        "episodeId": "1716915",
+        "occurredAtUtc": "2026-07-08T04:21:46.000Z",
+        "place": "Earthquake in Jan Mayen Island Region",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            -7.1298,
+            71.1194
+          ]
+        },
+        "estimate": {
+          "magnitude": 4.7,
+          "gdacsAlertLevel": "Green"
+        },
+        "rawPayload": {
+          "type": "Feature",
+          "bbox": [
+            -7.1298,
+            71.1194,
+            -7.1298,
+            71.1194
+          ],
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -7.1298,
+              71.1194
+            ]
+          },
+          "properties": {
+            "eventtype": "EQ",
+            "eventid": 1550718,
+            "episodeid": 1716915,
+            "eventname": "",
+            "glide": "",
+            "name": "Earthquake in Jan Mayen Island Region",
+            "description": "Earthquake in Jan Mayen Island Region",
+            "htmldescription": "Green M 4.7 Earthquake in Jan Mayen Island Region at: 08 Jul 2026 04:21:46.",
+            "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+            "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+            "url": {
+              "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=EQ&eventid=1550718&episodeid=1716915",
+              "report": "https://www.gdacs.org/report.aspx?eventid=1550718&episodeid=1716915&eventtype=EQ",
+              "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=EQ&eventid=1550718"
+            },
+            "alertlevel": "Green",
+            "alertscore": 1,
+            "episodealertlevel": "Green",
+            "episodealertscore": 0,
+            "istemporary": "false",
+            "iscurrent": "true",
+            "country": "Jan Mayen Island Region",
+            "fromdate": "2026-07-08T04:21:46",
+            "todate": "2026-07-08T04:21:46",
+            "datemodified": "2026-07-08T05:02:07",
+            "iso3": "",
+            "source": "NEIC",
+            "sourceid": "",
+            "polygonlabel": "Centroid",
+            "Class": "Point_Centroid",
+            "affectedcountries": [],
+            "severitydata": {
+              "severity": 4.7,
+              "severitytext": "Magnitude 4.7M, Depth:10km",
+              "severityunit": "M"
+            }
+          }
+        }
+      },
       {
         "feed": "usgs",
         "hazardType": "Earthquake",
@@ -1277,11 +3013,17 @@
         }
       }
     ],
-    "state": "new",
-    "confidenceTier": "single-source (USGS)",
+    "state": "escalated",
+    "confidenceTier": "shared-sensor (USGS+GDACS)",
     "glide": null,
-    "impactEstimates": [],
+    "impactEstimates": [
+      {
+        "source": "gdacs",
+        "label": "Alert level",
+        "value": "Green"
+      }
+    ],
     "erratumLog": [],
-    "narrative": "A magnitude 4.7 earthquake occurred 61 km ENE of Olonkinbyen, Svalbard and Jan Mayen on 8 July."
+    "narrative": null
   }
 ]
