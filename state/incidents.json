@@ -593,17 +593,17 @@
             "mag": 5.3,
             "place": "10 km WSW of Orotina, Costa Rica",
             "time": 1783447892787,
-            "updated": 1783479430661,
+            "updated": 1783481776826,
             "tz": null,
             "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tarc",
             "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000tarc.geojson",
-            "felt": 26,
+            "felt": 27,
             "cdi": 4.3,
             "mmi": null,
             "alert": null,
             "status": "reviewed",
             "tsunami": 0,
-            "sig": 443,
+            "sig": 444,
             "net": "us",
             "code": "6000tarc",
             "ids": ",us6000tarc,",
@@ -895,11 +895,11 @@
             "mag": 5.1,
             "place": "13 km W of Changning, China",
             "time": 1783462349518,
-            "updated": 1783473754300,
+            "updated": 1783489565299,
             "tz": null,
             "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tatd",
             "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000tatd.geojson",
-            "felt": 2,
+            "felt": 3,
             "cdi": 3.1,
             "mmi": null,
             "alert": null,
@@ -1200,6 +1200,80 @@
             ]
           },
           "id": "us6000tau8"
+        }
+      }
+    ],
+    "state": "new",
+    "confidenceTier": "single-source (USGS)",
+    "glide": null,
+    "impactEstimates": [],
+    "erratumLog": [],
+    "narrative": null
+  },
+  {
+    "id": "usgs-eq-2026-07-08-us6000tauv",
+    "hazardType": "Earthquake",
+    "memberEvents": [
+      {
+        "feed": "usgs",
+        "hazardType": "Earthquake",
+        "sourceIds": [
+          "us6000tauv"
+        ],
+        "episodeId": null,
+        "occurredAtUtc": "2026-07-08T04:21:46.738Z",
+        "place": "61 km ENE of Olonkinbyen, Svalbard and Jan Mayen",
+        "location": {
+          "type": "Point",
+          "coordinates": [
+            -7.1298,
+            71.1194,
+            10
+          ]
+        },
+        "estimate": {
+          "magnitude": 4.7,
+          "pagerAlert": null
+        },
+        "rawPayload": {
+          "type": "Feature",
+          "properties": {
+            "mag": 4.7,
+            "place": "61 km ENE of Olonkinbyen, Svalbard and Jan Mayen",
+            "time": 1783484506738,
+            "updated": 1783485201040,
+            "tz": null,
+            "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tauv",
+            "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000tauv.geojson",
+            "felt": null,
+            "cdi": null,
+            "mmi": null,
+            "alert": null,
+            "status": "reviewed",
+            "tsunami": 0,
+            "sig": 340,
+            "net": "us",
+            "code": "6000tauv",
+            "ids": ",us6000tauv,",
+            "sources": ",us,",
+            "types": ",origin,phase-data,",
+            "nst": 53,
+            "dmin": 4.931,
+            "rms": 1.07,
+            "gap": 80,
+            "magType": "mb",
+            "type": "earthquake",
+            "title": "M 4.7 - 61 km ENE of Olonkinbyen, Svalbard and Jan Mayen"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -7.1298,
+              71.1194,
+              10
+            ]
+          },
+          "id": "us6000tauv"
         }
       }
     ],
