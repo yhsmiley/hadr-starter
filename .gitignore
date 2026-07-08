@@ -9,8 +9,9 @@ reports/
 .env
 .env.*
 
-# Language debris — extend for whichever toolchain you pick in CLAUDE.md.
+# Language debris — Node/TypeScript (see CLAUDE.md: Language & tooling).
 __pycache__/
 .venv/
 node_modules/
+dist/
 .DS_Store
