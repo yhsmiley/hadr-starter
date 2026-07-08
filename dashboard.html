@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>HADR Monitor</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 760px; margin: 0 auto; padding: 32px 20px; color: #1a1a1a; background: #fafafa; }
+  header.page { margin-bottom: 24px; border-bottom: 1px solid #ddd; padding-bottom: 16px; }
+  h1 { font-size: 22px; margin: 0 0 4px; }
+  .freshness { color: #555; font-size: 14px; }
+  ul.health { list-style: none; padding: 0; margin: 8px 0 0; font-size: 14px; }
+  .health-ok { color: #1a7f37; }
+  .health-bad { color: #c0341d; font-weight: 600; }
+  .incident { border: 1px solid #ddd; border-radius: 6px; padding: 14px 16px; margin-bottom: 14px; background: #fff; }
+  .incident.closed { opacity: 0.6; }
+  .badge { display: inline-block; font-size: 12px; padding: 2px 8px; border-radius: 999px; margin-right: 6px; background: #eee; }
+  .badge-state.new { background: #d6e4ff; }
+  .badge-state.escalated { background: #ffe0b2; }
+  .badge-state.revised { background: #fff3b0; }
+  .badge-state.closed { background: #e0e0e0; }
+  .mag { font-weight: 700; margin-right: 8px; }
+  .place { color: #444; }
+  .narrative { margin: 10px 0; }
+  ul.impact { font-size: 14px; margin: 8px 0; padding-left: 18px; }
+  .impact-none { color: #888; font-size: 13px; font-style: italic; }
+  .erratum { background: #fff8e1; border-left: 3px solid #e8a33d; padding: 8px 12px; margin-top: 10px; font-size: 13px; }
+  .meta { color: #999; font-size: 12px; margin-top: 8px; }
+  .quiet { color: #555; }
+</style>
+</head>
+<body>
+  <header class="page">
+    <h1>HADR Monitor</h1>
+    <div class="freshness">Checked 8 Jul 2026, 11:11 am SGT</div>
+    <ul class="health"><li><strong>USGS</strong>: <span class="health-bad">unreachable (no health record yet)</span></li></ul>
+  </header>
+  <main>
+
+    <article class="incident">
+      <header>
+        <span class="badge badge-state badge-escalated">escalated</span>
+        <span class="badge badge-tier">single-source (USGS)</span>
+        <span class="mag">M 5.4</span>
+        <span class="place">172 km NNW of Tobelo, Indonesia</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <ul class="impact"><li><strong>USGS PAGER alert:</strong> green</li></ul>
+      
+      <footer class="meta">2 event(s) on record &middot; id usgs-eq-2026-07-07-us6000talg</footer>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge badge-state badge-escalated">escalated</span>
+        <span class="badge badge-tier">single-source (USGS)</span>
+        <span class="mag">M 5.3</span>
+        <span class="place">Reykjanes Ridge</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <div class="impact impact-none">No impact estimate available yet.</div>
+      
+      <footer class="meta">3 event(s) on record &middot; id usgs-eq-2026-07-07-us6000takw</footer>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge badge-state badge-new">new</span>
+        <span class="badge badge-tier">single-source (USGS)</span>
+        <span class="mag">M 5.3</span>
+        <span class="place">10 km WSW of Orotina, Costa Rica</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <div class="impact impact-none">No impact estimate available yet.</div>
+      
+      <footer class="meta">1 event(s) on record &middot; id usgs-eq-2026-07-07-us6000tarc</footer>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge badge-state badge-new">new</span>
+        <span class="badge badge-tier">single-source (USGS)</span>
+        <span class="mag">M 5.3</span>
+        <span class="place">95 km WSW of Labuan, Indonesia</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <div class="impact impact-none">No impact estimate available yet.</div>
+      
+      <footer class="meta">1 event(s) on record &middot; id usgs-eq-2026-07-07-us6000tary</footer>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge badge-state badge-escalated">escalated</span>
+        <span class="badge badge-tier">single-source (USGS)</span>
+        <span class="mag">M 5.1</span>
+        <span class="place">15 km NNE of Xunchang, China</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <div class="impact impact-none">No impact estimate available yet.</div>
+      
+      <footer class="meta">3 event(s) on record &middot; id usgs-eq-2026-07-07-us6000tatd</footer>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge badge-state badge-new">new</span>
+        <span class="badge badge-tier">single-source (USGS)</span>
+        <span class="mag">M 4.9</span>
+        <span class="place">298 km SSE of Ushuaia, Argentina</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <div class="impact impact-none">No impact estimate available yet.</div>
+      
+      <footer class="meta">1 event(s) on record &middot; id usgs-eq-2026-07-07-us6000tar3</footer>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge badge-state badge-new">new</span>
+        <span class="badge badge-tier">single-source (USGS)</span>
+        <span class="mag">M 4.9</span>
+        <span class="place">88 km WNW of Hicks Bay, New Zealand</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <ul class="impact"><li><strong>USGS PAGER alert:</strong> green</li></ul>
+      
+      <footer class="meta">1 event(s) on record &middot; id usgs-eq-2026-07-07-us6000tasa</footer>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge badge-state badge-new">new</span>
+        <span class="badge badge-tier">single-source (USGS)</span>
+        <span class="mag">M 4.9</span>
+        <span class="place">21 km ESE of Karakenja, Tajikistan</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <div class="impact impact-none">No impact estimate available yet.</div>
+      
+      <footer class="meta">1 event(s) on record &middot; id usgs-eq-2026-07-07-us6000tatn</footer>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge badge-state badge-new">new</span>
+        <span class="badge badge-tier">single-source (USGS)</span>
+        <span class="mag">M 4.6</span>
+        <span class="place">132 km WNW of Ternate, Indonesia</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <div class="impact impact-none">No impact estimate available yet.</div>
+      
+      <footer class="meta">1 event(s) on record &middot; id usgs-eq-2026-07-07-us6000tau8</footer>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge badge-state badge-new">new</span>
+        <span class="badge badge-tier">single-source (USGS)</span>
+        <span class="mag">M 4.5</span>
+        <span class="place">32 km NE of Yaguaraparo, Venezuela</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <div class="impact impact-none">No impact estimate available yet.</div>
+      
+      <footer class="meta">1 event(s) on record &middot; id usgs-eq-2026-07-07-us6000talr</footer>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge badge-state badge-new">new</span>
+        <span class="badge badge-tier">single-source (USGS)</span>
+        <span class="mag">M 4.5</span>
+        <span class="place">81 km NNE of Adak, Alaska</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <div class="impact impact-none">No impact estimate available yet.</div>
+      
+      <footer class="meta">1 event(s) on record &middot; id usgs-eq-2026-07-07-us6000tara</footer>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge badge-state badge-new">new</span>
+        <span class="badge badge-tier">single-source (USGS)</span>
+        <span class="mag">M 4.5</span>
+        <span class="place">7 km SSE of Calatagan, Philippines</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <div class="impact impact-none">No impact estimate available yet.</div>
+      
+      <footer class="meta">1 event(s) on record &middot; id usgs-eq-2026-07-07-us6000tase</footer>
+    </article>
+  </main>
+</body>
+</html>
