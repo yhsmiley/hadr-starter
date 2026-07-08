@@ -17,6 +17,10 @@ concurrency:
 
 permissions:
   contents: write
+  id-token: write # required by anthropics/claude-code-action to mint its OIDC token
+  pull-requests: read
+  issues: read
+  actions: read
 
 jobs:
   sitrep:
