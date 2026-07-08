@@ -49,6 +49,15 @@ jobs:
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           prompt: "/sitrep"
+          # Headless mode has no interactive approval prompt, so tools
+          # default to denied -- without this the skill can only look,
+          # never act (confirmed live: 16/16 tool calls denied, "success"
+          # reported anyway since Claude gave up gracefully rather than
+          # erroring). Scoped to exactly what skills/sitrep/SKILL.md does:
+          # read + edit state/incidents.json, then run the one render
+          # command -- nothing broader.
+          claude_args: |
+            --allowedTools "Read,Edit,Bash(npm run render:*)"
 
       - name: Commit and push (A4.2)
         env:
