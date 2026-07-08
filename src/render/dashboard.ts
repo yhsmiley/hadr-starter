@@ -22,6 +22,24 @@ function escapeHtml(s: string): string {
     .replace(/"/g, "&quot;");
 }
 
+/** Alert levels (GDACS's Green/Orange/Red, USGS PAGER's green/yellow/
+ *  orange/red) are a status dimension in their own right, distinct from
+ *  Incident *state* -- they get their own reserved colors rather than
+ *  reusing the state-badge palette, so an amber "escalated" state badge
+ *  is never confused with an amber "orange" alert level in the same card. */
+const ALERT_LEVEL_CLASS: Record<string, string> = {
+  green: "alert-green",
+  yellow: "alert-yellow",
+  orange: "alert-orange",
+  red: "alert-red",
+};
+
+function alertLevelSpan(value: string): string {
+  const cls = ALERT_LEVEL_CLASS[value.toLowerCase()];
+  const escaped = escapeHtml(value);
+  return cls ? `<strong class="${cls}">${escaped}</strong>` : `<strong>${escaped}</strong>`;
+}
+
 /** V3: not every hazard type carries a magnitude (only Earthquake does).
  *  ADR 0002's "sorted by severity only" promise needs a comparable value
  *  across hazard types, so GDACS's own alert level substitutes as a
@@ -96,7 +114,7 @@ function renderImpactEstimates(incident: Incident): string {
   const items = incident.impactEstimates
     .map(
       (e) =>
-        `<li class="feed-${e.source}"><span class="feed-chip">${e.source.toUpperCase()}</span> ${escapeHtml(e.label)}: <strong>${escapeHtml(e.value)}</strong></li>`
+        `<li class="feed-${e.source}"><span class="feed-chip">${e.source.toUpperCase()}</span> ${escapeHtml(e.label)}: ${alertLevelSpan(e.value)}</li>`
     )
     .join("");
   return `<ul class="impact">${items}</ul>`;
@@ -106,10 +124,10 @@ function renderMemberRow(event: Incident["memberEvents"][number]): string {
   const detail =
     event.feed === "gdacs"
       ? event.estimate.gdacsAlertLevel
-        ? `Alert: ${escapeHtml(event.estimate.gdacsAlertLevel)}`
+        ? `Alert: ${alertLevelSpan(event.estimate.gdacsAlertLevel)}`
         : "—"
       : event.estimate.pagerAlert
-        ? `PAGER: ${escapeHtml(event.estimate.pagerAlert)}`
+        ? `PAGER: ${alertLevelSpan(event.estimate.pagerAlert)}`
         : "—";
   return `
     <tr>
@@ -247,6 +265,18 @@ export function renderDashboard(params: {
     --erratum-tint:   #fff2d6;
     --health-good:    #006300;
     --health-bad:     #d03b3b;
+
+    /* Alert-level colors (GDACS Green/Orange/Red, USGS PAGER green/
+       yellow/orange/red) -- a traffic-light ramp distinct from the state
+       badges above. Green/yellow reuse the same text-safe steps as
+       --status-deescalated/--status-escalated (same underlying "good"/
+       "warning" hues); orange is the palette's "serious" step, darkened
+       for light-surface legibility (raw #ec835a is only 2.57:1); red
+       reuses --health-bad ("critical", already validated at 4.68:1). */
+    --alert-green:  #006300;
+    --alert-yellow: #9c6a00;
+    --alert-orange: #a8461f;
+    --alert-red:    #d03b3b;
   }
   @media (prefers-color-scheme: dark) {
     :root {
@@ -285,6 +315,13 @@ export function renderDashboard(params: {
       --erratum-tint:   #3a2c0c;
       --health-good:    #0ca30c;
       --health-bad:     #e66767;
+
+      /* Dark surface tolerates the raw palette steps directly (same
+         reasoning as the status colors above). */
+      --alert-green:  #0ca30c;
+      --alert-yellow: #fab219;
+      --alert-orange: #ec835a;
+      --alert-red:    #e66767;
     }
   }
   * { box-sizing: border-box; }
@@ -399,6 +436,11 @@ export function renderDashboard(params: {
   .feed-chip.feed-usgs, .feed-usgs .feed-chip { background: var(--feed-usgs-tint); color: var(--feed-usgs); }
   .feed-chip.feed-gdacs, .feed-gdacs .feed-chip { background: var(--feed-gdacs-tint); color: var(--feed-gdacs); }
   .feed-chip.feed-reliefweb, .feed-reliefweb .feed-chip { background: var(--feed-reliefweb-tint); color: var(--feed-reliefweb); }
+
+  .alert-green  { color: var(--alert-green); }
+  .alert-yellow { color: var(--alert-yellow); }
+  .alert-orange { color: var(--alert-orange); }
+  .alert-red    { color: var(--alert-red); }
 
   .erratum {
     background: var(--erratum-tint);
