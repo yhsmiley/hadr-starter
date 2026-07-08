@@ -47,13 +47,34 @@ The RSS feed needs no approval:
 </item>
 ```
 
+## Findings (verified live, 7 Jul 2026)
+
+1. **This is a curated registry of crises, not an event feed.** One
+   "disaster" record per crisis, created when OCHA humans decide it matters.
+   That is why it carries things instruments never see (the current RSS
+   includes an Ebola outbreak, a dengue outbreak and a hailstorm) and misses
+   everything small. Treat it as ground truth for *"does this matter
+   humanitarianly"*, not for detection.
+2. **Latency is days to weeks.** The newest item in the RSS on 7 Jul is dated
+   24 Jun — 13 days old. ReliefWeb will never trigger a morning alert; its
+   role is enrichment, confirmation and the "who is affected" narrative for
+   events we already know about.
+3. **The RSS is a degraded view of the API.** `pubDate` is the
+   record-creation date pinned to 00:00 (not the event time), records are
+   updated after creation with no RSS signal, and the payload is HTML blobs.
+   The API adds structured `status` (`alert`/`ongoing`/`past`), GLIDE, ISO3
+   country codes, and the much higher-volume `reports` stream.
+4. **Apply for the appname immediately.** Approval-by-email latency is the
+   one critical-path item that cannot be parallelised. Build against the RSS
+   meanwhile.
+5. **GLIDE numbers are reliably present here** (in the `tag glide` div of
+   each RSS item), unlike GDACS where they are mostly empty — this is the
+   strongest cross-feed link once a disaster is significant enough to have
+   one.
+
 ## Open questions
 
-1. The appname review takes time you may not have this week. What do you
-   build against in the meantime, and what does the RSS feed lack that the
-   API would give you?
-2. This Venezuela entry describes earthquakes that GDACS and USGS reported
-   days earlier, under different identifiers. Is there anything in this
-   record that could tie the three feeds together?
-3. The API docs say usage is monitored and adapted per application. What are
+1. The API docs say usage is monitored and adapted per application. What are
    the actual limits, and how should your agent behave when it hits one?
+2. Once the appname is approved, does the `disasters` endpoint's `changed`
+   date give us the update signal the RSS lacks?
