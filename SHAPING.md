@@ -207,6 +207,7 @@ outage can go undetected for up to 24h.*
 |------|-----------|:---:|
 | A5.1 | One LLM call per Incident, given the already-computed record (state, tier, erratum flag) — **excluding per-source impact estimates**, producing only prose for the parts of the entry that aren't numeric facts | |
 | A5.2 | Structural exclusion, not a prompt instruction: per-source impact estimates never enter A5's input or output at all. A6.1 renders them directly from the Incident record, verbatim, next to (not inside) the narrative text | |
+| A5.3 | **Mechanism, revised during V1 build:** "one LLM call" is a headless Claude Code skill (`skills/sitrep/SKILL.md`), not a direct SDK call — a pre-existing `.github/workflows/sitrep.yml.disabled` placeholder in this repo already specified "a deterministic script decides whether anything changed; a headless model call runs only if it did," and README.md requires "at least one skill" as a deliverable. A1's deterministic pass sets `Incident.narrative = null` on any new/escalated/revised Incident and signals a `needs_narration` step output; the skill runs only when that's true, fills in `narrative` for pending Incidents, then calls the same deterministic renderer (`npm run render`) A6.1 already used — it never hand-writes HTML. See `implementation-notes.md` for the full account. | |
 
 ### A6 — Renderer
 

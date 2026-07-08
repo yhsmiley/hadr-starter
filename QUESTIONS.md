@@ -310,3 +310,19 @@ _Questions added mid-session go below this line, oldest first._
       Amended into ADR 0007, `SHAPING.md` (new A4.3 + A7 components,
       updated breadboard/wiring), and `SLICES.md` (A7 rolls out per feed
       alongside that feed's ingestion adapter, V1→V3).
+
+## N — Discovered while building V1 (implementation-notes.md)
+
+- [ ] **N1.** SLICES.md V1 lists "erratum for USGS revision/deletion" as
+      live, and ADR 0004/I1 committed to an explicit erratum for USGS
+      deletions. But USGS's summary GeoJSON feeds (`4.5_day`, `all_day`)
+      are rolling windows — `feeds/usgs.md` finding 1 already notes that a
+      deleted event and one that simply aged out of the window look
+      identical from these endpoints. Detecting real deletions would need
+      the FDSN query API, which ADR 0006 never scoped in. V1 implements
+      revision detection (magnitude changes on a still-present event) but
+      **not** deletion detection — this was quietly out of reach given the
+      chosen data source, not a missed line of code. Does V2/V3 add FDSN
+      polling for tracked Incidents specifically to get a reliable deletion
+      signal, or is "we can't tell deleted from aged-out" an accepted,
+      permanent limitation worth writing into ADR 0006 explicitly?
