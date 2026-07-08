@@ -2,7 +2,7 @@
   {
     "type": "FeatureCollection",
     "metadata": {
-      "generated": 1783497017000,
+      "generated": 1783498082000,
       "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_day.geojson",
       "title": "USGS Magnitude 4.5+ Earthquakes, Past Day",
       "status": 200,
@@ -663,21 +663,61 @@
   {
     "type": "FeatureCollection",
     "metadata": {
-      "generated": 1783497005000,
+      "generated": 1783498085000,
       "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson",
       "title": "USGS All Earthquakes, Past Day",
       "status": 200,
       "api": "2.7.0",
-      "count": 247
+      "count": 244
     },
     "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "mag": 1.5,
+          "place": "45 km NW of Toyah, Texas",
+          "time": 1783497509138,
+          "updated": 1783497753425,
+          "tz": null,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026nhsjtm",
+          "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/tx2026nhsjtm.geojson",
+          "felt": null,
+          "cdi": null,
+          "mmi": null,
+          "alert": null,
+          "status": "automatic",
+          "tsunami": 0,
+          "sig": 35,
+          "net": "tx",
+          "code": "2026nhsjtm",
+          "ids": ",tx2026nhsjtm,",
+          "sources": ",tx,",
+          "types": ",origin,phase-data,",
+          "nst": 31,
+          "dmin": 0,
+          "rms": 0.4,
+          "gap": 53,
+          "magType": "ml",
+          "type": "earthquake",
+          "title": "M 1.5 - 45 km NW of Toyah, Texas"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -104.129,
+            31.612,
+            4.2465
+          ]
+        },
+        "id": "tx2026nhsjtm"
+      },
       {
         "type": "Feature",
         "properties": {
           "mag": 1.06,
           "place": "6 km NW of The Geysers, CA",
           "time": 1783496887670,
-          "updated": 1783496985531,
+          "updated": 1783498040450,
           "tz": null,
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75391856",
           "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/nc75391856.geojson",
@@ -692,7 +732,7 @@
           "code": "75391856",
           "ids": ",nc75391856,",
           "sources": ",nc,",
-          "types": ",nearby-cities,origin,phase-data,",
+          "types": ",nearby-cities,origin,phase-data,scitech-link,",
           "nst": 20,
           "dmin": 0.009728,
           "rms": 0.02,
@@ -797,22 +837,22 @@
           "mag": 3.31,
           "place": "13 km SE of Pāhala, Hawaii",
           "time": 1783494985320,
-          "updated": 1783496782078,
+          "updated": 1783497229695,
           "tz": null,
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv74998936",
           "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/hv74998936.geojson",
-          "felt": 18,
+          "felt": 19,
           "cdi": 2.7,
-          "mmi": null,
+          "mmi": 3.443,
           "alert": null,
           "status": "reviewed",
           "tsunami": 0,
-          "sig": 173,
+          "sig": 174,
           "net": "hv",
           "code": "74998936",
           "ids": ",hv74998936,us6000tavq,",
           "sources": ",hv,us,",
-          "types": ",dyfi,origin,phase-data,",
+          "types": ",dyfi,origin,phase-data,shakemap,",
           "nst": 41,
           "dmin": 0.09058,
           "rms": 0.12,
@@ -3150,6 +3190,46 @@
           ]
         },
         "id": "tx2026nhfxvb"
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "mag": 1.7,
+          "place": "7 km N of Nordheim, Texas",
+          "time": 1783474869986,
+          "updated": 1783497760146,
+          "tz": null,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026nhfwpo",
+          "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/tx2026nhfwpo.geojson",
+          "felt": null,
+          "cdi": null,
+          "mmi": null,
+          "alert": null,
+          "status": "reviewed",
+          "tsunami": 0,
+          "sig": 44,
+          "net": "tx",
+          "code": "2026nhfwpo",
+          "ids": ",tx2026nhfwpo,",
+          "sources": ",tx,",
+          "types": ",origin,phase-data,",
+          "nst": 34,
+          "dmin": 0.1,
+          "rms": 0.4,
+          "gap": 80,
+          "magType": "ml",
+          "type": "earthquake",
+          "title": "M 1.7 - 7 km N of Nordheim, Texas"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -97.62,
+            28.989,
+            6.7477
+          ]
+        },
+        "id": "tx2026nhfwpo"
       },
       {
         "type": "Feature",
@@ -10350,213 +10430,13 @@
           ]
         },
         "id": "nc75391226"
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "mag": 3.78,
-          "place": "134 km NNE of Cruz Bay, U.S. Virgin Islands",
-          "time": 1783411331400,
-          "updated": 1783420106594,
-          "tz": null,
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr2026188000",
-          "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/pr2026188000.geojson",
-          "felt": null,
-          "cdi": null,
-          "mmi": null,
-          "alert": null,
-          "status": "reviewed",
-          "tsunami": 0,
-          "sig": 220,
-          "net": "pr",
-          "code": "2026188000",
-          "ids": ",pr2026188000,",
-          "sources": ",pr,",
-          "types": ",origin,phase-data,",
-          "nst": 8,
-          "dmin": 0.9686,
-          "rms": 0.28,
-          "gap": 300,
-          "magType": "md",
-          "type": "earthquake",
-          "title": "M 3.8 - 134 km NNE of Cruz Bay, U.S. Virgin Islands"
-        },
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            -64.3028,
-            19.454,
-            87
-          ]
-        },
-        "id": "pr2026188000"
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "mag": 0.62,
-          "place": "13 km N of Ocotillo Wells, CA",
-          "time": 1783411181460,
-          "updated": 1783411394271,
-          "tz": null,
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41288407",
-          "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/ci41288407.geojson",
-          "felt": null,
-          "cdi": null,
-          "mmi": null,
-          "alert": null,
-          "status": "automatic",
-          "tsunami": 0,
-          "sig": 6,
-          "net": "ci",
-          "code": "41288407",
-          "ids": ",ci41288407,",
-          "sources": ",ci,",
-          "types": ",nearby-cities,origin,phase-data,",
-          "nst": 39,
-          "dmin": 0.1133,
-          "rms": 0.2,
-          "gap": 63,
-          "magType": "ml",
-          "type": "earthquake",
-          "title": "M 0.6 - 13 km N of Ocotillo Wells, CA"
-        },
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            -116.118666666667,
-            33.2586666666667,
-            7.94
-          ]
-        },
-        "id": "ci41288407"
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "mag": 3.3,
-          "place": "Rat Islands, Aleutian Islands, Alaska",
-          "time": 1783411155661,
-          "updated": 1783445530766,
-          "tz": null,
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026niabsn",
-          "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/aka2026niabsn.geojson",
-          "felt": null,
-          "cdi": null,
-          "mmi": 1,
-          "alert": null,
-          "status": "reviewed",
-          "tsunami": 0,
-          "sig": 168,
-          "net": "ak",
-          "code": "a2026niabsn",
-          "ids": ",aka2026niabsn,",
-          "sources": ",ak,",
-          "types": ",origin,phase-data,shakemap,",
-          "nst": 9,
-          "dmin": 0.7,
-          "rms": 0.6,
-          "gap": 300,
-          "magType": "ml",
-          "type": "earthquake",
-          "title": "M 3.3 - Rat Islands, Aleutian Islands, Alaska"
-        },
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            178.263,
-            51.165,
-            10
-          ]
-        },
-        "id": "aka2026niabsn"
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "mag": 1.03,
-          "place": "29 km WSW of Olancha, CA",
-          "time": 1783410773420,
-          "updated": 1783432454140,
-          "tz": null,
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41288391",
-          "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/ci41288391.geojson",
-          "felt": null,
-          "cdi": null,
-          "mmi": null,
-          "alert": null,
-          "status": "reviewed",
-          "tsunami": 0,
-          "sig": 16,
-          "net": "ci",
-          "code": "41288391",
-          "ids": ",ci41288391,",
-          "sources": ",ci,",
-          "types": ",nearby-cities,origin,phase-data,scitech-link,",
-          "nst": 25,
-          "dmin": 0.02605,
-          "rms": 0.2,
-          "gap": 77,
-          "magType": "ml",
-          "type": "earthquake",
-          "title": "M 1.0 - 29 km WSW of Olancha, CA"
-        },
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            -118.281,
-            36.1525,
-            8.41
-          ]
-        },
-        "id": "ci41288391"
-      },
-      {
-        "type": "Feature",
-        "properties": {
-          "mag": 2.48,
-          "place": "9 km NE of Big Pine, CA",
-          "time": 1783410639060,
-          "updated": 1783472881749,
-          "tz": null,
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75391211",
-          "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/nc75391211.geojson",
-          "felt": null,
-          "cdi": null,
-          "mmi": null,
-          "alert": null,
-          "status": "automatic",
-          "tsunami": 0,
-          "sig": 95,
-          "net": "nc",
-          "code": "75391211",
-          "ids": ",nc75391211,nn00921281,",
-          "sources": ",nc,nn,",
-          "types": ",nearby-cities,origin,phase-data,scitech-link,",
-          "nst": 15,
-          "dmin": null,
-          "rms": 0.11,
-          "gap": 103,
-          "magType": "md",
-          "type": "earthquake",
-          "title": "M 2.5 - 9 km NE of Big Pine, CA"
-        },
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            -118.210166931152,
-            37.2205009460449,
-            9.36999988555908
-          ]
-        },
-        "id": "nc75391211"
       }
     ],
     "bbox": [
       -176.2826,
       -57.3541,
       -0.47,
-      178.263,
+      177.4292,
       71.1194,
       216.967
     ]
