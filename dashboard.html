@@ -18,6 +18,12 @@
     --feed-usgs-tint: #e7f0fc;
     --feed-gdacs:     #1baf7a;
     --feed-gdacs-tint:#e3f7ee;
+    /* Categorical slot 3 (yellow). Raw #eda100 is the palette's own hue
+       but text-contrast-unsafe as small chip text (same "relief rule" as
+       the status colors below) -- substituted with the same text-safe
+       amber step already used for --status-escalated. */
+    --feed-reliefweb:      #9c6a00;
+    --feed-reliefweb-tint: #fdf0d9;
 
     /* Status hues per dataviz skill's fixed status palette. The raw
        "warning" (#fab219) and "good" (#0ca30c) hexes are text-contrast-
@@ -58,6 +64,10 @@
       --feed-usgs-tint: #152841;
       --feed-gdacs:     #199e70;
       --feed-gdacs-tint:#0f2b21;
+      /* Categorical slot 3's own dark step -- validated as a set at
+         >=3:1 on the dark surface (references/palette.md), used directly. */
+      --feed-reliefweb:      #c98500;
+      --feed-reliefweb-tint: #332708;
 
       /* Dark surface is far more forgiving to the raw status hexes
          (documented 9.49 / 5.19 contrast) -- used directly here, unlike
@@ -173,6 +183,7 @@
   }
 
   .mag { font-weight: 700; font-variant-numeric: tabular-nums; margin-left: 2px; }
+  .hazard-type { font-weight: 700; margin-left: 2px; }
   .place { color: var(--ink-secondary); }
 
   .narrative { margin: 0 0 10px; line-height: 1.5; }
@@ -189,6 +200,7 @@
   }
   .feed-chip.feed-usgs, .feed-usgs .feed-chip { background: var(--feed-usgs-tint); color: var(--feed-usgs); }
   .feed-chip.feed-gdacs, .feed-gdacs .feed-chip { background: var(--feed-gdacs-tint); color: var(--feed-gdacs); }
+  .feed-chip.feed-reliefweb, .feed-reliefweb .feed-chip { background: var(--feed-reliefweb-tint); color: var(--feed-reliefweb); }
 
   .erratum {
     background: var(--erratum-tint);
@@ -257,10 +269,42 @@
 <body>
   <header class="page">
     <h1>HADR Monitor</h1>
-    <div class="freshness">Checked 8 Jul 2026, 3:09 pm SGT</div>
-    <ul class="health"><li class="feed-usgs"><span class="feed-name">USGS</span> <span class="health-pill health-ok"><span class="dot"></span>reachable</span> <span class="health-detail">last checked 8 Jul 2026, 2:38 pm SGT</span></li><li class="feed-gdacs"><span class="feed-name">GDACS</span> <span class="health-pill health-ok"><span class="dot"></span>reachable</span> <span class="health-detail">last checked 8 Jul 2026, 2:38 pm SGT</span></li></ul>
+    <div class="freshness">Checked 8 Jul 2026, 3:42 pm SGT</div>
+    <ul class="health"><li class="feed-usgs"><span class="feed-name">USGS</span> <span class="health-pill health-ok"><span class="dot"></span>reachable</span> <span class="health-detail">last checked 8 Jul 2026, 2:38 pm SGT</span></li><li class="feed-gdacs"><span class="feed-name">GDACS</span> <span class="health-pill health-ok"><span class="dot"></span>reachable</span> <span class="health-detail">last checked 8 Jul 2026, 2:38 pm SGT</span></li><li class="feed-reliefweb"><span class="feed-name">RELIEFWEB</span> <span class="health-pill health-bad"><span class="dot"></span>unreachable</span> <span class="health-detail">no health record yet</span></li></ul>
   </header>
   <main>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-new"><span class="dot"></span>new</span>
+        <span class="badge tier-badge">single-source (GDACS)</span>
+        <span class="hazard-type">Cyclone</span>
+        <span class="place">Tropical Cyclone BAVI-26</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <ul class="impact"><li class="feed-gdacs"><span class="feed-chip">GDACS</span> Alert level: <strong>Red</strong></li></ul>
+      
+      
+    <details class="events-detail">
+      <summary>1 contributing event</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">1 Jul 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">16.90°N, 134.10°E</td>
+      <td>Alert: Red</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>gdacs-cyclone-2026-07-01-1001279</code></p>
+    </details>
+    </article>
 
     <article class="incident">
       <header>
@@ -556,6 +600,102 @@
         </table>
       </div>
       <p class="events-footer">Incident id: <code>gdacs-eq-2026-07-07-1550669</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-new"><span class="dot"></span>new</span>
+        <span class="badge tier-badge">single-source (GDACS)</span>
+        <span class="hazard-type">Flood</span>
+        <span class="place">Flood in China</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <ul class="impact"><li class="feed-gdacs"><span class="feed-chip">GDACS</span> Alert level: <strong>Orange</strong></li></ul>
+      
+      
+    <details class="events-detail">
+      <summary>1 contributing event</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">6 Jun 2026, 9:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">27.12°N, 111.03°E</td>
+      <td>Alert: Orange</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>gdacs-flood-2026-06-06-1103933</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-new"><span class="dot"></span>new</span>
+        <span class="badge tier-badge">single-source (GDACS)</span>
+        <span class="hazard-type">Wildfire</span>
+        <span class="place">Forest fires in Portugal</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <ul class="impact"><li class="feed-gdacs"><span class="feed-chip">GDACS</span> Alert level: <strong>Orange</strong></li></ul>
+      
+      
+    <details class="events-detail">
+      <summary>1 contributing event</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">2 Jul 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">40.62°N, 8.28°W</td>
+      <td>Alert: Orange</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>gdacs-wildfire-2026-07-02-1029260</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-new"><span class="dot"></span>new</span>
+        <span class="badge tier-badge">single-source (GDACS)</span>
+        <span class="hazard-type">Wildfire</span>
+        <span class="place">Forest fires in France</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <ul class="impact"><li class="feed-gdacs"><span class="feed-chip">GDACS</span> Alert level: <strong>Orange</strong></li></ul>
+      
+      
+    <details class="events-detail">
+      <summary>1 contributing event</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">4 Jul 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">42.67°N, 2.57°E</td>
+      <td>Alert: Orange</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>gdacs-wildfire-2026-07-04-1029331</code></p>
     </details>
     </article>
 
@@ -935,6 +1075,2199 @@
         </table>
       </div>
       <p class="events-footer">Incident id: <code>gdacs-eq-2026-07-07-1550657</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-new"><span class="dot"></span>new</span>
+        <span class="badge tier-badge">single-source (GDACS)</span>
+        <span class="hazard-type">Flood</span>
+        <span class="place">Flood in United States</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <ul class="impact"><li class="feed-gdacs"><span class="feed-chip">GDACS</span> Alert level: <strong>Green</strong></li></ul>
+      
+      
+    <details class="events-detail">
+      <summary>1 contributing event</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">19 May 2026, 9:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">41.60°N, 82.71°W</td>
+      <td>Alert: Green</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>gdacs-flood-2026-05-19-1103888</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-escalated"><span class="dot"></span>escalated</span>
+        <span class="badge tier-badge">single-source (GDACS)</span>
+        <span class="hazard-type">Wildfire</span>
+        <span class="place">Forest fires in The Democratic Republic of Congo</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <ul class="impact"><li class="feed-gdacs"><span class="feed-chip">GDACS</span> Alert level: <strong>Green</strong></li></ul>
+      <div class="erratum"><strong>Erratum</strong><ul><li>Re-merged with Incident gdacs-wildfire-2026-07-04-1029364 -- both now match the same window. <span class="ts">8 Jul 2026, 3:36 pm SGT</span></li></ul></div>
+      
+    <details class="events-detail">
+      <summary>6 contributing events</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">24 Jun 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">6.83°S, 26.83°E</td>
+      <td>Alert: Green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">24 Jun 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">6.78°S, 27.13°E</td>
+      <td>Alert: Green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">26 Jun 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">6.74°S, 27.03°E</td>
+      <td>Alert: Green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">30 Jun 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">6.03°S, 26.48°E</td>
+      <td>Alert: Green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">4 Jul 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">6.28°S, 26.55°E</td>
+      <td>Alert: Green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">4 Jul 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">7.11°S, 26.66°E</td>
+      <td>Alert: Green</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>gdacs-wildfire-2026-06-24-1029369</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-escalated"><span class="dot"></span>escalated</span>
+        <span class="badge tier-badge">single-source (GDACS)</span>
+        <span class="hazard-type">Wildfire</span>
+        <span class="place">Forest fires in The Democratic Republic of Congo</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <ul class="impact"><li class="feed-gdacs"><span class="feed-chip">GDACS</span> Alert level: <strong>Green</strong></li></ul>
+      
+      
+    <details class="events-detail">
+      <summary>2 contributing events</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">25 Jun 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">7.93°S, 28.73°E</td>
+      <td>Alert: Green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">2 Jul 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">8.26°S, 29.06°E</td>
+      <td>Alert: Green</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>gdacs-wildfire-2026-06-25-1029345</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-escalated"><span class="dot"></span>escalated</span>
+        <span class="badge tier-badge">single-source (GDACS)</span>
+        <span class="hazard-type">Wildfire</span>
+        <span class="place">Forest fires in The Democratic Republic of Congo</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <ul class="impact"><li class="feed-gdacs"><span class="feed-chip">GDACS</span> Alert level: <strong>Green</strong></li></ul>
+      
+      
+    <details class="events-detail">
+      <summary>2 contributing events</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">25 Jun 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">6.77°S, 20.01°E</td>
+      <td>Alert: Green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">6 Jul 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">6.13°S, 19.88°E</td>
+      <td>Alert: Green</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>gdacs-wildfire-2026-06-25-1029325</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-new"><span class="dot"></span>new</span>
+        <span class="badge tier-badge">single-source (GDACS)</span>
+        <span class="hazard-type">Wildfire</span>
+        <span class="place">Forest fires in Canada</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <ul class="impact"><li class="feed-gdacs"><span class="feed-chip">GDACS</span> Alert level: <strong>Green</strong></li></ul>
+      
+      
+    <details class="events-detail">
+      <summary>1 contributing event</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">26 Jun 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">57.58°N, 97.92°W</td>
+      <td>Alert: Green</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>gdacs-wildfire-2026-06-26-1029316</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-escalated"><span class="dot"></span>escalated</span>
+        <span class="badge tier-badge">single-source (GDACS)</span>
+        <span class="hazard-type">Wildfire</span>
+        <span class="place">Forest fires in Canada</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <ul class="impact"><li class="feed-gdacs"><span class="feed-chip">GDACS</span> Alert level: <strong>Green</strong></li></ul>
+      <div class="erratum"><strong>Erratum</strong><ul><li>Re-merged with Incident gdacs-wildfire-2026-07-02-1029377 -- both now match the same window. <span class="ts">8 Jul 2026, 3:36 pm SGT</span></li><li>Re-merged with Incident gdacs-wildfire-2026-07-02-1029377 -- both now match the same window. <span class="ts">8 Jul 2026, 3:39 pm SGT</span></li></ul></div>
+      
+    <details class="events-detail">
+      <summary>5 contributing events</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">26 Jun 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">50.89°N, 78.96°W</td>
+      <td>Alert: Green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">2 Jul 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">50.20°N, 78.87°W</td>
+      <td>Alert: Green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">2 Jul 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">50.12°N, 78.63°W</td>
+      <td>Alert: Green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">2 Jul 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">51.62°N, 78.16°W</td>
+      <td>Alert: Green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">2 Jul 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">51.62°N, 78.16°W</td>
+      <td>Alert: Green</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>gdacs-wildfire-2026-06-26-1029238</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-new"><span class="dot"></span>new</span>
+        <span class="badge tier-badge">single-source (GDACS)</span>
+        <span class="hazard-type">Wildfire</span>
+        <span class="place">Forest fires in Russian Federation</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <ul class="impact"><li class="feed-gdacs"><span class="feed-chip">GDACS</span> Alert level: <strong>Green</strong></li></ul>
+      
+      
+    <details class="events-detail">
+      <summary>1 contributing event</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">26 Jun 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">62.40°N, 83.05°E</td>
+      <td>Alert: Green</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>gdacs-wildfire-2026-06-26-1029357</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-escalated"><span class="dot"></span>escalated</span>
+        <span class="badge tier-badge">single-source (GDACS)</span>
+        <span class="hazard-type">Wildfire</span>
+        <span class="place">Forest fires in The Democratic Republic of Congo</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <ul class="impact"><li class="feed-gdacs"><span class="feed-chip">GDACS</span> Alert level: <strong>Green</strong></li></ul>
+      
+      
+    <details class="events-detail">
+      <summary>9 contributing events</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">26 Jun 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">7.19°S, 18.93°E</td>
+      <td>Alert: Green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">29 Jun 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">6.69°S, 18.53°E</td>
+      <td>Alert: Green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">29 Jun 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">7.05°S, 18.43°E</td>
+      <td>Alert: Green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">29 Jun 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">6.93°S, 18.31°E</td>
+      <td>Alert: Green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">30 Jun 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">7.47°S, 18.41°E</td>
+      <td>Alert: Green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">30 Jun 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">7.59°S, 18.51°E</td>
+      <td>Alert: Green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">30 Jun 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">7.13°S, 18.32°E</td>
+      <td>Alert: Green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">1 Jul 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">7.26°S, 18.78°E</td>
+      <td>Alert: Green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">6 Jul 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">6.97°S, 18.52°E</td>
+      <td>Alert: Green</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>gdacs-wildfire-2026-06-26-1029324</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-new"><span class="dot"></span>new</span>
+        <span class="badge tier-badge">single-source (GDACS)</span>
+        <span class="hazard-type">Wildfire</span>
+        <span class="place">Forest fires in Russian Federation</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <ul class="impact"><li class="feed-gdacs"><span class="feed-chip">GDACS</span> Alert level: <strong>Green</strong></li></ul>
+      
+      
+    <details class="events-detail">
+      <summary>1 contributing event</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">26 Jun 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">63.06°N, 81.26°E</td>
+      <td>Alert: Green</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>gdacs-wildfire-2026-06-26-1029321</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-new"><span class="dot"></span>new</span>
+        <span class="badge tier-badge">single-source (GDACS)</span>
+        <span class="hazard-type">Wildfire</span>
+        <span class="place">Forest fires in Canada</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <ul class="impact"><li class="feed-gdacs"><span class="feed-chip">GDACS</span> Alert level: <strong>Green</strong></li></ul>
+      
+      
+    <details class="events-detail">
+      <summary>1 contributing event</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">27 Jun 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">56.36°N, 102.92°W</td>
+      <td>Alert: Green</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>gdacs-wildfire-2026-06-27-1029265</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-new"><span class="dot"></span>new</span>
+        <span class="badge tier-badge">single-source (GDACS)</span>
+        <span class="hazard-type">Wildfire</span>
+        <span class="place">Forest fires in Canada</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <ul class="impact"><li class="feed-gdacs"><span class="feed-chip">GDACS</span> Alert level: <strong>Green</strong></li></ul>
+      
+      
+    <details class="events-detail">
+      <summary>1 contributing event</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">27 Jun 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">63.12°N, 109.73°W</td>
+      <td>Alert: Green</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>gdacs-wildfire-2026-06-27-1029264</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-escalated"><span class="dot"></span>escalated</span>
+        <span class="badge tier-badge">single-source (GDACS)</span>
+        <span class="hazard-type">Wildfire</span>
+        <span class="place">Forest fires in Canada</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <ul class="impact"><li class="feed-gdacs"><span class="feed-chip">GDACS</span> Alert level: <strong>Green</strong></li></ul>
+      
+      
+    <details class="events-detail">
+      <summary>2 contributing events</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">27 Jun 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">61.83°N, 121.53°W</td>
+      <td>Alert: Green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">2 Jul 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">61.78°N, 121.33°W</td>
+      <td>Alert: Green</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>gdacs-wildfire-2026-06-27-1029181</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-new"><span class="dot"></span>new</span>
+        <span class="badge tier-badge">single-source (GDACS)</span>
+        <span class="hazard-type">Wildfire</span>
+        <span class="place">Forest fires in Canada</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <ul class="impact"><li class="feed-gdacs"><span class="feed-chip">GDACS</span> Alert level: <strong>Green</strong></li></ul>
+      
+      
+    <details class="events-detail">
+      <summary>1 contributing event</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">27 Jun 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">57.98°N, 66.98°W</td>
+      <td>Alert: Green</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>gdacs-wildfire-2026-06-27-1029350</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-new"><span class="dot"></span>new</span>
+        <span class="badge tier-badge">single-source (GDACS)</span>
+        <span class="hazard-type">Wildfire</span>
+        <span class="place">Forest fires in Zambia</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <ul class="impact"><li class="feed-gdacs"><span class="feed-chip">GDACS</span> Alert level: <strong>Green</strong></li></ul>
+      
+      
+    <details class="events-detail">
+      <summary>1 contributing event</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">28 Jun 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">13.19°S, 24.74°E</td>
+      <td>Alert: Green</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>gdacs-wildfire-2026-06-28-1029368</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-escalated"><span class="dot"></span>escalated</span>
+        <span class="badge tier-badge">single-source (GDACS)</span>
+        <span class="hazard-type">Wildfire</span>
+        <span class="place">Forest fires in Angola</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <ul class="impact"><li class="feed-gdacs"><span class="feed-chip">GDACS</span> Alert level: <strong>Green</strong></li></ul>
+      
+      
+    <details class="events-detail">
+      <summary>3 contributing events</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">29 Jun 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">9.21°S, 21.62°E</td>
+      <td>Alert: Green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">4 Jul 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">8.52°S, 21.85°E</td>
+      <td>Alert: Green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">5 Jul 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">8.93°S, 21.64°E</td>
+      <td>Alert: Green</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>gdacs-wildfire-2026-06-29-1029380</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-new"><span class="dot"></span>new</span>
+        <span class="badge tier-badge">single-source (GDACS)</span>
+        <span class="hazard-type">Wildfire</span>
+        <span class="place">Forest fires in The Democratic Republic of Congo</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <ul class="impact"><li class="feed-gdacs"><span class="feed-chip">GDACS</span> Alert level: <strong>Green</strong></li></ul>
+      
+      
+    <details class="events-detail">
+      <summary>1 contributing event</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">29 Jun 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">9.62°S, 26.28°E</td>
+      <td>Alert: Green</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>gdacs-wildfire-2026-06-29-1029276</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-new"><span class="dot"></span>new</span>
+        <span class="badge tier-badge">single-source (GDACS)</span>
+        <span class="hazard-type">Wildfire</span>
+        <span class="place">Forest fires in United States</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <ul class="impact"><li class="feed-gdacs"><span class="feed-chip">GDACS</span> Alert level: <strong>Green</strong></li></ul>
+      
+      
+    <details class="events-detail">
+      <summary>1 contributing event</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">29 Jun 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">38.05°N, 104.99°W</td>
+      <td>Alert: Green</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>gdacs-wildfire-2026-06-29-1029196</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-new"><span class="dot"></span>new</span>
+        <span class="badge tier-badge">single-source (GDACS)</span>
+        <span class="hazard-type">Wildfire</span>
+        <span class="place">Forest fires in Angola</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <ul class="impact"><li class="feed-gdacs"><span class="feed-chip">GDACS</span> Alert level: <strong>Green</strong></li></ul>
+      
+      
+    <details class="events-detail">
+      <summary>1 contributing event</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">29 Jun 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">10.74°S, 16.84°E</td>
+      <td>Alert: Green</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>gdacs-wildfire-2026-06-29-1029343</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-new"><span class="dot"></span>new</span>
+        <span class="badge tier-badge">single-source (GDACS)</span>
+        <span class="hazard-type">Wildfire</span>
+        <span class="place">Forest fires in The Democratic Republic of Congo</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <ul class="impact"><li class="feed-gdacs"><span class="feed-chip">GDACS</span> Alert level: <strong>Green</strong></li></ul>
+      
+      
+    <details class="events-detail">
+      <summary>1 contributing event</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">29 Jun 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">5.19°S, 17.37°E</td>
+      <td>Alert: Green</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>gdacs-wildfire-2026-06-29-1029323</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-new"><span class="dot"></span>new</span>
+        <span class="badge tier-badge">single-source (GDACS)</span>
+        <span class="hazard-type">Wildfire</span>
+        <span class="place">Forest fires in Russian Federation</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <ul class="impact"><li class="feed-gdacs"><span class="feed-chip">GDACS</span> Alert level: <strong>Green</strong></li></ul>
+      
+      
+    <details class="events-detail">
+      <summary>1 contributing event</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">30 Jun 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">65.00°N, 127.99°E</td>
+      <td>Alert: Green</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>gdacs-wildfire-2026-06-30-1029379</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-escalated"><span class="dot"></span>escalated</span>
+        <span class="badge tier-badge">single-source (GDACS)</span>
+        <span class="hazard-type">Wildfire</span>
+        <span class="place">Forest fires in Canada</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <ul class="impact"><li class="feed-gdacs"><span class="feed-chip">GDACS</span> Alert level: <strong>Green</strong></li></ul>
+      
+      
+    <details class="events-detail">
+      <summary>2 contributing events</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">30 Jun 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">56.94°N, 66.56°W</td>
+      <td>Alert: Green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">5 Jul 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">56.83°N, 66.39°W</td>
+      <td>Alert: Green</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>gdacs-wildfire-2026-06-30-1029378</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-new"><span class="dot"></span>new</span>
+        <span class="badge tier-badge">single-source (GDACS)</span>
+        <span class="hazard-type">Wildfire</span>
+        <span class="place">Forest fires in Brazil</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <ul class="impact"><li class="feed-gdacs"><span class="feed-chip">GDACS</span> Alert level: <strong>Green</strong></li></ul>
+      
+      
+    <details class="events-detail">
+      <summary>1 contributing event</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">1 Jul 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">12.76°S, 44.52°W</td>
+      <td>Alert: Green</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>gdacs-wildfire-2026-07-01-1029293</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-new"><span class="dot"></span>new</span>
+        <span class="badge tier-badge">single-source (GDACS)</span>
+        <span class="hazard-type">Wildfire</span>
+        <span class="place">Forest fires in Angola</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <ul class="impact"><li class="feed-gdacs"><span class="feed-chip">GDACS</span> Alert level: <strong>Green</strong></li></ul>
+      
+      
+    <details class="events-detail">
+      <summary>1 contributing event</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">1 Jul 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">9.24°S, 17.36°E</td>
+      <td>Alert: Green</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>gdacs-wildfire-2026-07-01-1029365</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-new"><span class="dot"></span>new</span>
+        <span class="badge tier-badge">single-source (GDACS)</span>
+        <span class="hazard-type">Wildfire</span>
+        <span class="place">Forest fires in Zambia</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <ul class="impact"><li class="feed-gdacs"><span class="feed-chip">GDACS</span> Alert level: <strong>Green</strong></li></ul>
+      
+      
+    <details class="events-detail">
+      <summary>1 contributing event</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">1 Jul 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">9.48°S, 32.30°E</td>
+      <td>Alert: Green</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>gdacs-wildfire-2026-07-01-1029338</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-escalated"><span class="dot"></span>escalated</span>
+        <span class="badge tier-badge">single-source (GDACS)</span>
+        <span class="hazard-type">Wildfire</span>
+        <span class="place">Forest fires in Australia</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <ul class="impact"><li class="feed-gdacs"><span class="feed-chip">GDACS</span> Alert level: <strong>Green</strong></li></ul>
+      
+      
+    <details class="events-detail">
+      <summary>2 contributing events</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">1 Jul 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">12.42°S, 133.67°E</td>
+      <td>Alert: Green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">3 Jul 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">12.48°S, 133.22°E</td>
+      <td>Alert: Green</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>gdacs-wildfire-2026-07-01-1029292</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-new"><span class="dot"></span>new</span>
+        <span class="badge tier-badge">single-source (GDACS)</span>
+        <span class="hazard-type">Flood</span>
+        <span class="place">Flood in Peru</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <ul class="impact"><li class="feed-gdacs"><span class="feed-chip">GDACS</span> Alert level: <strong>Green</strong></li></ul>
+      
+      
+    <details class="events-detail">
+      <summary>1 contributing event</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">1 Jul 2026, 9:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">3.50°S, 77.82°W</td>
+      <td>Alert: Green</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>gdacs-flood-2026-07-01-1104000</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-escalated"><span class="dot"></span>escalated</span>
+        <span class="badge tier-badge">single-source (GDACS)</span>
+        <span class="hazard-type">Wildfire</span>
+        <span class="place">Forest fires in Australia</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <ul class="impact"><li class="feed-gdacs"><span class="feed-chip">GDACS</span> Alert level: <strong>Green</strong></li></ul>
+      
+      
+    <details class="events-detail">
+      <summary>3 contributing events</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">2 Jul 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">14.27°S, 133.73°E</td>
+      <td>Alert: Green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">3 Jul 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">14.21°S, 133.87°E</td>
+      <td>Alert: Green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">7 Jul 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">13.90°S, 133.99°E</td>
+      <td>Alert: Green</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>gdacs-wildfire-2026-07-02-1029333</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-new"><span class="dot"></span>new</span>
+        <span class="badge tier-badge">single-source (GDACS)</span>
+        <span class="hazard-type">Wildfire</span>
+        <span class="place">Forest fires in Australia</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <ul class="impact"><li class="feed-gdacs"><span class="feed-chip">GDACS</span> Alert level: <strong>Green</strong></li></ul>
+      
+      
+    <details class="events-detail">
+      <summary>1 contributing event</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">2 Jul 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">11.69°S, 130.65°E</td>
+      <td>Alert: Green</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>gdacs-wildfire-2026-07-02-1029329</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-escalated"><span class="dot"></span>escalated</span>
+        <span class="badge tier-badge">single-source (GDACS)</span>
+        <span class="hazard-type">Wildfire</span>
+        <span class="place">Forest fires in Australia</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <ul class="impact"><li class="feed-gdacs"><span class="feed-chip">GDACS</span> Alert level: <strong>Green</strong></li></ul>
+      
+      
+    <details class="events-detail">
+      <summary>3 contributing events</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">2 Jul 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">18.19°S, 137.61°E</td>
+      <td>Alert: Green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">2 Jul 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">17.89°S, 137.62°E</td>
+      <td>Alert: Green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">3 Jul 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">17.85°S, 137.23°E</td>
+      <td>Alert: Green</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>gdacs-wildfire-2026-07-02-1029328</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-escalated"><span class="dot"></span>escalated</span>
+        <span class="badge tier-badge">single-source (GDACS)</span>
+        <span class="hazard-type">Wildfire</span>
+        <span class="place">Forest fires in Australia</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <ul class="impact"><li class="feed-gdacs"><span class="feed-chip">GDACS</span> Alert level: <strong>Green</strong></li></ul>
+      
+      
+    <details class="events-detail">
+      <summary>3 contributing events</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">2 Jul 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">13.23°S, 142.05°E</td>
+      <td>Alert: Green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">2 Jul 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">13.31°S, 142.18°E</td>
+      <td>Alert: Green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">3 Jul 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">12.73°S, 142.55°E</td>
+      <td>Alert: Green</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>gdacs-wildfire-2026-07-02-1029291</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-new"><span class="dot"></span>new</span>
+        <span class="badge tier-badge">single-source (GDACS)</span>
+        <span class="hazard-type">Wildfire</span>
+        <span class="place">Forest fires in Russian Federation</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <ul class="impact"><li class="feed-gdacs"><span class="feed-chip">GDACS</span> Alert level: <strong>Green</strong></li></ul>
+      
+      
+    <details class="events-detail">
+      <summary>1 contributing event</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">3 Jul 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">64.84°N, 110.28°E</td>
+      <td>Alert: Green</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>gdacs-wildfire-2026-07-03-1029375</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-escalated"><span class="dot"></span>escalated</span>
+        <span class="badge tier-badge">single-source (GDACS)</span>
+        <span class="hazard-type">Wildfire</span>
+        <span class="place">Forest fires in Canada</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <ul class="impact"><li class="feed-gdacs"><span class="feed-chip">GDACS</span> Alert level: <strong>Green</strong></li></ul>
+      <div class="erratum"><strong>Erratum</strong><ul><li>Re-merged with Incident gdacs-wildfire-2026-07-04-1029347 -- both now match the same window. <span class="ts">8 Jul 2026, 3:36 pm SGT</span></li><li>Re-merged with Incident gdacs-wildfire-2026-07-03-1029374 -- both now match the same window. <span class="ts">8 Jul 2026, 3:39 pm SGT</span></li></ul></div>
+      
+    <details class="events-detail">
+      <summary>8 contributing events</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">3 Jul 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">54.38°N, 72.61°W</td>
+      <td>Alert: Green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">3 Jul 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">53.91°N, 72.78°W</td>
+      <td>Alert: Green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">3 Jul 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">53.80°N, 71.69°W</td>
+      <td>Alert: Green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">3 Jul 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">54.38°N, 72.61°W</td>
+      <td>Alert: Green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">3 Jul 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">53.91°N, 72.78°W</td>
+      <td>Alert: Green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">3 Jul 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">53.80°N, 71.69°W</td>
+      <td>Alert: Green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">4 Jul 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">53.45°N, 70.63°W</td>
+      <td>Alert: Green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">5 Jul 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">53.49°N, 69.50°W</td>
+      <td>Alert: Green</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>gdacs-wildfire-2026-07-03-1029374</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-new"><span class="dot"></span>new</span>
+        <span class="badge tier-badge">single-source (GDACS)</span>
+        <span class="hazard-type">Wildfire</span>
+        <span class="place">Forest fires in Brazil</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <ul class="impact"><li class="feed-gdacs"><span class="feed-chip">GDACS</span> Alert level: <strong>Green</strong></li></ul>
+      
+      
+    <details class="events-detail">
+      <summary>1 contributing event</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">3 Jul 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">13.26°S, 54.36°W</td>
+      <td>Alert: Green</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>gdacs-wildfire-2026-07-03-1029311</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-new"><span class="dot"></span>new</span>
+        <span class="badge tier-badge">single-source (GDACS)</span>
+        <span class="hazard-type">Wildfire</span>
+        <span class="place">Forest fires in Canada</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <ul class="impact"><li class="feed-gdacs"><span class="feed-chip">GDACS</span> Alert level: <strong>Green</strong></li></ul>
+      
+      
+    <details class="events-detail">
+      <summary>1 contributing event</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">3 Jul 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">49.95°N, 121.48°W</td>
+      <td>Alert: Green</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>gdacs-wildfire-2026-07-03-1029359</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-escalated"><span class="dot"></span>escalated</span>
+        <span class="badge tier-badge">single-source (GDACS)</span>
+        <span class="hazard-type">Wildfire</span>
+        <span class="place">Forest fires in Angola</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <ul class="impact"><li class="feed-gdacs"><span class="feed-chip">GDACS</span> Alert level: <strong>Green</strong></li></ul>
+      
+      
+    <details class="events-detail">
+      <summary>2 contributing events</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">3 Jul 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">8.15°S, 19.72°E</td>
+      <td>Alert: Green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">5 Jul 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">7.92°S, 20.09°E</td>
+      <td>Alert: Green</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>gdacs-wildfire-2026-07-03-1029300</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-new"><span class="dot"></span>new</span>
+        <span class="badge tier-badge">single-source (GDACS)</span>
+        <span class="hazard-type">Wildfire</span>
+        <span class="place">Forest fires in Australia</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <ul class="impact"><li class="feed-gdacs"><span class="feed-chip">GDACS</span> Alert level: <strong>Green</strong></li></ul>
+      
+      
+    <details class="events-detail">
+      <summary>1 contributing event</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">3 Jul 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">12.85°S, 136.08°E</td>
+      <td>Alert: Green</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>gdacs-wildfire-2026-07-03-1029289</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-new"><span class="dot"></span>new</span>
+        <span class="badge tier-badge">single-source (GDACS)</span>
+        <span class="hazard-type">Wildfire</span>
+        <span class="place">Forest fires in Sudan</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <ul class="impact"><li class="feed-gdacs"><span class="feed-chip">GDACS</span> Alert level: <strong>Green</strong></li></ul>
+      
+      
+    <details class="events-detail">
+      <summary>1 contributing event</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">4 Jul 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">4.96°N, 34.77°E</td>
+      <td>Alert: Green</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>gdacs-wildfire-2026-07-04-1029358</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-escalated"><span class="dot"></span>escalated</span>
+        <span class="badge tier-badge">single-source (GDACS)</span>
+        <span class="hazard-type">Wildfire</span>
+        <span class="place">Forest fires in Canada</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <ul class="impact"><li class="feed-gdacs"><span class="feed-chip">GDACS</span> Alert level: <strong>Green</strong></li></ul>
+      
+      
+    <details class="events-detail">
+      <summary>2 contributing events</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">4 Jul 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">54.75°N, 76.21°W</td>
+      <td>Alert: Green</td>
+    </tr>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">5 Jul 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">54.81°N, 76.37°W</td>
+      <td>Alert: Green</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>gdacs-wildfire-2026-07-04-1029372</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-new"><span class="dot"></span>new</span>
+        <span class="badge tier-badge">single-source (GDACS)</span>
+        <span class="hazard-type">Flood</span>
+        <span class="place">Flood in New Zealand</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <ul class="impact"><li class="feed-gdacs"><span class="feed-chip">GDACS</span> Alert level: <strong>Green</strong></li></ul>
+      
+      
+    <details class="events-detail">
+      <summary>1 contributing event</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">5 Jul 2026, 9:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">45.10°S, 170.97°E</td>
+      <td>Alert: Green</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>gdacs-flood-2026-07-05-1104006</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-new"><span class="dot"></span>new</span>
+        <span class="badge tier-badge">single-source (GDACS)</span>
+        <span class="hazard-type">Wildfire</span>
+        <span class="place">Forest fires in Australia</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <ul class="impact"><li class="feed-gdacs"><span class="feed-chip">GDACS</span> Alert level: <strong>Green</strong></li></ul>
+      
+      
+    <details class="events-detail">
+      <summary>1 contributing event</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-gdacs">GDACS</span></td>
+      <td class="tabular">6 Jul 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">12.91°S, 132.04°E</td>
+      <td>Alert: Green</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>gdacs-wildfire-2026-07-06-1029332</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-new"><span class="dot"></span>new</span>
+        <span class="badge tier-badge">humanitarian-confirmed</span>
+        <span class="hazard-type">Other</span>
+        <span class="place">Bangladesh</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <div class="impact impact-none">No impact estimate available yet.</div>
+      
+      
+    <details class="events-detail">
+      <summary>1 contributing event</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-reliefweb">RELIEFWEB</span></td>
+      <td class="tabular">15 Mar 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">23.68°N, 90.36°E</td>
+      <td>—</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>reliefweb-other-2026-03-15-ep-2026-000048-bgd</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-new"><span class="dot"></span>new</span>
+        <span class="badge tier-badge">humanitarian-confirmed</span>
+        <span class="hazard-type">Flood</span>
+        <span class="place">Botswana</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <div class="impact impact-none">No impact estimate available yet.</div>
+      
+      
+    <details class="events-detail">
+      <summary>1 contributing event</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-reliefweb">RELIEFWEB</span></td>
+      <td class="tabular">15 Mar 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">22.33°S, 24.68°E</td>
+      <td>—</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>reliefweb-flood-2026-03-15-fl-2026-000046-bwa</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-new"><span class="dot"></span>new</span>
+        <span class="badge tier-badge">humanitarian-confirmed</span>
+        <span class="hazard-type">Other</span>
+        <span class="place">Guinea-Bissau</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <div class="impact impact-none">No impact estimate available yet.</div>
+      
+      
+    <details class="events-detail">
+      <summary>1 contributing event</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-reliefweb">RELIEFWEB</span></td>
+      <td class="tabular">24 Mar 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">11.80°N, 15.18°W</td>
+      <td>—</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>reliefweb-other-2026-03-24-fr-2026-000055-gnb</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-new"><span class="dot"></span>new</span>
+        <span class="badge tier-badge">humanitarian-confirmed</span>
+        <span class="hazard-type">Other</span>
+        <span class="place">Liberia</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <div class="impact impact-none">No impact estimate available yet.</div>
+      
+      
+    <details class="events-detail">
+      <summary>1 contributing event</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-reliefweb">RELIEFWEB</span></td>
+      <td class="tabular">24 Mar 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">6.43°N, 9.43°W</td>
+      <td>—</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>reliefweb-other-2026-03-24-vw-2026-000054-lbr</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-new"><span class="dot"></span>new</span>
+        <span class="badge tier-badge">humanitarian-confirmed</span>
+        <span class="hazard-type">Other</span>
+        <span class="place">Liberia</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <div class="impact impact-none">No impact estimate available yet.</div>
+      
+      
+    <details class="events-detail">
+      <summary>1 contributing event</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-reliefweb">RELIEFWEB</span></td>
+      <td class="tabular">24 Mar 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">6.43°N, 9.43°W</td>
+      <td>—</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>reliefweb-other-2026-03-24-fr-2026-000052-lbr</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-new"><span class="dot"></span>new</span>
+        <span class="badge tier-badge">humanitarian-confirmed</span>
+        <span class="hazard-type">Flood</span>
+        <span class="place">United Republic of Tanzania</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <div class="impact impact-none">No impact estimate available yet.</div>
+      
+      
+    <details class="events-detail">
+      <summary>1 contributing event</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-reliefweb">RELIEFWEB</span></td>
+      <td class="tabular">25 Mar 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">6.37°S, 34.89°E</td>
+      <td>—</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>reliefweb-flood-2026-03-25-fl-2026-000063-tza</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-new"><span class="dot"></span>new</span>
+        <span class="badge tier-badge">humanitarian-confirmed</span>
+        <span class="hazard-type">Flood</span>
+        <span class="place">Afghanistan</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <div class="impact impact-none">No impact estimate available yet.</div>
+      
+      
+    <details class="events-detail">
+      <summary>1 contributing event</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-reliefweb">RELIEFWEB</span></td>
+      <td class="tabular">25 Mar 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">33.94°N, 67.71°E</td>
+      <td>—</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>reliefweb-flood-2026-03-25-ff-2026-000043-afg</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-new"><span class="dot"></span>new</span>
+        <span class="badge tier-badge">humanitarian-confirmed</span>
+        <span class="hazard-type">Flood</span>
+        <span class="place">Yemen</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <div class="impact impact-none">No impact estimate available yet.</div>
+      
+      
+    <details class="events-detail">
+      <summary>1 contributing event</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-reliefweb">RELIEFWEB</span></td>
+      <td class="tabular">27 Mar 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">15.55°N, 48.52°E</td>
+      <td>—</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>reliefweb-flood-2026-03-27-fl-2026-000044-yem</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-new"><span class="dot"></span>new</span>
+        <span class="badge tier-badge">humanitarian-confirmed</span>
+        <span class="hazard-type">Cyclone</span>
+        <span class="place">Fiji</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <div class="impact impact-none">No impact estimate available yet.</div>
+      
+      
+    <details class="events-detail">
+      <summary>1 contributing event</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-reliefweb">RELIEFWEB</span></td>
+      <td class="tabular">6 Apr 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">17.71°S, 178.07°E</td>
+      <td>—</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>reliefweb-cyclone-2026-04-06-tc-2026-000053-fji</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-new"><span class="dot"></span>new</span>
+        <span class="badge tier-badge">humanitarian-confirmed</span>
+        <span class="hazard-type">Cyclone</span>
+        <span class="place">Australia, Papua New Guinea, Solomon Islands</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <div class="impact impact-none">No impact estimate available yet.</div>
+      
+      
+    <details class="events-detail">
+      <summary>1 contributing event</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-reliefweb">RELIEFWEB</span></td>
+      <td class="tabular">6 Apr 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">6.31°S, 143.96°E</td>
+      <td>—</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>reliefweb-cyclone-2026-04-06-tc-2026-000051-slb</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-new"><span class="dot"></span>new</span>
+        <span class="badge tier-badge">humanitarian-confirmed</span>
+        <span class="hazard-type">Flood</span>
+        <span class="place">Dominican Republic</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <div class="impact impact-none">No impact estimate available yet.</div>
+      
+      
+    <details class="events-detail">
+      <summary>1 contributing event</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-reliefweb">RELIEFWEB</span></td>
+      <td class="tabular">7 Apr 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">18.74°N, 70.16°W</td>
+      <td>—</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>reliefweb-flood-2026-04-07-fl-2026-000087-dom</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-new"><span class="dot"></span>new</span>
+        <span class="badge tier-badge">humanitarian-confirmed</span>
+        <span class="hazard-type">Cyclone</span>
+        <span class="place">Guam, Micronesia (Federated States of), Northern Mariana Islands (The United States of America)</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <div class="impact impact-none">No impact estimate available yet.</div>
+      
+      
+    <details class="events-detail">
+      <summary>1 contributing event</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-reliefweb">RELIEFWEB</span></td>
+      <td class="tabular">9 Apr 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">37.09°N, 95.71°W</td>
+      <td>—</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>reliefweb-cyclone-2026-04-09-tc-2026-000050-fsm</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-new"><span class="dot"></span>new</span>
+        <span class="badge tier-badge">humanitarian-confirmed</span>
+        <span class="hazard-type">Other</span>
+        <span class="place">Sri Lanka</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <div class="impact impact-none">No impact estimate available yet.</div>
+      
+      
+    <details class="events-detail">
+      <summary>1 contributing event</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-reliefweb">RELIEFWEB</span></td>
+      <td class="tabular">1 May 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">7.87°N, 80.77°E</td>
+      <td>—</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>reliefweb-other-2026-05-01-ep-2026-000085-lka</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-new"><span class="dot"></span>new</span>
+        <span class="badge tier-badge">humanitarian-confirmed</span>
+        <span class="hazard-type">Other</span>
+        <span class="place">Democratic Republic of the Congo, Uganda</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <div class="impact impact-none">No impact estimate available yet.</div>
+      
+      
+    <details class="events-detail">
+      <summary>1 contributing event</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-reliefweb">RELIEFWEB</span></td>
+      <td class="tabular">5 May 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">4.04°S, 21.76°E</td>
+      <td>—</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>reliefweb-other-2026-05-05-ep-2026-000071-cod</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-new"><span class="dot"></span>new</span>
+        <span class="badge tier-badge">humanitarian-confirmed</span>
+        <span class="hazard-type">Flood</span>
+        <span class="place">Syrian Arab Republic</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <div class="impact impact-none">No impact estimate available yet.</div>
+      
+      
+    <details class="events-detail">
+      <summary>1 contributing event</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-reliefweb">RELIEFWEB</span></td>
+      <td class="tabular">20 May 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">34.80°N, 38.99°E</td>
+      <td>—</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>reliefweb-flood-2026-05-20-fl-2026-000080-syr</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-new"><span class="dot"></span>new</span>
+        <span class="badge tier-badge">humanitarian-confirmed</span>
+        <span class="hazard-type">Other</span>
+        <span class="place">Armenia</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <div class="impact impact-none">No impact estimate available yet.</div>
+      
+      
+    <details class="events-detail">
+      <summary>1 contributing event</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-reliefweb">RELIEFWEB</span></td>
+      <td class="tabular">6 Jun 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">40.07°N, 45.04°E</td>
+      <td>—</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>reliefweb-other-2026-06-06-st-2026-000086-arm</code></p>
+    </details>
+    </article>
+
+    <article class="incident is-closed">
+      <header>
+        <span class="badge state-badge state-closed"><span class="dot"></span>closed</span>
+        <span class="badge tier-badge">humanitarian-confirmed</span>
+        <span class="hazard-type">Earthquake</span>
+        <span class="place">Indonesia, Philippines</span>
+      </header>
+      <p class="narrative">Sequence closed -- no new activity.</p>
+      <div class="impact impact-none">No impact estimate available yet.</div>
+      
+      
+    <details class="events-detail">
+      <summary>1 contributing event</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-reliefweb">RELIEFWEB</span></td>
+      <td class="tabular">8 Jun 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">12.88°N, 121.77°E</td>
+      <td>—</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>reliefweb-earthquake-2026-06-08-eq-2026-000083-phl</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-new"><span class="dot"></span>new</span>
+        <span class="badge tier-badge">humanitarian-confirmed</span>
+        <span class="hazard-type">Earthquake</span>
+        <span class="place">Venezuela (Bolivarian Republic of)</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <div class="impact impact-none">No impact estimate available yet.</div>
+      
+      
+    <details class="events-detail">
+      <summary>1 contributing event</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-reliefweb">RELIEFWEB</span></td>
+      <td class="tabular">24 Jun 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">6.42°N, 66.59°W</td>
+      <td>—</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>reliefweb-earthquake-2026-06-24-eq-2026-000093-ven</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-new"><span class="dot"></span>new</span>
+        <span class="badge tier-badge">humanitarian-confirmed</span>
+        <span class="hazard-type">Other</span>
+        <span class="place">Central African Republic</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <div class="impact impact-none">No impact estimate available yet.</div>
+      
+      
+    <details class="events-detail">
+      <summary>1 contributing event</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-reliefweb">RELIEFWEB</span></td>
+      <td class="tabular">26 Jun 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">6.61°N, 20.94°E</td>
+      <td>—</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>reliefweb-other-2026-06-26-ep-2026-000107-caf</code></p>
+    </details>
+    </article>
+
+    <article class="incident">
+      <header>
+        <span class="badge state-badge state-new"><span class="dot"></span>new</span>
+        <span class="badge tier-badge">humanitarian-confirmed</span>
+        <span class="hazard-type">Flood</span>
+        <span class="place">Georgia</span>
+      </header>
+      <p class="narrative">(awaiting narration)</p>
+      <div class="impact impact-none">No impact estimate available yet.</div>
+      
+      
+    <details class="events-detail">
+      <summary>1 contributing event</summary>
+      <div class="table-wrap">
+        <table class="events-table">
+          <thead>
+            <tr><th>Source</th><th>Time (SGT)</th><th>Magnitude</th><th>Location</th><th>Estimate</th></tr>
+          </thead>
+          <tbody>
+    <tr>
+      <td><span class="feed-chip feed-reliefweb">RELIEFWEB</span></td>
+      <td class="tabular">27 Jun 2026, 8:00 am</td>
+      <td class="tabular">—</td>
+      <td class="tabular">42.32°N, 43.36°E</td>
+      <td>—</td>
+    </tr></tbody>
+        </table>
+      </div>
+      <p class="events-footer">Incident id: <code>reliefweb-flood-2026-06-27-fl-2026-000106-geo</code></p>
     </details>
     </article>
   </main>
