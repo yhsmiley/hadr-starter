@@ -1,7 +1,8 @@
 // A3: Events + prior Incidents -> updated Incidents. Pure function --
 // same inputs always produce the same output (SHAPING.md's whole reason
-// for choosing Shape A). V1 scope only (SLICES.md): USGS/Earthquake only,
-// magnitude is the only allowlisted field (ADR 0003).
+// for choosing Shape A). V2 (SLICES.md): USGS + GDACS earthquakes, real
+// cross-feed matching. Allowlist (ADR 0003) is magnitude (either feed,
+// diffed per source per K2's resolution) plus GDACS alert colour.
 import { FeedEvent, Incident } from "../types";
 import { EARTHQUAKE_WINDOW, idsOverlap, isSameOrRelatedEarthquake } from "./match";
 import { assignConfidenceTier } from "./confidence";
@@ -28,21 +29,41 @@ function hoursBetween(aIso: string, bIso: string): number {
 function newIncidentId(anchor: FeedEvent): string {
   const day = anchor.occurredAtUtc.slice(0, 10);
   const primaryId = anchor.sourceIds[0] ?? "unknown";
-  return `usgs-eq-${day}-${primaryId}`;
+  return `${anchor.feed}-eq-${day}-${primaryId}`;
 }
 
-/** ADR 0005: only the PAGER alert answers "who's affected" for USGS --
- *  magnitude is hazard physics, not impact (feeds/usgs.md finding 5). */
+const GDACS_ALERT_RANK: Record<string, number> = { Green: 0, Orange: 1, Red: 2 };
+
+/** `undefined` means no comparable colour on one/both sides -- not a change. */
+function compareGdacsAlertLevel(
+  prior?: string | null,
+  next?: string | null
+): "up" | "down" | undefined {
+  if (!prior || !next || prior === next) return undefined;
+  const priorRank = GDACS_ALERT_RANK[prior];
+  const nextRank = GDACS_ALERT_RANK[next];
+  if (priorRank === undefined || nextRank === undefined) return undefined;
+  return nextRank > priorRank ? "up" : "down";
+}
+
+/** ADR 0005: never one blended number. USGS's PAGER alert and GDACS's
+ *  alert colour are both "who's affected" signals (feeds/usgs.md finding
+ *  5, feeds/gdacs.md finding 1) -- shown side by side when both exist. */
 function buildImpactEstimates(inc: Incident): Incident["impactEstimates"] {
-  const withAlert = inc.memberEvents.find((e) => e.estimate.pagerAlert);
-  if (!withAlert) return [];
-  return [
-    {
-      source: "usgs",
-      label: "PAGER alert",
-      value: withAlert.estimate.pagerAlert as string,
-    },
-  ];
+  const estimates: Incident["impactEstimates"] = [];
+  const withPager = inc.memberEvents.find((e) => e.estimate.pagerAlert);
+  if (withPager) {
+    estimates.push({ source: "usgs", label: "PAGER alert", value: withPager.estimate.pagerAlert as string });
+  }
+  const withGdacsColour = inc.memberEvents.find((e) => e.estimate.gdacsAlertLevel);
+  if (withGdacsColour) {
+    estimates.push({
+      source: "gdacs",
+      label: "Alert level",
+      value: withGdacsColour.estimate.gdacsAlertLevel as string,
+    });
+  }
+  return estimates;
 }
 
 export function fuse(
@@ -72,14 +93,34 @@ export function fuse(
         // Same physical event, refetched -- a revision candidate, never
         // a new member (ADR 0001: alias-set matching, not id-keying).
         const prior = matched.memberEvents[existingIdx];
-        if (prior.estimate.magnitude !== event.estimate.magnitude) {
+        const magnitudeChanged = prior.estimate.magnitude !== event.estimate.magnitude;
+
+        if (magnitudeChanged) {
+          // A measurement correction, not a real-world escalation --
+          // "revised" per implementation-notes.md's earlier decision.
+          // Takes precedence over a simultaneous colour change: a
+          // correction is the more consequential thing to surface.
           matched.erratumLog.push({
             kind: "revised",
             atUtc: nowUtc,
-            description: `Magnitude revised from ${prior.estimate.magnitude ?? "unknown"} to ${event.estimate.magnitude ?? "unknown"} (USGS ${event.sourceIds[0] ?? "?"}).`,
+            description: `Magnitude revised from ${prior.estimate.magnitude ?? "unknown"} to ${event.estimate.magnitude ?? "unknown"} (${event.feed.toUpperCase()} ${event.sourceIds[0] ?? "?"}).`,
           });
           matched.state = "revised";
           matched.narrative = null; // stale -- the sitrep skill must re-narrate
+        } else {
+          // No magnitude correction -- check GDACS's alert colour for a
+          // genuine severity change (ADR 0003's allowlist).
+          const colourChange = compareGdacsAlertLevel(
+            prior.estimate.gdacsAlertLevel,
+            event.estimate.gdacsAlertLevel
+          );
+          if (colourChange === "up") {
+            matched.state = "escalated";
+            matched.narrative = null;
+          } else if (colourChange === "down") {
+            matched.state = "de-escalated";
+            matched.narrative = null;
+          }
         }
         matched.memberEvents[existingIdx] = event;
       } else {
@@ -96,7 +137,7 @@ export function fuse(
         hazardType: "Earthquake",
         memberEvents: [event],
         state: "new",
-        confidenceTier: "single-source (USGS)",
+        confidenceTier: event.feed === "gdacs" ? "single-source (GDACS)" : "single-source (USGS)",
         glide: null,
         impactEstimates: [],
         erratumLog: [],

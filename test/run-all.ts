@@ -3,10 +3,12 @@
 // exports a `run()` that throws on assertion failure.
 import * as fusion from "./fusion.test";
 import * as ingest from "./ingest.test";
+import * as gdacsIngest from "./gdacs-ingest.test";
 
 const tests: Array<[string, () => Promise<void>]> = [
   ["fusion.test.ts", fusion.run],
   ["ingest.test.ts", ingest.run],
+  ["gdacs-ingest.test.ts", gdacsIngest.run],
 ];
 
 async function main(): Promise<void> {

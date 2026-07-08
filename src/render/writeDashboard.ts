@@ -7,20 +7,30 @@ import path from "path";
 import { readIncidents } from "../store/incidentStore";
 import { readHealth } from "../store/healthStore";
 import { renderDashboard } from "./dashboard";
-import { FeedHealth } from "../types";
+import { Feed, FeedHealth } from "../types";
 
 const DASHBOARD_PATH = path.join(__dirname, "..", "..", "..", "dashboard.html");
 
-export async function writeDashboardFile(nowUtc: string = new Date().toISOString()): Promise<void> {
-  const incidents = await readIncidents();
-  const usgsHealth: FeedHealth =
-    (await readHealth("usgs")) ?? {
-      feed: "usgs",
+// One health line per feed with a live A7 job. Grows alongside the
+// ingestion adapters, same rollout order as SLICES.md (V1: usgs; V2:
+// + gdacs; V3: + reliefweb).
+const LIVE_FEEDS: Feed[] = ["usgs", "gdacs"];
+
+async function readHealthOrPending(feed: Feed, nowUtc: string): Promise<FeedHealth> {
+  return (
+    (await readHealth(feed)) ?? {
+      feed,
       lastSuccessAtUtc: null,
       lastAttemptAtUtc: nowUtc,
       lastError: "no health record yet",
-    };
+    }
+  );
+}
 
-  const html = renderDashboard({ incidents, health: [usgsHealth], generatedAtUtc: nowUtc });
+export async function writeDashboardFile(nowUtc: string = new Date().toISOString()): Promise<void> {
+  const incidents = await readIncidents();
+  const health = await Promise.all(LIVE_FEEDS.map((feed) => readHealthOrPending(feed, nowUtc)));
+
+  const html = renderDashboard({ incidents, health, generatedAtUtc: nowUtc });
   await fs.writeFile(DASHBOARD_PATH, html, "utf8");
 }

@@ -1,0 +1,5824 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "bbox": [
+        -7.1298,
+        71.1194,
+        -7.1298,
+        71.1194
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.1298,
+          71.1194
+        ]
+      },
+      "properties": {
+        "eventtype": "EQ",
+        "eventid": 1550718,
+        "episodeid": 1716915,
+        "eventname": "",
+        "glide": "",
+        "name": "Earthquake in Jan Mayen Island Region",
+        "description": "Earthquake in Jan Mayen Island Region",
+        "htmldescription": "Green M 4.7 Earthquake in Jan Mayen Island Region at: 08 Jul 2026 04:21:46.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=EQ&eventid=1550718&episodeid=1716915",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1550718&episodeid=1716915&eventtype=EQ",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=EQ&eventid=1550718"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Jan Mayen Island Region",
+        "fromdate": "2026-07-08T04:21:46",
+        "todate": "2026-07-08T04:21:46",
+        "datemodified": "2026-07-08T05:02:07",
+        "iso3": "",
+        "source": "NEIC",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [],
+        "severitydata": {
+          "severity": 4.7,
+          "severitytext": "Magnitude 4.7M, Depth:10km",
+          "severityunit": "M"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        104.7549,
+        28.5871,
+        104.7549,
+        28.5871
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.7549,
+          28.5871
+        ]
+      },
+      "properties": {
+        "eventtype": "EQ",
+        "eventid": 1550709,
+        "episodeid": 1716905,
+        "eventname": "",
+        "glide": "",
+        "name": "Earthquake in China",
+        "description": "Earthquake in China",
+        "htmldescription": "Green M 5 Earthquake in China at: 08 Jul 2026 02:08:48.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=EQ&eventid=1550709&episodeid=1716905",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1550709&episodeid=1716905&eventtype=EQ",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=EQ&eventid=1550709"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.01,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "China",
+        "fromdate": "2026-07-08T02:08:48",
+        "todate": "2026-07-08T02:08:48",
+        "datemodified": "2026-07-08T02:49:03",
+        "iso3": "CHN",
+        "source": "NEIC",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "CN",
+            "iso3": "CHN",
+            "countryname": "China"
+          }
+        ],
+        "severitydata": {
+          "severity": 5,
+          "severitytext": "Magnitude 5M, Depth:10km",
+          "severityunit": "M"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        134.1,
+        16.9,
+        134.1,
+        16.9
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          134.1,
+          16.9
+        ]
+      },
+      "properties": {
+        "eventtype": "TC",
+        "eventid": 1001279,
+        "episodeid": 29,
+        "eventname": "BAVI-26",
+        "glide": "TC-2026-000099-GUM",
+        "name": "Tropical Cyclone BAVI-26",
+        "description": "Tropical Cyclone BAVI-26",
+        "htmldescription": "Red Tropical Cyclone BAVI-26 in Guam, Northern Mariana Islands, Japan, Taiwan, China from: 01 Jul 2026  to: 08 Jul 2026 .",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Red/TC.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Red/TC.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=TC&eventid=1001279&episodeid=29",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1001279&episodeid=29&eventtype=TC",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=TC&eventid=1001279"
+        },
+        "alertlevel": "Red",
+        "alertscore": 3,
+        "episodealertlevel": "Red",
+        "episodealertscore": 3,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Guam, Northern Mariana Islands, Japan, Taiwan, China",
+        "fromdate": "2026-07-01T00:00:00",
+        "todate": "2026-07-08T00:00:00",
+        "datemodified": "2026-07-08T06:35:05",
+        "iso3": "CHN",
+        "source": "JTWC",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "countryonland": "",
+        "affectedcountries": [
+          {
+            "iso2": "GU",
+            "iso3": "GUM",
+            "countryname": "Guam"
+          },
+          {
+            "iso2": "JP",
+            "iso3": "JPN",
+            "countryname": "Japan"
+          },
+          {
+            "iso2": "TW",
+            "iso3": "TWN",
+            "countryname": "Taiwan"
+          },
+          {
+            "iso2": "CN",
+            "iso3": "CHN",
+            "countryname": "China"
+          }
+        ],
+        "severitydata": {
+          "severity": 287.0352,
+          "severitytext": "Hurricane/Typhoon > 74 mph (maximum wind speed of 287 km/h)",
+          "severityunit": "km/h"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        126.3577,
+        1.3973,
+        126.3577,
+        1.3973
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.3577,
+          1.3973
+        ]
+      },
+      "properties": {
+        "eventtype": "EQ",
+        "eventid": 1550684,
+        "episodeid": 1716889,
+        "eventname": "",
+        "glide": "",
+        "name": "Earthquake in Northern Molucca Sea",
+        "description": "Earthquake in Northern Molucca Sea",
+        "htmldescription": "Green M 4.6 Earthquake in Northern Molucca Sea at: 07 Jul 2026 23:35:51.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=EQ&eventid=1550684&episodeid=1716889",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1550684&episodeid=1716889&eventtype=EQ",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=EQ&eventid=1550684"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Northern Molucca Sea",
+        "fromdate": "2026-07-07T23:35:51",
+        "todate": "2026-07-07T23:35:51",
+        "datemodified": "2026-07-08T01:42:12",
+        "iso3": "",
+        "source": "NEIC",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [],
+        "severitydata": {
+          "severity": 4.6,
+          "severitytext": "Magnitude 4.6M, Depth:49.277km",
+          "severityunit": "M"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        71.7429,
+        39.1463,
+        71.7429,
+        39.1463
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          71.7429,
+          39.1463
+        ]
+      },
+      "properties": {
+        "eventtype": "EQ",
+        "eventid": 1550675,
+        "episodeid": 1716888,
+        "eventname": "",
+        "glide": "",
+        "name": "Earthquake in Tajikistan",
+        "description": "Earthquake in Tajikistan",
+        "htmldescription": "Green M 4.9 Earthquake in Tajikistan at: 07 Jul 2026 22:42:39.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=EQ&eventid=1550675&episodeid=1716888",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1550675&episodeid=1716888&eventtype=EQ",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=EQ&eventid=1550675"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Tajikistan",
+        "fromdate": "2026-07-07T22:42:39",
+        "todate": "2026-07-07T22:42:39",
+        "datemodified": "2026-07-08T01:33:57",
+        "iso3": "TJK",
+        "source": "NEIC",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "TJ",
+            "iso3": "TJK",
+            "countryname": "Tajikistan"
+          }
+        ],
+        "severitydata": {
+          "severity": 4.9,
+          "severitytext": "Magnitude 4.9M, Depth:10km",
+          "severityunit": "M"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        104.7122,
+        28.6565,
+        104.7122,
+        28.6565
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.7122,
+          28.6565
+        ]
+      },
+      "properties": {
+        "eventtype": "EQ",
+        "eventid": 1550674,
+        "episodeid": 1716865,
+        "eventname": "",
+        "glide": "",
+        "name": "Earthquake in China",
+        "description": "Earthquake in China",
+        "htmldescription": "Green M 4.6 Earthquake in China at: 07 Jul 2026 22:22:13.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=EQ&eventid=1550674&episodeid=1716865",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1550674&episodeid=1716865&eventtype=EQ",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=EQ&eventid=1550674"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "China",
+        "fromdate": "2026-07-07T22:22:13",
+        "todate": "2026-07-07T22:22:13",
+        "datemodified": "2026-07-07T23:02:24",
+        "iso3": "CHN",
+        "source": "NEIC",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "CN",
+            "iso3": "CHN",
+            "countryname": "China"
+          }
+        ],
+        "severitydata": {
+          "severity": 4.6,
+          "severitytext": "Magnitude 4.6M, Depth:10km",
+          "severityunit": "M"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        104.7718,
+        28.5899,
+        104.7718,
+        28.5899
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.7718,
+          28.5899
+        ]
+      },
+      "properties": {
+        "eventtype": "EQ",
+        "eventid": 1550669,
+        "episodeid": 1716860,
+        "eventname": "",
+        "glide": "",
+        "name": "Earthquake in China",
+        "description": "Earthquake in China",
+        "htmldescription": "Green M 5.1 Earthquake in China at: 07 Jul 2026 22:12:29.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=EQ&eventid=1550669&episodeid=1716860",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1550669&episodeid=1716860&eventtype=EQ",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=EQ&eventid=1550669"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.181860137739503,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "China",
+        "fromdate": "2026-07-07T22:12:29",
+        "todate": "2026-07-07T22:12:29",
+        "datemodified": "2026-07-07T22:52:43",
+        "iso3": "CHN",
+        "source": "NEIC",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "CN",
+            "iso3": "CHN",
+            "countryname": "China"
+          }
+        ],
+        "severitydata": {
+          "severity": 5.1,
+          "severitytext": "Magnitude 5.1M, Depth:10km",
+          "severityunit": "M"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        120.6627,
+        13.7713,
+        120.6627,
+        13.7713
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.6627,
+          13.7713
+        ]
+      },
+      "properties": {
+        "eventtype": "EQ",
+        "eventid": 1550657,
+        "episodeid": 1716846,
+        "eventname": "",
+        "glide": "",
+        "name": "Earthquake in Philippines",
+        "description": "Earthquake in Philippines",
+        "htmldescription": "Green M 4.5 Earthquake in Philippines at: 07 Jul 2026 20:37:40.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=EQ&eventid=1550657&episodeid=1716846",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1550657&episodeid=1716846&eventtype=EQ",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=EQ&eventid=1550657"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Philippines",
+        "fromdate": "2026-07-07T20:37:40",
+        "todate": "2026-07-07T20:37:40",
+        "datemodified": "2026-07-07T21:18:02",
+        "iso3": "PHL",
+        "source": "NEIC",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "PH",
+            "iso3": "PHL",
+            "countryname": "Philippines"
+          }
+        ],
+        "severitydata": {
+          "severity": 4.5,
+          "severitytext": "Magnitude 4.5M, Depth:155.427km",
+          "severityunit": "M"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        177.4292,
+        -37.2165,
+        177.4292,
+        -37.2165
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          177.4292,
+          -37.2165
+        ]
+      },
+      "properties": {
+        "eventtype": "EQ",
+        "eventid": 1550654,
+        "episodeid": 1716843,
+        "eventname": "",
+        "glide": "",
+        "name": "Earthquake in New Zealand",
+        "description": "Earthquake in New Zealand",
+        "htmldescription": "Green M 4.9 Earthquake in New Zealand at: 07 Jul 2026 20:33:15.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=EQ&eventid=1550654&episodeid=1716843",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1550654&episodeid=1716843&eventtype=EQ",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=EQ&eventid=1550654"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "New Zealand",
+        "fromdate": "2026-07-07T20:33:15",
+        "todate": "2026-07-07T20:33:15",
+        "datemodified": "2026-07-07T23:00:30",
+        "iso3": "NZL",
+        "source": "NEIC",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "NZ",
+            "iso3": "NZL",
+            "countryname": "New Zealand"
+          }
+        ],
+        "severitydata": {
+          "severity": 4.9,
+          "severitytext": "Magnitude 4.9M, Depth:121.41km",
+          "severityunit": "M"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        105.0646,
+        -6.7717,
+        105.0646,
+        -6.7717
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.0646,
+          -6.7717
+        ]
+      },
+      "properties": {
+        "eventtype": "EQ",
+        "eventid": 1550650,
+        "episodeid": 1716837,
+        "eventname": "",
+        "glide": "",
+        "name": "Earthquake in Indonesia",
+        "description": "Earthquake in Indonesia",
+        "htmldescription": "Green M 5.3 Earthquake in Indonesia at: 07 Jul 2026 19:44:52.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=EQ&eventid=1550650&episodeid=1716837",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1550650&episodeid=1716837&eventtype=EQ",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=EQ&eventid=1550650"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Indonesia",
+        "fromdate": "2026-07-07T19:44:52",
+        "todate": "2026-07-07T19:44:52",
+        "datemodified": "2026-07-07T20:25:02",
+        "iso3": "IDN",
+        "source": "NEIC",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "ID",
+            "iso3": "IDN",
+            "countryname": "Indonesia"
+          }
+        ],
+        "severitydata": {
+          "severity": 5.3,
+          "severitytext": "Magnitude 5.3M, Depth:35km",
+          "severityunit": "M"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        -84.6042,
+        9.8644,
+        -84.6042,
+        9.8644
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.6042,
+          9.8644
+        ]
+      },
+      "properties": {
+        "eventtype": "EQ",
+        "eventid": 1550639,
+        "episodeid": 1716823,
+        "eventname": "",
+        "glide": "",
+        "name": "Earthquake in Costa Rica",
+        "description": "Earthquake in Costa Rica",
+        "htmldescription": "Green M 5.3 Earthquake in Costa Rica at: 07 Jul 2026 18:11:32.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=EQ&eventid=1550639&episodeid=1716823",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1550639&episodeid=1716823&eventtype=EQ",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=EQ&eventid=1550639"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Costa Rica",
+        "fromdate": "2026-07-07T18:11:32",
+        "todate": "2026-07-07T18:11:32",
+        "datemodified": "2026-07-07T18:51:43",
+        "iso3": "CRI",
+        "source": "NEIC",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "CR",
+            "iso3": "CRI",
+            "countryname": "Costa Rica"
+          }
+        ],
+        "severitydata": {
+          "severity": 5.3,
+          "severitytext": "Magnitude 5.3M, Depth:47.784km",
+          "severityunit": "M"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        -176.2826,
+        52.5711,
+        -176.2826,
+        52.5711
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -176.2826,
+          52.5711
+        ]
+      },
+      "properties": {
+        "eventtype": "EQ",
+        "eventid": 1550648,
+        "episodeid": 1716833,
+        "eventname": "",
+        "glide": "",
+        "name": "Earthquake in United States",
+        "description": "Earthquake in United States",
+        "htmldescription": "Green M 4.5 Earthquake in United States at: 07 Jul 2026 18:07:41.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=EQ&eventid=1550648&episodeid=1716833",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1550648&episodeid=1716833&eventtype=EQ",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=EQ&eventid=1550648"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "United States",
+        "fromdate": "2026-07-07T18:07:41",
+        "todate": "2026-07-07T18:07:41",
+        "datemodified": "2026-07-07T19:37:02",
+        "iso3": "USA",
+        "source": "NEIC",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "US",
+            "iso3": "USA",
+            "countryname": "United States"
+          }
+        ],
+        "severitydata": {
+          "severity": 4.5,
+          "severitytext": "Magnitude 4.5M, Depth:172.427km",
+          "severityunit": "M"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        -66.8183,
+        -57.3541,
+        -66.8183,
+        -57.3541
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.8183,
+          -57.3541
+        ]
+      },
+      "properties": {
+        "eventtype": "EQ",
+        "eventid": 1550638,
+        "episodeid": 1716821,
+        "eventname": "",
+        "glide": "",
+        "name": "Earthquake in Drake Passage",
+        "description": "Earthquake in Drake Passage",
+        "htmldescription": "Green M 4.9 Earthquake in Drake Passage at: 07 Jul 2026 17:39:56.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=EQ&eventid=1550638&episodeid=1716821",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1550638&episodeid=1716821&eventtype=EQ",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=EQ&eventid=1550638"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Drake Passage",
+        "fromdate": "2026-07-07T17:39:56",
+        "todate": "2026-07-07T17:39:56",
+        "datemodified": "2026-07-07T18:22:42",
+        "iso3": "",
+        "source": "NEIC",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [],
+        "severitydata": {
+          "severity": 4.9,
+          "severitytext": "Magnitude 4.9M, Depth:10km",
+          "severityunit": "M"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        -64.4759,
+        19.6403,
+        -64.4759,
+        19.6403
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.4759,
+          19.6403
+        ]
+      },
+      "properties": {
+        "eventtype": "EQ",
+        "eventid": 1550633,
+        "episodeid": 1716813,
+        "eventname": "",
+        "glide": "",
+        "name": "Earthquake in British Virgin Is.",
+        "description": "Earthquake in British Virgin Is.",
+        "htmldescription": "Green M 4.7 Earthquake in British Virgin Is. at: 07 Jul 2026 17:25:35.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=EQ&eventid=1550633&episodeid=1716813",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1550633&episodeid=1716813&eventtype=EQ",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=EQ&eventid=1550633"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "British Virgin Is.",
+        "fromdate": "2026-07-07T17:25:35",
+        "todate": "2026-07-07T17:25:35",
+        "datemodified": "2026-07-07T18:05:42",
+        "iso3": "VGB",
+        "source": "NEIC",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "VG",
+            "iso3": "VGB",
+            "countryname": "British Virgin Is."
+          }
+        ],
+        "severitydata": {
+          "severity": 4.7,
+          "severitytext": "Magnitude 4.7M, Depth:10km",
+          "severityunit": "M"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        127.2906,
+        3.1116,
+        127.2906,
+        3.1116
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.2906,
+          3.1116
+        ]
+      },
+      "properties": {
+        "eventtype": "EQ",
+        "eventid": 1550615,
+        "episodeid": 1716796,
+        "eventname": "",
+        "glide": "",
+        "name": "Earthquake in Indonesia",
+        "description": "Earthquake in Indonesia",
+        "htmldescription": "Green M 4.5 Earthquake in Indonesia at: 07 Jul 2026 14:21:22.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=EQ&eventid=1550615&episodeid=1716796",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1550615&episodeid=1716796&eventtype=EQ",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=EQ&eventid=1550615"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Indonesia",
+        "fromdate": "2026-07-07T14:21:22",
+        "todate": "2026-07-07T14:21:22",
+        "datemodified": "2026-07-07T15:05:42",
+        "iso3": "IDN",
+        "source": "NEIC",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "ID",
+            "iso3": "IDN",
+            "countryname": "Indonesia"
+          }
+        ],
+        "severitydata": {
+          "severity": 4.5,
+          "severitytext": "Magnitude 4.5M, Depth:35km",
+          "severityunit": "M"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        -62.58,
+        10.7321,
+        -62.58,
+        10.7321
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -62.58,
+          10.7321
+        ]
+      },
+      "properties": {
+        "eventtype": "EQ",
+        "eventid": 1550582,
+        "episodeid": 1716761,
+        "eventname": "",
+        "glide": "",
+        "name": "Earthquake in Venezuela",
+        "description": "Earthquake in Venezuela",
+        "htmldescription": "Green M 4.5 Earthquake in Venezuela at: 07 Jul 2026 08:41:37.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=EQ&eventid=1550582&episodeid=1716761",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1550582&episodeid=1716761&eventtype=EQ",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=EQ&eventid=1550582"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Venezuela",
+        "fromdate": "2026-07-07T08:41:37",
+        "todate": "2026-07-07T08:41:37",
+        "datemodified": "2026-07-07T11:03:42",
+        "iso3": "VEN",
+        "source": "NEIC",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "VE",
+            "iso3": "VEN",
+            "countryname": "Venezuela"
+          }
+        ],
+        "severitydata": {
+          "severity": 4.5,
+          "severitytext": "Magnitude 4.5M, Depth:126.81km",
+          "severityunit": "M"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        -30.3683,
+        59.4768,
+        -30.3683,
+        59.4768
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -30.3683,
+          59.4768
+        ]
+      },
+      "properties": {
+        "eventtype": "EQ",
+        "eventid": 1550574,
+        "episodeid": 1716751,
+        "eventname": "",
+        "glide": "",
+        "name": "Earthquake in Reykjanes Ridge",
+        "description": "Earthquake in Reykjanes Ridge",
+        "htmldescription": "Green M 5 Earthquake in Reykjanes Ridge at: 07 Jul 2026 08:30:56.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=EQ&eventid=1550574&episodeid=1716751",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1550574&episodeid=1716751&eventtype=EQ",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=EQ&eventid=1550574"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Reykjanes Ridge",
+        "fromdate": "2026-07-07T08:30:56",
+        "todate": "2026-07-07T08:30:56",
+        "datemodified": "2026-07-07T08:52:44",
+        "iso3": "",
+        "source": "NEIC",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [],
+        "severitydata": {
+          "severity": 5,
+          "severitytext": "Magnitude 5M, Depth:10km",
+          "severityunit": "M"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        127.5573,
+        3.1239,
+        127.5573,
+        3.1239
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.5573,
+          3.1239
+        ]
+      },
+      "properties": {
+        "eventtype": "EQ",
+        "eventid": 1550568,
+        "episodeid": 1716745,
+        "eventname": "",
+        "glide": "",
+        "name": "Earthquake in Indonesia",
+        "description": "Earthquake in Indonesia",
+        "htmldescription": "Green M 5.4 Earthquake in Indonesia at: 07 Jul 2026 07:16:26.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=EQ&eventid=1550568&episodeid=1716745",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1550568&episodeid=1716745&eventtype=EQ",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=EQ&eventid=1550568"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Indonesia",
+        "fromdate": "2026-07-07T07:16:26",
+        "todate": "2026-07-07T07:16:26",
+        "datemodified": "2026-07-07T09:53:02",
+        "iso3": "IDN",
+        "source": "NEIC",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "ID",
+            "iso3": "IDN",
+            "countryname": "Indonesia"
+          }
+        ],
+        "severitydata": {
+          "severity": 5.4,
+          "severitytext": "Magnitude 5.4M, Depth:36.821km",
+          "severityunit": "M"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        -30.2483,
+        59.5106,
+        -30.2483,
+        59.5106
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -30.2483,
+          59.5106
+        ]
+      },
+      "properties": {
+        "eventtype": "EQ",
+        "eventid": 1550559,
+        "episodeid": 1716735,
+        "eventname": "",
+        "glide": "",
+        "name": "Earthquake in Reykjanes Ridge",
+        "description": "Earthquake in Reykjanes Ridge",
+        "htmldescription": "Green M 5.3 Earthquake in Reykjanes Ridge at: 07 Jul 2026 05:55:40.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=EQ&eventid=1550559&episodeid=1716735",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1550559&episodeid=1716735&eventtype=EQ",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=EQ&eventid=1550559"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Reykjanes Ridge",
+        "fromdate": "2026-07-07T05:55:40",
+        "todate": "2026-07-07T05:55:40",
+        "datemodified": "2026-07-07T06:16:23",
+        "iso3": "",
+        "source": "NEIC",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [],
+        "severitydata": {
+          "severity": 5.3,
+          "severitytext": "Magnitude 5.3M, Depth:10km",
+          "severityunit": "M"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        -30.2505,
+        59.4631,
+        -30.2505,
+        59.4631
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -30.2505,
+          59.4631
+        ]
+      },
+      "properties": {
+        "eventtype": "EQ",
+        "eventid": 1550554,
+        "episodeid": 1716731,
+        "eventname": "",
+        "glide": "",
+        "name": "Earthquake in Reykjanes Ridge",
+        "description": "Earthquake in Reykjanes Ridge",
+        "htmldescription": "Green M 5 Earthquake in Reykjanes Ridge at: 07 Jul 2026 05:00:43.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=EQ&eventid=1550554&episodeid=1716731",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1550554&episodeid=1716731&eventtype=EQ",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=EQ&eventid=1550554"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Reykjanes Ridge",
+        "fromdate": "2026-07-07T05:00:43",
+        "todate": "2026-07-07T05:00:43",
+        "datemodified": "2026-07-07T05:18:23",
+        "iso3": "",
+        "source": "NEIC",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [],
+        "severitydata": {
+          "severity": 5,
+          "severitytext": "Magnitude 5M, Depth:10km",
+          "severityunit": "M"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        -66.7593,
+        -57.3319,
+        -66.7593,
+        -57.3319
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.7593,
+          -57.3319
+        ]
+      },
+      "properties": {
+        "eventtype": "EQ",
+        "eventid": 1550528,
+        "episodeid": 1716719,
+        "eventname": "",
+        "glide": "",
+        "name": "Earthquake in Chile",
+        "description": "Earthquake in Chile",
+        "htmldescription": "Green M 5.8 Earthquake in Chile at: 07 Jul 2026 01:26:45.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/EQ.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=EQ&eventid=1550528&episodeid=1716719",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1550528&episodeid=1716719&eventtype=EQ",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=EQ&eventid=1550528"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Chile",
+        "fromdate": "2026-07-07T01:26:45",
+        "todate": "2026-07-07T01:26:45",
+        "datemodified": "2026-07-08T02:08:33",
+        "iso3": "CHL",
+        "source": "NEIC",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "CL",
+            "iso3": "CHL",
+            "countryname": "Chile"
+          }
+        ],
+        "severitydata": {
+          "severity": 5.8,
+          "severitytext": "Magnitude 5.8M, Depth:10km",
+          "severityunit": "M"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        170.9698,
+        -45.1,
+        170.9698,
+        -45.1
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          170.9698,
+          -45.1
+        ]
+      },
+      "properties": {
+        "eventtype": "FL",
+        "eventid": 1104006,
+        "episodeid": 1,
+        "eventname": "",
+        "glide": "",
+        "name": "Flood in New Zealand",
+        "description": "Flood in New Zealand",
+        "htmldescription": "Green Flood in New Zealand from: 05 Jul 2026 01 to: 07 Jul 2026 01.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/FL.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/FL.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=FL&eventid=1104006&episodeid=1",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1104006&episodeid=1&eventtype=FL",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=FL&eventid=1104006"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "New Zealand",
+        "fromdate": "2026-07-05T01:00:00",
+        "todate": "2026-07-07T01:00:00",
+        "datemodified": "2026-07-07T06:08:23",
+        "iso3": "NZL",
+        "source": "GLOFAS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "NZ",
+            "iso3": "NZL",
+            "countryname": "New Zealand"
+          }
+        ],
+        "severitydata": {
+          "severity": 0,
+          "severitytext": "Magnitude 0 ",
+          "severityunit": ""
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        -77.8217,
+        -3.4996,
+        -77.8217,
+        -3.4996
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.8217,
+          -3.4996
+        ]
+      },
+      "properties": {
+        "eventtype": "FL",
+        "eventid": 1104000,
+        "episodeid": 3,
+        "eventname": "",
+        "glide": "",
+        "name": "Flood in Peru",
+        "description": "Flood in Peru",
+        "htmldescription": "Green Flood in Peru from: 01 Jul 2026 01 to: 07 Jul 2026 01.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/FL.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/FL.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=FL&eventid=1104000&episodeid=3",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1104000&episodeid=3&eventtype=FL",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=FL&eventid=1104000"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Peru",
+        "fromdate": "2026-07-01T01:00:00",
+        "todate": "2026-07-07T01:00:00",
+        "datemodified": "2026-07-07T09:59:27",
+        "iso3": "PER",
+        "source": "GLOFAS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "PE",
+            "iso3": "PER",
+            "countryname": "Peru"
+          }
+        ],
+        "severitydata": {
+          "severity": 0,
+          "severitytext": "Magnitude 0 ",
+          "severityunit": ""
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        111.0272,
+        27.1176,
+        111.0272,
+        27.1176
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.0272,
+          27.1176
+        ]
+      },
+      "properties": {
+        "eventtype": "FL",
+        "eventid": 1103933,
+        "episodeid": 17,
+        "eventname": "",
+        "glide": "FL-2026-000105-CHN",
+        "name": "Flood in China",
+        "description": "Flood in China",
+        "htmldescription": "Orange Flood in China from: 06 Jun 2026 01 to: 07 Jul 2026 01.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/FL.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/FL.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=FL&eventid=1103933&episodeid=17",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1103933&episodeid=17&eventtype=FL",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=FL&eventid=1103933"
+        },
+        "alertlevel": "Orange",
+        "alertscore": 2,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "China",
+        "fromdate": "2026-06-06T01:00:00",
+        "todate": "2026-07-07T01:00:00",
+        "datemodified": "2026-07-07T07:01:35",
+        "iso3": "CHN",
+        "source": "GLOFAS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "CN",
+            "iso3": "CHN",
+            "countryname": "China"
+          }
+        ],
+        "severitydata": {
+          "severity": 0,
+          "severitytext": "Magnitude 0 ",
+          "severityunit": ""
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        -82.7102,
+        41.597,
+        -82.7102,
+        41.597
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.7102,
+          41.597
+        ]
+      },
+      "properties": {
+        "eventtype": "FL",
+        "eventid": 1103888,
+        "episodeid": 40,
+        "eventname": "",
+        "glide": "",
+        "name": "Flood in United States",
+        "description": "Flood in United States",
+        "htmldescription": "Green Flood in United States from: 19 May 2026 01 to: 07 Jul 2026 01.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/FL.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/FL.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=FL&eventid=1103888&episodeid=40",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1103888&episodeid=40&eventtype=FL",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=FL&eventid=1103888"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "United States",
+        "fromdate": "2026-05-19T01:00:00",
+        "todate": "2026-07-07T01:00:00",
+        "datemodified": "2026-07-07T09:59:20",
+        "iso3": "USA",
+        "source": "GLOFAS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "US",
+            "iso3": "USA",
+            "countryname": "United States"
+          }
+        ],
+        "severitydata": {
+          "severity": 0,
+          "severitytext": "Magnitude 0 ",
+          "severityunit": ""
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        127.9934,
+        64.9978,
+        127.9934,
+        64.9978
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.9934,
+          64.9978
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029379,
+        "episodeid": 1,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in Russian Federation",
+        "description": "Forest fires in Russian Federation",
+        "htmldescription": "Green Forest fires in Russian Federation from: 30 Jun 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029379&episodeid=1",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029379&episodeid=1&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029379"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Russian Federation",
+        "fromdate": "2026-06-30T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:11:56",
+        "iso3": "RUS",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [],
+        "severitydata": {
+          "severity": 5069,
+          "severitytext": "Green impact for forestfire in 5069 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        -66.5608,
+        56.9382,
+        -66.5608,
+        56.9382
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.5608,
+          56.9382
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029378,
+        "episodeid": 1,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in Canada",
+        "description": "Forest fires in Canada",
+        "htmldescription": "Green Forest fires in Canada from: 30 Jun 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029378&episodeid=1",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029378&episodeid=1&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029378"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Canada",
+        "fromdate": "2026-06-30T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:11:24",
+        "iso3": "CAN",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "CA",
+            "iso3": "CAN",
+            "countryname": "Canada"
+          }
+        ],
+        "severitydata": {
+          "severity": 6106,
+          "severitytext": "Green impact for forestfire in 6106 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        -78.1606,
+        51.6179,
+        -78.1606,
+        51.6179
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.1606,
+          51.6179
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029377,
+        "episodeid": 1,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in Canada",
+        "description": "Forest fires in Canada",
+        "htmldescription": "Green Forest fires in Canada from: 02 Jul 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029377&episodeid=1",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029377&episodeid=1&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029377"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Canada",
+        "fromdate": "2026-07-02T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:08:13",
+        "iso3": "CAN",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "CA",
+            "iso3": "CAN",
+            "countryname": "Canada"
+          }
+        ],
+        "severitydata": {
+          "severity": 5547,
+          "severitytext": "Green impact for forestfire in 5547 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        -71.6921,
+        53.8041,
+        -71.6921,
+        53.8041
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.6921,
+          53.8041
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029376,
+        "episodeid": 1,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in Canada",
+        "description": "Forest fires in Canada",
+        "htmldescription": "Green Forest fires in Canada from: 03 Jul 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029376&episodeid=1",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029376&episodeid=1&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029376"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Canada",
+        "fromdate": "2026-07-03T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:06:29",
+        "iso3": "CAN",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "CA",
+            "iso3": "CAN",
+            "countryname": "Canada"
+          }
+        ],
+        "severitydata": {
+          "severity": 5838,
+          "severitytext": "Green impact for forestfire in 5838 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        110.2784,
+        64.8433,
+        110.2784,
+        64.8433
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.2784,
+          64.8433
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029375,
+        "episodeid": 1,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in Russian Federation",
+        "description": "Forest fires in Russian Federation",
+        "htmldescription": "Green Forest fires in Russian Federation from: 03 Jul 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029375&episodeid=1",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029375&episodeid=1&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029375"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Russian Federation",
+        "fromdate": "2026-07-03T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:06:00",
+        "iso3": "RUS",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [],
+        "severitydata": {
+          "severity": 5136,
+          "severitytext": "Green impact for forestfire in 5136 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        -72.6112,
+        54.3772,
+        -72.6112,
+        54.3772
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.6112,
+          54.3772
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029374,
+        "episodeid": 1,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in Canada",
+        "description": "Forest fires in Canada",
+        "htmldescription": "Green Forest fires in Canada from: 03 Jul 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029374&episodeid=1",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029374&episodeid=1&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029374"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Canada",
+        "fromdate": "2026-07-03T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:05:52",
+        "iso3": "CAN",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "CA",
+            "iso3": "CAN",
+            "countryname": "Canada"
+          }
+        ],
+        "severitydata": {
+          "severity": 5105,
+          "severitytext": "Green impact for forestfire in 5105 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        -72.7775,
+        53.9065,
+        -72.7775,
+        53.9065
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.7775,
+          53.9065
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029373,
+        "episodeid": 1,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in Canada",
+        "description": "Forest fires in Canada",
+        "htmldescription": "Green Forest fires in Canada from: 03 Jul 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029373&episodeid=1",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029373&episodeid=1&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029373"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Canada",
+        "fromdate": "2026-07-03T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:05:32",
+        "iso3": "CAN",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "CA",
+            "iso3": "CAN",
+            "countryname": "Canada"
+          }
+        ],
+        "severitydata": {
+          "severity": 5090,
+          "severitytext": "Green impact for forestfire in 5090 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        -76.2071,
+        54.7526,
+        -76.2071,
+        54.7526
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.2071,
+          54.7526
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029372,
+        "episodeid": 2,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in Canada",
+        "description": "Forest fires in Canada",
+        "htmldescription": "Green Forest fires in Canada from: 04 Jul 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029372&episodeid=2",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029372&episodeid=2&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029372"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Canada",
+        "fromdate": "2026-07-04T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:03:50",
+        "iso3": "CAN",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "CA",
+            "iso3": "CAN",
+            "countryname": "Canada"
+          }
+        ],
+        "severitydata": {
+          "severity": 8331,
+          "severitytext": "Green impact for forestfire in 8331 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        -76.3704,
+        54.8122,
+        -76.3704,
+        54.8122
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.3704,
+          54.8122
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029371,
+        "episodeid": 2,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in Canada",
+        "description": "Forest fires in Canada",
+        "htmldescription": "Green Forest fires in Canada from: 05 Jul 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029371&episodeid=2",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029371&episodeid=2&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029371"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Canada",
+        "fromdate": "2026-07-05T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:02:48",
+        "iso3": "CAN",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "CA",
+            "iso3": "CAN",
+            "countryname": "Canada"
+          }
+        ],
+        "severitydata": {
+          "severity": 9979,
+          "severitytext": "Green impact for forestfire in 9979 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        -69.5001,
+        53.4938,
+        -69.5001,
+        53.4938
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.5001,
+          53.4938
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029370,
+        "episodeid": 1,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in Canada",
+        "description": "Forest fires in Canada",
+        "htmldescription": "Green Forest fires in Canada from: 05 Jul 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029370&episodeid=1",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029370&episodeid=1&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029370"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Canada",
+        "fromdate": "2026-07-05T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:02:40",
+        "iso3": "CAN",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "CA",
+            "iso3": "CAN",
+            "countryname": "Canada"
+          }
+        ],
+        "severitydata": {
+          "severity": 5052,
+          "severitytext": "Green impact for forestfire in 5052 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        26.8258,
+        -6.8285,
+        26.8258,
+        -6.8285
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.8258,
+          -6.8285
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029369,
+        "episodeid": 1,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in The Democratic Republic of Congo",
+        "description": "Forest fires in The Democratic Republic of Congo",
+        "htmldescription": "Green Forest fires in The Democratic Republic of Congo from: 24 Jun 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029369&episodeid=1",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029369&episodeid=1&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029369"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "The Democratic Republic of Congo",
+        "fromdate": "2026-06-24T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:31:54",
+        "iso3": "COD",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [],
+        "severitydata": {
+          "severity": 5029,
+          "severitytext": "Green impact for forestfire in 5029 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        24.7406,
+        -13.1892,
+        24.7406,
+        -13.1892
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.7406,
+          -13.1892
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029368,
+        "episodeid": 1,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in Zambia",
+        "description": "Forest fires in Zambia",
+        "htmldescription": "Green Forest fires in Zambia from: 28 Jun 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029368&episodeid=1",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029368&episodeid=1&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029368"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Zambia",
+        "fromdate": "2026-06-28T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:15:53",
+        "iso3": "ZMB",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "ZM",
+            "iso3": "ZMB",
+            "countryname": "Zambia"
+          }
+        ],
+        "severitydata": {
+          "severity": 5127,
+          "severitytext": "Green impact for forestfire in 5127 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        18.4128,
+        -7.4684,
+        18.4128,
+        -7.4684
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.4128,
+          -7.4684
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029367,
+        "episodeid": 1,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in The Democratic Republic of Congo",
+        "description": "Forest fires in The Democratic Republic of Congo",
+        "htmldescription": "Green Forest fires in The Democratic Republic of Congo from: 30 Jun 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029367&episodeid=1",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029367&episodeid=1&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029367"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "The Democratic Republic of Congo",
+        "fromdate": "2026-06-30T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:11:10",
+        "iso3": "COD",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [],
+        "severitydata": {
+          "severity": 5753,
+          "severitytext": "Green impact for forestfire in 5753 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        26.4777,
+        -6.0294,
+        26.4777,
+        -6.0294
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.4777,
+          -6.0294
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029366,
+        "episodeid": 1,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in The Democratic Republic of Congo",
+        "description": "Forest fires in The Democratic Republic of Congo",
+        "htmldescription": "Green Forest fires in The Democratic Republic of Congo from: 30 Jun 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029366&episodeid=1",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029366&episodeid=1&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029366"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "The Democratic Republic of Congo",
+        "fromdate": "2026-06-30T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:11:43",
+        "iso3": "COD",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [],
+        "severitydata": {
+          "severity": 8690,
+          "severitytext": "Green impact for forestfire in 8690 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        17.3581,
+        -9.2396,
+        17.3581,
+        -9.2396
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.3581,
+          -9.2396
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029365,
+        "episodeid": 1,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in Angola",
+        "description": "Forest fires in Angola",
+        "htmldescription": "Green Forest fires in Angola from: 01 Jul 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029365&episodeid=1",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029365&episodeid=1&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029365"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Angola",
+        "fromdate": "2026-07-01T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:09:11",
+        "iso3": "AGO",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "AO",
+            "iso3": "AGO",
+            "countryname": "Angola"
+          }
+        ],
+        "severitydata": {
+          "severity": 5591,
+          "severitytext": "Green impact for forestfire in 5591 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        26.6579,
+        -7.1093,
+        26.6579,
+        -7.1093
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.6579,
+          -7.1093
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029364,
+        "episodeid": 1,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in The Democratic Republic of Congo",
+        "description": "Forest fires in The Democratic Republic of Congo",
+        "htmldescription": "Green Forest fires in The Democratic Republic of Congo from: 04 Jul 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029364&episodeid=1",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029364&episodeid=1&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029364"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "The Democratic Republic of Congo",
+        "fromdate": "2026-07-04T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:04:06",
+        "iso3": "COD",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [],
+        "severitydata": {
+          "severity": 5820,
+          "severitytext": "Green impact for forestfire in 5820 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        21.8487,
+        -8.5206,
+        21.8487,
+        -8.5206
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.8487,
+          -8.5206
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029363,
+        "episodeid": 2,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in Angola",
+        "description": "Forest fires in Angola",
+        "htmldescription": "Green Forest fires in Angola from: 04 Jul 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029363&episodeid=2",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029363&episodeid=2&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029363"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Angola",
+        "fromdate": "2026-07-04T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:03:03",
+        "iso3": "AGO",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "AO",
+            "iso3": "AGO",
+            "countryname": "Angola"
+          }
+        ],
+        "severitydata": {
+          "severity": 9804,
+          "severitytext": "Green impact for forestfire in 9804 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        20.0927,
+        -7.9124,
+        20.0927,
+        -7.9124
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.0927,
+          -7.9124
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029362,
+        "episodeid": 2,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in Angola",
+        "description": "Forest fires in Angola",
+        "htmldescription": "Green Forest fires in Angola from: 05 Jul 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029362&episodeid=2",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029362&episodeid=2&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029362"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Angola",
+        "fromdate": "2026-07-05T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:02:17",
+        "iso3": "AGO",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "AO",
+            "iso3": "AGO",
+            "countryname": "Angola"
+          }
+        ],
+        "severitydata": {
+          "severity": 10973,
+          "severitytext": "Green impact for forestfire in 10973 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        18.5238,
+        -6.9733,
+        18.5238,
+        -6.9733
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.5238,
+          -6.9733
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029361,
+        "episodeid": 1,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in The Democratic Republic of Congo",
+        "description": "Forest fires in The Democratic Republic of Congo",
+        "htmldescription": "Green Forest fires in The Democratic Republic of Congo from: 06 Jul 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029361&episodeid=1",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029361&episodeid=1&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029361"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "The Democratic Republic of Congo",
+        "fromdate": "2026-07-06T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:01:44",
+        "iso3": "COD",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [],
+        "severitydata": {
+          "severity": 5197,
+          "severitytext": "Green impact for forestfire in 5197 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        18.5293,
+        -6.6901,
+        18.5293,
+        -6.6901
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.5293,
+          -6.6901
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029360,
+        "episodeid": 2,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in The Democratic Republic of Congo",
+        "description": "Forest fires in The Democratic Republic of Congo",
+        "htmldescription": "Green Forest fires in The Democratic Republic of Congo from: 29 Jun 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029360&episodeid=2",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029360&episodeid=2&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029360"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "The Democratic Republic of Congo",
+        "fromdate": "2026-06-29T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:12:09",
+        "iso3": "COD",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [],
+        "severitydata": {
+          "severity": 8523,
+          "severitytext": "Green impact for forestfire in 8523 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        -121.4756,
+        49.952,
+        -121.4756,
+        49.952
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.4756,
+          49.952
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029359,
+        "episodeid": 3,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in Canada",
+        "description": "Forest fires in Canada",
+        "htmldescription": "Green Forest fires in Canada from: 03 Jul 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029359&episodeid=3",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029359&episodeid=3&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029359"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Canada",
+        "fromdate": "2026-07-03T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:04:43",
+        "iso3": "CAN",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "CA",
+            "iso3": "CAN",
+            "countryname": "Canada"
+          }
+        ],
+        "severitydata": {
+          "severity": 8602,
+          "severitytext": "Green impact for forestfire in 8602 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        34.7639,
+        4.9618,
+        34.7639,
+        4.9618
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.7639,
+          4.9618
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029358,
+        "episodeid": 3,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in Sudan",
+        "description": "Forest fires in Sudan",
+        "htmldescription": "Green Forest fires in Sudan from: 04 Jul 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029358&episodeid=3",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029358&episodeid=3&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029358"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Sudan",
+        "fromdate": "2026-07-04T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:03:17",
+        "iso3": "SDN",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "SD",
+            "iso3": "SDN",
+            "countryname": "Sudan"
+          }
+        ],
+        "severitydata": {
+          "severity": 6826,
+          "severitytext": "Green impact for forestfire in 6826 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        83.05,
+        62.3976,
+        83.05,
+        62.3976
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          83.05,
+          62.3976
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029357,
+        "episodeid": 3,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in Russian Federation",
+        "description": "Forest fires in Russian Federation",
+        "htmldescription": "Green Forest fires in Russian Federation from: 26 Jun 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029357&episodeid=3",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029357&episodeid=3&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029357"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Russian Federation",
+        "fromdate": "2026-06-26T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:19:46",
+        "iso3": "RUS",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [],
+        "severitydata": {
+          "severity": 5133,
+          "severitytext": "Green impact for forestfire in 5133 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        137.2299,
+        -17.8471,
+        137.2299,
+        -17.8471
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.2299,
+          -17.8471
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029356,
+        "episodeid": 2,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in Australia",
+        "description": "Forest fires in Australia",
+        "htmldescription": "Green Forest fires in Australia from: 03 Jul 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029356&episodeid=2",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029356&episodeid=2&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029356"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Australia",
+        "fromdate": "2026-07-03T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:06:20",
+        "iso3": "AUS",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "AU",
+            "iso3": "AUS",
+            "countryname": "Australia"
+          }
+        ],
+        "severitydata": {
+          "severity": 5339,
+          "severitytext": "Green impact for forestfire in 5339 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        142.5512,
+        -12.7286,
+        142.5512,
+        -12.7286
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.5512,
+          -12.7286
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029355,
+        "episodeid": 3,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in Australia",
+        "description": "Forest fires in Australia",
+        "htmldescription": "Green Forest fires in Australia from: 03 Jul 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029355&episodeid=3",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029355&episodeid=3&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029355"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Australia",
+        "fromdate": "2026-07-03T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:06:11",
+        "iso3": "AUS",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "AU",
+            "iso3": "AUS",
+            "countryname": "Australia"
+          }
+        ],
+        "severitydata": {
+          "severity": 5378,
+          "severitytext": "Green impact for forestfire in 5378 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        133.2247,
+        -12.4771,
+        133.2247,
+        -12.4771
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          133.2247,
+          -12.4771
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029354,
+        "episodeid": 2,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in Australia",
+        "description": "Forest fires in Australia",
+        "htmldescription": "Green Forest fires in Australia from: 03 Jul 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029354&episodeid=2",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029354&episodeid=2&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029354"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Australia",
+        "fromdate": "2026-07-03T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:04:20",
+        "iso3": "AUS",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "AU",
+            "iso3": "AUS",
+            "countryname": "Australia"
+          }
+        ],
+        "severitydata": {
+          "severity": 5046,
+          "severitytext": "Green impact for forestfire in 5046 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        -66.3882,
+        56.8252,
+        -66.3882,
+        56.8252
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.3882,
+          56.8252
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029353,
+        "episodeid": 5,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in Canada",
+        "description": "Forest fires in Canada",
+        "htmldescription": "Green Forest fires in Canada from: 05 Jul 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029353&episodeid=5",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029353&episodeid=5&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029353"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Canada",
+        "fromdate": "2026-07-05T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:02:31",
+        "iso3": "CAN",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "CA",
+            "iso3": "CAN",
+            "countryname": "Canada"
+          }
+        ],
+        "severitydata": {
+          "severity": 8484,
+          "severitytext": "Green impact for forestfire in 8484 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        133.9946,
+        -13.8963,
+        133.9946,
+        -13.8963
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          133.9946,
+          -13.8963
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029352,
+        "episodeid": 2,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in Australia",
+        "description": "Forest fires in Australia",
+        "htmldescription": "Green Forest fires in Australia from: 07 Jul 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029352&episodeid=2",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029352&episodeid=2&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029352"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Australia",
+        "fromdate": "2026-07-07T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:01:01",
+        "iso3": "AUS",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "AU",
+            "iso3": "AUS",
+            "countryname": "Australia"
+          }
+        ],
+        "severitydata": {
+          "severity": 18185,
+          "severitytext": "Green impact for forestfire in 18185 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        -66.9822,
+        57.9793,
+        -66.9822,
+        57.9793
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.9822,
+          57.9793
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029350,
+        "episodeid": 5,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in Canada",
+        "description": "Forest fires in Canada",
+        "htmldescription": "Green Forest fires in Canada from: 27 Jun 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029350&episodeid=5",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029350&episodeid=5&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029350"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Canada",
+        "fromdate": "2026-06-27T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:18:54",
+        "iso3": "CAN",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "CA",
+            "iso3": "CAN",
+            "countryname": "Canada"
+          }
+        ],
+        "severitydata": {
+          "severity": 6504,
+          "severitytext": "Green impact for forestfire in 6504 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        -78.6338,
+        50.1227,
+        -78.6338,
+        50.1227
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.6338,
+          50.1227
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029349,
+        "episodeid": 7,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in Canada",
+        "description": "Forest fires in Canada",
+        "htmldescription": "Green Forest fires in Canada from: 02 Jul 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029349&episodeid=7",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029349&episodeid=7&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029349"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Canada",
+        "fromdate": "2026-07-02T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:07:39",
+        "iso3": "CAN",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "CA",
+            "iso3": "CAN",
+            "countryname": "Canada"
+          }
+        ],
+        "severitydata": {
+          "severity": 7683,
+          "severitytext": "Green impact for forestfire in 7683 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        -78.8669,
+        50.2026,
+        -78.8669,
+        50.2026
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.8669,
+          50.2026
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029348,
+        "episodeid": 7,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in Canada",
+        "description": "Forest fires in Canada",
+        "htmldescription": "Green Forest fires in Canada from: 02 Jul 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029348&episodeid=7",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029348&episodeid=7&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029348"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Canada",
+        "fromdate": "2026-07-02T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:08:32",
+        "iso3": "CAN",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "CA",
+            "iso3": "CAN",
+            "countryname": "Canada"
+          }
+        ],
+        "severitydata": {
+          "severity": 23005,
+          "severitytext": "Green impact for forestfire in 23005 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        -70.6333,
+        53.4541,
+        -70.6333,
+        53.4541
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.6333,
+          53.4541
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029347,
+        "episodeid": 6,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in Canada",
+        "description": "Forest fires in Canada",
+        "htmldescription": "Green Forest fires in Canada from: 04 Jul 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029347&episodeid=6",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029347&episodeid=6&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029347"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Canada",
+        "fromdate": "2026-07-04T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:03:34",
+        "iso3": "CAN",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "CA",
+            "iso3": "CAN",
+            "countryname": "Canada"
+          }
+        ],
+        "severitydata": {
+          "severity": 11234,
+          "severitytext": "Green impact for forestfire in 11234 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        28.7323,
+        -7.9309,
+        28.7323,
+        -7.9309
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.7323,
+          -7.9309
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029345,
+        "episodeid": 2,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in The Democratic Republic of Congo",
+        "description": "Forest fires in The Democratic Republic of Congo",
+        "htmldescription": "Green Forest fires in The Democratic Republic of Congo from: 25 Jun 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029345&episodeid=2",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029345&episodeid=2&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029345"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "The Democratic Republic of Congo",
+        "fromdate": "2026-06-25T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:28:35",
+        "iso3": "COD",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [],
+        "severitydata": {
+          "severity": 5605,
+          "severitytext": "Green impact for forestfire in 5605 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        27.0262,
+        -6.7353,
+        27.0262,
+        -6.7353
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.0262,
+          -6.7353
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029344,
+        "episodeid": 2,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in The Democratic Republic of Congo",
+        "description": "Forest fires in The Democratic Republic of Congo",
+        "htmldescription": "Green Forest fires in The Democratic Republic of Congo from: 26 Jun 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029344&episodeid=2",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029344&episodeid=2&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029344"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "The Democratic Republic of Congo",
+        "fromdate": "2026-06-26T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:22:56",
+        "iso3": "COD",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [],
+        "severitydata": {
+          "severity": 5341,
+          "severitytext": "Green impact for forestfire in 5341 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        16.8363,
+        -10.74,
+        16.8363,
+        -10.74
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.8363,
+          -10.74
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029343,
+        "episodeid": 2,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in Angola",
+        "description": "Forest fires in Angola",
+        "htmldescription": "Green Forest fires in Angola from: 29 Jun 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029343&episodeid=2",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029343&episodeid=2&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029343"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Angola",
+        "fromdate": "2026-06-29T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:12:30",
+        "iso3": "AGO",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "AO",
+            "iso3": "AGO",
+            "countryname": "Angola"
+          }
+        ],
+        "severitydata": {
+          "severity": 7282,
+          "severitytext": "Green impact for forestfire in 7282 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        18.4309,
+        -7.0504,
+        18.4309,
+        -7.0504
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.4309,
+          -7.0504
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029342,
+        "episodeid": 2,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in The Democratic Republic of Congo",
+        "description": "Forest fires in The Democratic Republic of Congo",
+        "htmldescription": "Green Forest fires in The Democratic Republic of Congo from: 29 Jun 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029342&episodeid=2",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029342&episodeid=2&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029342"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "The Democratic Republic of Congo",
+        "fromdate": "2026-06-29T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:12:52",
+        "iso3": "COD",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [],
+        "severitydata": {
+          "severity": 5598,
+          "severitytext": "Green impact for forestfire in 5598 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        18.5058,
+        -7.5895,
+        18.5058,
+        -7.5895
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.5058,
+          -7.5895
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029340,
+        "episodeid": 4,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in The Democratic Republic of Congo",
+        "description": "Forest fires in The Democratic Republic of Congo",
+        "htmldescription": "Green Forest fires in The Democratic Republic of Congo from: 30 Jun 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029340&episodeid=4",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029340&episodeid=4&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029340"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "The Democratic Republic of Congo",
+        "fromdate": "2026-06-30T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:11:37",
+        "iso3": "COD",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [],
+        "severitydata": {
+          "severity": 9240,
+          "severitytext": "Green impact for forestfire in 9240 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        18.3191,
+        -7.1349,
+        18.3191,
+        -7.1349
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.3191,
+          -7.1349
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029339,
+        "episodeid": 2,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in The Democratic Republic of Congo",
+        "description": "Forest fires in The Democratic Republic of Congo",
+        "htmldescription": "Green Forest fires in The Democratic Republic of Congo from: 30 Jun 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029339&episodeid=2",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029339&episodeid=2&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029339"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "The Democratic Republic of Congo",
+        "fromdate": "2026-06-30T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:11:31",
+        "iso3": "COD",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [],
+        "severitydata": {
+          "severity": 9680,
+          "severitytext": "Green impact for forestfire in 9680 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        32.296,
+        -9.4836,
+        32.296,
+        -9.4836
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.296,
+          -9.4836
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029338,
+        "episodeid": 2,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in Zambia",
+        "description": "Forest fires in Zambia",
+        "htmldescription": "Green Forest fires in Zambia from: 01 Jul 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029338&episodeid=2",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029338&episodeid=2&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029338"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Zambia",
+        "fromdate": "2026-07-01T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:09:49",
+        "iso3": "ZMB",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "ZM",
+            "iso3": "ZMB",
+            "countryname": "Zambia"
+          }
+        ],
+        "severitydata": {
+          "severity": 5189,
+          "severitytext": "Green impact for forestfire in 5189 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        29.0565,
+        -8.2635,
+        29.0565,
+        -8.2635
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.0565,
+          -8.2635
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029337,
+        "episodeid": 3,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in The Democratic Republic of Congo",
+        "description": "Forest fires in The Democratic Republic of Congo",
+        "htmldescription": "Green Forest fires in The Democratic Republic of Congo from: 02 Jul 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029337&episodeid=3",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029337&episodeid=3&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029337"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "The Democratic Republic of Congo",
+        "fromdate": "2026-07-02T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:07:27",
+        "iso3": "COD",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [],
+        "severitydata": {
+          "severity": 8604,
+          "severitytext": "Green impact for forestfire in 8604 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        26.5524,
+        -6.2822,
+        26.5524,
+        -6.2822
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.5524,
+          -6.2822
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029336,
+        "episodeid": 3,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in The Democratic Republic of Congo",
+        "description": "Forest fires in The Democratic Republic of Congo",
+        "htmldescription": "Green Forest fires in The Democratic Republic of Congo from: 04 Jul 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029336&episodeid=3",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029336&episodeid=3&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029336"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "The Democratic Republic of Congo",
+        "fromdate": "2026-07-04T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:03:59",
+        "iso3": "COD",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [],
+        "severitydata": {
+          "severity": 5766,
+          "severitytext": "Green impact for forestfire in 5766 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        21.6404,
+        -8.9281,
+        21.6404,
+        -8.9281
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.6404,
+          -8.9281
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029335,
+        "episodeid": 7,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in Angola",
+        "description": "Forest fires in Angola",
+        "htmldescription": "Green Forest fires in Angola from: 05 Jul 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029335&episodeid=7",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029335&episodeid=7&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029335"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Angola",
+        "fromdate": "2026-07-05T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:02:24",
+        "iso3": "AGO",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "AO",
+            "iso3": "AGO",
+            "countryname": "Angola"
+          }
+        ],
+        "severitydata": {
+          "severity": 6084,
+          "severitytext": "Green impact for forestfire in 6084 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        19.8818,
+        -6.1276,
+        19.8818,
+        -6.1276
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.8818,
+          -6.1276
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029334,
+        "episodeid": 3,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in The Democratic Republic of Congo",
+        "description": "Forest fires in The Democratic Republic of Congo",
+        "htmldescription": "Green Forest fires in The Democratic Republic of Congo from: 06 Jul 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029334&episodeid=3",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029334&episodeid=3&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029334"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "The Democratic Republic of Congo",
+        "fromdate": "2026-07-06T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:02:07",
+        "iso3": "COD",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [],
+        "severitydata": {
+          "severity": 5188,
+          "severitytext": "Green impact for forestfire in 5188 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        133.7291,
+        -14.2701,
+        133.7291,
+        -14.2701
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          133.7291,
+          -14.2701
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029333,
+        "episodeid": 4,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in Australia",
+        "description": "Forest fires in Australia",
+        "htmldescription": "Green Forest fires in Australia from: 02 Jul 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029333&episodeid=4",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029333&episodeid=4&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029333"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Australia",
+        "fromdate": "2026-07-02T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:07:52",
+        "iso3": "AUS",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "AU",
+            "iso3": "AUS",
+            "countryname": "Australia"
+          }
+        ],
+        "severitydata": {
+          "severity": 6518,
+          "severitytext": "Green impact for forestfire in 6518 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        132.0411,
+        -12.9089,
+        132.0411,
+        -12.9089
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.0411,
+          -12.9089
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029332,
+        "episodeid": 4,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in Australia",
+        "description": "Forest fires in Australia",
+        "htmldescription": "Green Forest fires in Australia from: 06 Jul 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029332&episodeid=4",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029332&episodeid=4&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029332"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Australia",
+        "fromdate": "2026-07-06T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:01:58",
+        "iso3": "AUS",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "AU",
+            "iso3": "AUS",
+            "countryname": "Australia"
+          }
+        ],
+        "severitydata": {
+          "severity": 10900,
+          "severitytext": "Green impact for forestfire in 10900 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        2.5678,
+        42.6724,
+        2.5678,
+        42.6724
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.5678,
+          42.6724
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029331,
+        "episodeid": 6,
+        "eventname": "",
+        "glide": "WF-2026-000102-FRA",
+        "name": "Forest fires in France",
+        "description": "Forest fires in France",
+        "htmldescription": "Orange Forest fires in France from: 04 Jul 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029331&episodeid=6",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029331&episodeid=6&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029331"
+        },
+        "alertlevel": "Orange",
+        "alertscore": 2,
+        "episodealertlevel": "Orange",
+        "episodealertscore": 1.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "France",
+        "fromdate": "2026-07-04T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:03:10",
+        "iso3": "FRA",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "FR",
+            "iso3": "FRA",
+            "countryname": "France"
+          }
+        ],
+        "severitydata": {
+          "severity": 6561,
+          "severitytext": "Orange impact for forestfire in 6561 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        130.6524,
+        -11.6851,
+        130.6524,
+        -11.6851
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          130.6524,
+          -11.6851
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029329,
+        "episodeid": 5,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in Australia",
+        "description": "Forest fires in Australia",
+        "htmldescription": "Green Forest fires in Australia from: 02 Jul 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029329&episodeid=5",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029329&episodeid=5&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029329"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Australia",
+        "fromdate": "2026-07-02T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:06:40",
+        "iso3": "AUS",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "AU",
+            "iso3": "AUS",
+            "countryname": "Australia"
+          }
+        ],
+        "severitydata": {
+          "severity": 6072,
+          "severitytext": "Green impact for forestfire in 6072 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        137.6126,
+        -18.1873,
+        137.6126,
+        -18.1873
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.6126,
+          -18.1873
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029328,
+        "episodeid": 6,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in Australia",
+        "description": "Forest fires in Australia",
+        "htmldescription": "Green Forest fires in Australia from: 02 Jul 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029328&episodeid=6",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029328&episodeid=6&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029328"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Australia",
+        "fromdate": "2026-07-02T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:07:46",
+        "iso3": "AUS",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "AU",
+            "iso3": "AUS",
+            "countryname": "Australia"
+          }
+        ],
+        "severitydata": {
+          "severity": 7435,
+          "severitytext": "Green impact for forestfire in 7435 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        137.6199,
+        -17.8873,
+        137.6199,
+        -17.8873
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.6199,
+          -17.8873
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029327,
+        "episodeid": 4,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in Australia",
+        "description": "Forest fires in Australia",
+        "htmldescription": "Green Forest fires in Australia from: 02 Jul 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029327&episodeid=4",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029327&episodeid=4&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029327"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Australia",
+        "fromdate": "2026-07-02T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:08:06",
+        "iso3": "AUS",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "AU",
+            "iso3": "AUS",
+            "countryname": "Australia"
+          }
+        ],
+        "severitydata": {
+          "severity": 6281,
+          "severitytext": "Green impact for forestfire in 6281 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        133.87,
+        -14.2075,
+        133.87,
+        -14.2075
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          133.87,
+          -14.2075
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029326,
+        "episodeid": 6,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in Australia",
+        "description": "Forest fires in Australia",
+        "htmldescription": "Green Forest fires in Australia from: 03 Jul 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029326&episodeid=6",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029326&episodeid=6&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029326"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Australia",
+        "fromdate": "2026-07-03T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:04:27",
+        "iso3": "AUS",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "AU",
+            "iso3": "AUS",
+            "countryname": "Australia"
+          }
+        ],
+        "severitydata": {
+          "severity": 16303,
+          "severitytext": "Green impact for forestfire in 16303 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        20.0069,
+        -6.7664,
+        20.0069,
+        -6.7664
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.0069,
+          -6.7664
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029325,
+        "episodeid": 3,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in The Democratic Republic of Congo",
+        "description": "Forest fires in The Democratic Republic of Congo",
+        "htmldescription": "Green Forest fires in The Democratic Republic of Congo from: 25 Jun 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029325&episodeid=3",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029325&episodeid=3&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029325"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "The Democratic Republic of Congo",
+        "fromdate": "2026-06-25T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:27:39",
+        "iso3": "COD",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [],
+        "severitydata": {
+          "severity": 5289,
+          "severitytext": "Green impact for forestfire in 5289 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        18.9297,
+        -7.1887,
+        18.9297,
+        -7.1887
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.9297,
+          -7.1887
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029324,
+        "episodeid": 3,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in The Democratic Republic of Congo",
+        "description": "Forest fires in The Democratic Republic of Congo",
+        "htmldescription": "Green Forest fires in The Democratic Republic of Congo from: 26 Jun 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029324&episodeid=3",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029324&episodeid=3&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029324"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "The Democratic Republic of Congo",
+        "fromdate": "2026-06-26T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:20:13",
+        "iso3": "COD",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [],
+        "severitydata": {
+          "severity": 5121,
+          "severitytext": "Green impact for forestfire in 5121 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        17.3717,
+        -5.1941,
+        17.3717,
+        -5.1941
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.3717,
+          -5.1941
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029323,
+        "episodeid": 3,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in The Democratic Republic of Congo",
+        "description": "Forest fires in The Democratic Republic of Congo",
+        "htmldescription": "Green Forest fires in The Democratic Republic of Congo from: 29 Jun 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029323&episodeid=3",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029323&episodeid=3&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029323"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "The Democratic Republic of Congo",
+        "fromdate": "2026-06-29T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:13:11",
+        "iso3": "COD",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [],
+        "severitydata": {
+          "severity": 5572,
+          "severitytext": "Green impact for forestfire in 5572 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        81.2576,
+        63.0578,
+        81.2576,
+        63.0578
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          81.2576,
+          63.0578
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029321,
+        "episodeid": 7,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in Russian Federation",
+        "description": "Forest fires in Russian Federation",
+        "htmldescription": "Green Forest fires in Russian Federation from: 26 Jun 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029321&episodeid=7",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029321&episodeid=7&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029321"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Russian Federation",
+        "fromdate": "2026-06-26T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:20:29",
+        "iso3": "RUS",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [],
+        "severitydata": {
+          "severity": 5913,
+          "severitytext": "Green impact for forestfire in 5913 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        -121.3288,
+        61.7762,
+        -121.3288,
+        61.7762
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.3288,
+          61.7762
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029317,
+        "episodeid": 9,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in Canada",
+        "description": "Forest fires in Canada",
+        "htmldescription": "Green Forest fires in Canada from: 02 Jul 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029317&episodeid=9",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029317&episodeid=9&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029317"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Canada",
+        "fromdate": "2026-07-02T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-07T07:04:19",
+        "iso3": "CAN",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "CA",
+            "iso3": "CAN",
+            "countryname": "Canada"
+          }
+        ],
+        "severitydata": {
+          "severity": 8380,
+          "severitytext": "Green impact for forestfire in 8380 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        -97.9244,
+        57.581,
+        -97.9244,
+        57.581
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.9244,
+          57.581
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029316,
+        "episodeid": 8,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in Canada",
+        "description": "Forest fires in Canada",
+        "htmldescription": "Green Forest fires in Canada from: 26 Jun 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029316&episodeid=8",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029316&episodeid=8&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029316"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Canada",
+        "fromdate": "2026-06-26T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:24:58",
+        "iso3": "CAN",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "CA",
+            "iso3": "CAN",
+            "countryname": "Canada"
+          }
+        ],
+        "severitydata": {
+          "severity": 6216,
+          "severitytext": "Green impact for forestfire in 6216 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        -54.3571,
+        -13.2619,
+        -54.3571,
+        -13.2619
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.3571,
+          -13.2619
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029311,
+        "episodeid": 13,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in Brazil",
+        "description": "Forest fires in Brazil",
+        "htmldescription": "Green Forest fires in Brazil from: 03 Jul 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029311&episodeid=13",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029311&episodeid=13&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029311"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Brazil",
+        "fromdate": "2026-07-03T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:04:31",
+        "iso3": "BRA",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "BR",
+            "iso3": "BRA",
+            "countryname": "Brazil"
+          }
+        ],
+        "severitydata": {
+          "severity": 12258,
+          "severitytext": "Green impact for forestfire in 12258 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        27.1276,
+        -6.7797,
+        27.1276,
+        -6.7797
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.1276,
+          -6.7797
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029308,
+        "episodeid": 6,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in The Democratic Republic of Congo",
+        "description": "Forest fires in The Democratic Republic of Congo",
+        "htmldescription": "Green Forest fires in The Democratic Republic of Congo from: 24 Jun 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029308&episodeid=6",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029308&episodeid=6&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029308"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "The Democratic Republic of Congo",
+        "fromdate": "2026-06-24T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:31:11",
+        "iso3": "COD",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [],
+        "severitydata": {
+          "severity": 6474,
+          "severitytext": "Green impact for forestfire in 6474 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        18.3095,
+        -6.9294,
+        18.3095,
+        -6.9294
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.3095,
+          -6.9294
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029305,
+        "episodeid": 4,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in The Democratic Republic of Congo",
+        "description": "Forest fires in The Democratic Republic of Congo",
+        "htmldescription": "Green Forest fires in The Democratic Republic of Congo from: 29 Jun 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029305&episodeid=4",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029305&episodeid=4&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029305"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "The Democratic Republic of Congo",
+        "fromdate": "2026-06-29T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:13:40",
+        "iso3": "COD",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [],
+        "severitydata": {
+          "severity": 6632,
+          "severitytext": "Green impact for forestfire in 6632 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        18.7849,
+        -7.2584,
+        18.7849,
+        -7.2584
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.7849,
+          -7.2584
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029302,
+        "episodeid": 4,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in The Democratic Republic of Congo",
+        "description": "Forest fires in The Democratic Republic of Congo",
+        "htmldescription": "Green Forest fires in The Democratic Republic of Congo from: 01 Jul 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029302&episodeid=4",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029302&episodeid=4&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029302"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "The Democratic Republic of Congo",
+        "fromdate": "2026-07-01T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:09:33",
+        "iso3": "COD",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [],
+        "severitydata": {
+          "severity": 6453,
+          "severitytext": "Green impact for forestfire in 6453 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        19.7229,
+        -8.1471,
+        19.7229,
+        -8.1471
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.7229,
+          -8.1471
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029300,
+        "episodeid": 2,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in Angola",
+        "description": "Forest fires in Angola",
+        "htmldescription": "Green Forest fires in Angola from: 03 Jul 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029300&episodeid=2",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029300&episodeid=2&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029300"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Angola",
+        "fromdate": "2026-07-03T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:05:17",
+        "iso3": "AGO",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "AO",
+            "iso3": "AGO",
+            "countryname": "Angola"
+          }
+        ],
+        "severitydata": {
+          "severity": 6346,
+          "severitytext": "Green impact for forestfire in 6346 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        -44.5202,
+        -12.7559,
+        -44.5202,
+        -12.7559
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -44.5202,
+          -12.7559
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029293,
+        "episodeid": 4,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in Brazil",
+        "description": "Forest fires in Brazil",
+        "htmldescription": "Green Forest fires in Brazil from: 01 Jul 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029293&episodeid=4",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029293&episodeid=4&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029293"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Brazil",
+        "fromdate": "2026-07-01T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:09:39",
+        "iso3": "BRA",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "BR",
+            "iso3": "BRA",
+            "countryname": "Brazil"
+          }
+        ],
+        "severitydata": {
+          "severity": 5506,
+          "severitytext": "Green impact for forestfire in 5506 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        133.6748,
+        -12.4213,
+        133.6748,
+        -12.4213
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          133.6748,
+          -12.4213
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029292,
+        "episodeid": 11,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in Australia",
+        "description": "Forest fires in Australia",
+        "htmldescription": "Green Forest fires in Australia from: 01 Jul 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029292&episodeid=11",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029292&episodeid=11&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029292"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Australia",
+        "fromdate": "2026-07-01T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:08:41",
+        "iso3": "AUS",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "AU",
+            "iso3": "AUS",
+            "countryname": "Australia"
+          }
+        ],
+        "severitydata": {
+          "severity": 13968,
+          "severitytext": "Green impact for forestfire in 13968 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        142.0541,
+        -13.2257,
+        142.0541,
+        -13.2257
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.0541,
+          -13.2257
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029291,
+        "episodeid": 10,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in Australia",
+        "description": "Forest fires in Australia",
+        "htmldescription": "Green Forest fires in Australia from: 02 Jul 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029291&episodeid=10",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029291&episodeid=10&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029291"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Australia",
+        "fromdate": "2026-07-02T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:07:33",
+        "iso3": "AUS",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "AU",
+            "iso3": "AUS",
+            "countryname": "Australia"
+          }
+        ],
+        "severitydata": {
+          "severity": 8221,
+          "severitytext": "Green impact for forestfire in 8221 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        142.1776,
+        -13.3055,
+        142.1776,
+        -13.3055
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.1776,
+          -13.3055
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029290,
+        "episodeid": 13,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in Australia",
+        "description": "Forest fires in Australia",
+        "htmldescription": "Green Forest fires in Australia from: 02 Jul 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029290&episodeid=13",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029290&episodeid=13&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029290"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Australia",
+        "fromdate": "2026-07-02T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:08:22",
+        "iso3": "AUS",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "AU",
+            "iso3": "AUS",
+            "countryname": "Australia"
+          }
+        ],
+        "severitydata": {
+          "severity": 26380,
+          "severitytext": "Green impact for forestfire in 26380 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        136.0807,
+        -12.8461,
+        136.0807,
+        -12.8461
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          136.0807,
+          -12.8461
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029289,
+        "episodeid": 5,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in Australia",
+        "description": "Forest fires in Australia",
+        "htmldescription": "Green Forest fires in Australia from: 03 Jul 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029289&episodeid=5",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029289&episodeid=5&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029289"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Australia",
+        "fromdate": "2026-07-03T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:04:51",
+        "iso3": "AUS",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "AU",
+            "iso3": "AUS",
+            "countryname": "Australia"
+          }
+        ],
+        "severitydata": {
+          "severity": 8053,
+          "severitytext": "Green impact for forestfire in 8053 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        142.587,
+        -15.287,
+        142.587,
+        -15.287
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.587,
+          -15.287
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029288,
+        "episodeid": 7,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in Australia",
+        "description": "Forest fires in Australia",
+        "htmldescription": "Green Forest fires in Australia from: 03 Jul 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029288&episodeid=7",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029288&episodeid=7&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029288"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Australia",
+        "fromdate": "2026-07-03T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:05:06",
+        "iso3": "AUS",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "AU",
+            "iso3": "AUS",
+            "countryname": "Australia"
+          }
+        ],
+        "severitydata": {
+          "severity": 6740,
+          "severitytext": "Green impact for forestfire in 6740 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        136.0609,
+        -13.1245,
+        136.0609,
+        -13.1245
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          136.0609,
+          -13.1245
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029287,
+        "episodeid": 5,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in Australia",
+        "description": "Forest fires in Australia",
+        "htmldescription": "Green Forest fires in Australia from: 04 Jul 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029287&episodeid=5",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029287&episodeid=5&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029287"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Australia",
+        "fromdate": "2026-07-04T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:04:14",
+        "iso3": "AUS",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "AU",
+            "iso3": "AUS",
+            "countryname": "Australia"
+          }
+        ],
+        "severitydata": {
+          "severity": 5891,
+          "severitytext": "Green impact for forestfire in 5891 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        133.9351,
+        -12.2406,
+        133.9351,
+        -12.2406
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          133.9351,
+          -12.2406
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029285,
+        "episodeid": 8,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in Australia",
+        "description": "Forest fires in Australia",
+        "htmldescription": "Green Forest fires in Australia from: 04 Jul 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029285&episodeid=8",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029285&episodeid=8&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029285"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Australia",
+        "fromdate": "2026-07-04T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:03:26",
+        "iso3": "AUS",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "AU",
+            "iso3": "AUS",
+            "countryname": "Australia"
+          }
+        ],
+        "severitydata": {
+          "severity": 12257,
+          "severitytext": "Green impact for forestfire in 12257 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        19.0626,
+        -7.2115,
+        19.0626,
+        -7.2115
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.0626,
+          -7.2115
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029278,
+        "episodeid": 7,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in The Democratic Republic of Congo",
+        "description": "Forest fires in The Democratic Republic of Congo",
+        "htmldescription": "Green Forest fires in The Democratic Republic of Congo from: 24 Jun 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029278&episodeid=7",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029278&episodeid=7&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029278"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "The Democratic Republic of Congo",
+        "fromdate": "2026-06-24T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:33:16",
+        "iso3": "COD",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [],
+        "severitydata": {
+          "severity": 15128,
+          "severitytext": "Green impact for forestfire in 15128 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        26.2736,
+        -9.6154,
+        26.2736,
+        -9.6154
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.2736,
+          -9.6154
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029276,
+        "episodeid": 9,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in The Democratic Republic of Congo",
+        "description": "Forest fires in The Democratic Republic of Congo",
+        "htmldescription": "Green Forest fires in The Democratic Republic of Congo from: 29 Jun 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029276&episodeid=9",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029276&episodeid=9&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029276"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "The Democratic Republic of Congo",
+        "fromdate": "2026-06-29T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:13:50",
+        "iso3": "COD",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [],
+        "severitydata": {
+          "severity": 6753,
+          "severitytext": "Green impact for forestfire in 6753 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        18.4533,
+        -6.8285,
+        18.4533,
+        -6.8285
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.4533,
+          -6.8285
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029275,
+        "episodeid": 4,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in The Democratic Republic of Congo",
+        "description": "Forest fires in The Democratic Republic of Congo",
+        "htmldescription": "Green Forest fires in The Democratic Republic of Congo from: 29 Jun 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029275&episodeid=4",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029275&episodeid=4&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029275"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "The Democratic Republic of Congo",
+        "fromdate": "2026-06-29T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:14:11",
+        "iso3": "COD",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [],
+        "severitydata": {
+          "severity": 8938,
+          "severitytext": "Green impact for forestfire in 8938 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        19.7566,
+        -7.0162,
+        19.7566,
+        -7.0162
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.7566,
+          -7.0162
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029272,
+        "episodeid": 5,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in Angola, The Democratic Republic of Congo",
+        "description": "Forest fires in Angola, The Democratic Republic of Congo",
+        "htmldescription": "Green Forest fires in Angola, The Democratic Republic of Congo from: 01 Jul 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029272&episodeid=5",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029272&episodeid=5&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029272"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Angola, The Democratic Republic of Congo",
+        "fromdate": "2026-07-01T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:09:26",
+        "iso3": "AGO",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "AO",
+            "iso3": "AGO",
+            "countryname": "Angola"
+          }
+        ],
+        "severitydata": {
+          "severity": 11224,
+          "severitytext": "Green impact for forestfire in 11224 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        20.1247,
+        -7.211,
+        20.1247,
+        -7.211
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.1247,
+          -7.211
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029271,
+        "episodeid": 4,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in Angola",
+        "description": "Forest fires in Angola",
+        "htmldescription": "Green Forest fires in Angola from: 03 Jul 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029271&episodeid=4",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029271&episodeid=4&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029271"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Angola",
+        "fromdate": "2026-07-03T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:04:58",
+        "iso3": "AGO",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "AO",
+            "iso3": "AGO",
+            "countryname": "Angola"
+          }
+        ],
+        "severitydata": {
+          "severity": 7334,
+          "severitytext": "Green impact for forestfire in 7334 ha",
+          "severityunit": "ha"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "bbox": [
+        142.5188,
+        -13.0989,
+        142.5188,
+        -13.0989
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.5188,
+          -13.0989
+        ]
+      },
+      "properties": {
+        "eventtype": "WF",
+        "eventid": 1029267,
+        "episodeid": 8,
+        "eventname": "",
+        "glide": "",
+        "name": "Forest fires in Australia",
+        "description": "Forest fires in Australia",
+        "htmldescription": "Green Forest fires in Australia from: 26 Jun 2026 to: 07 Jul 2026.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Green/WF.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=WF&eventid=1029267&episodeid=8",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1029267&episodeid=8&eventtype=WF",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=WF&eventid=1029267"
+        },
+        "alertlevel": "Green",
+        "alertscore": 1,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "true",
+        "country": "Australia",
+        "fromdate": "2026-06-26T00:00:00",
+        "todate": "2026-07-07T00:00:00",
+        "datemodified": "2026-07-08T03:20:04",
+        "iso3": "AUS",
+        "source": "GWIS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "AU",
+            "iso3": "AUS",
+            "countryname": "Australia"
+          }
+        ],
+        "severitydata": {
+          "severity": 5932,
+          "severitytext": "Green impact for forestfire in 5932 ha",
+          "severityunit": "ha"
+        }
+      }
+    }
+  ],
+  "bbox": null
+}

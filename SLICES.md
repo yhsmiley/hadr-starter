@@ -58,11 +58,21 @@ day.
 | Erratum marker | reachable (USGS revision/deletion only) |
 | Hazard coverage | Earthquake only |
 
-## V2 — Cross-feed fusion (USGS + GDACS earthquakes)
+## V2 — Cross-feed fusion (USGS + GDACS earthquakes) — **BUILT**
 
 **Scope:** the actual product thesis. Adds the second feed and turns on
 real cross-feed matching, scoped to the one hazard type with the richest
 verified data.
+
+**Verified against live data:** every Incident fused during a real run
+came back `shared-sensor (USGS+GDACS)` — GDACS's earthquake feed really
+does mirror USGS/NEIC closely enough that same-day quakes are seen by
+both. Also caught GDACS's ~100-feature cap firing for real (ADR 0006's
+truncation-risk warning triggered on a live response), and confirmed a
+genuine mainshock→aftershock pair 16 hours apart still aggregated
+correctly into one Incident across both feeds. See
+`implementation-notes.md` for the two decisions this build needed that
+weren't fully pinned down in `SHAPING.md`/the ADRs.
 
 **Newly live:** A2.2 (GDACS adapter, `eventtype=EQ` only — Cyclone and
 the rest stay dormant until V3) · A3.1 fully active for cross-feed
