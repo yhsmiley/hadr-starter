@@ -1,0 +1,20 @@
+{
+  "name": "hadr-monitor",
+  "version": "0.1.0",
+  "private": true,
+  "description": "HADR Monitor -- fuses GDACS/USGS/ReliefWeb feeds into a daily sitrep.",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "npm run build && node dist/test/run-all.js",
+    "sitrep": "npm run build && node dist/scripts/sitrep.js",
+    "render": "npm run build && node dist/scripts/render.js",
+    "health-check": "npm run build && node dist/scripts/health-check.js"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "typescript": "^5.5.0"
+  }
+}

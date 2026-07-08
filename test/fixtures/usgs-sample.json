@@ -1,0 +1,48 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "generated": 1783342886000,
+    "title": "USGS All Earthquakes, Past Day",
+    "count": 2
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 3.04,
+        "place": "9 km NNE of Avalon, CA",
+        "time": 1783342082180,
+        "updated": 1783342799040,
+        "felt": 1,
+        "alert": null,
+        "status": "automatic",
+        "tsunami": 0,
+        "sig": 143,
+        "ids": ",ci41287863,us6000tafd,",
+        "type": "earthquake",
+        "title": "M 3.0 - 9 km NNE of Avalon, CA"
+      },
+      "geometry": { "type": "Point", "coordinates": [-118.3, 33.4, 12.1] },
+      "id": "ci41287863"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 2.1,
+        "place": "5 km N of Somewhere Quarry, NV",
+        "time": 1783342000000,
+        "updated": 1783342000000,
+        "felt": null,
+        "alert": null,
+        "status": "reviewed",
+        "tsunami": 0,
+        "sig": 20,
+        "ids": ",nn00812345,",
+        "type": "explosion",
+        "title": "Explosion - 5 km N of Somewhere Quarry, NV"
+      },
+      "geometry": { "type": "Point", "coordinates": [-119.1, 39.5, 0.5] },
+      "id": "nn00812345"
+    }
+  ]
+}
