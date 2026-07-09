@@ -1,4 +1,4 @@
-name: Morning sitrep
+name: Sitrep
 
 # Implements the shape .github/workflows/sitrep.yml.disabled specified:
 #   1. a deterministic script decides whether anything changed;
@@ -8,11 +8,11 @@ name: Morning sitrep
 
 on:
   schedule:
-    - cron: "30 0 * * *" # 08:30 SGT (UTC+8) -- A1.1
+    - cron: "0 * * * *" # hourly -- deviation from A1.1's daily 08:30 SGT, see implementation-notes.md
   workflow_dispatch: {}
 
 concurrency:
-  group: sitrep-daily
+  group: sitrep-hourly
   cancel-in-progress: false
 
 permissions:

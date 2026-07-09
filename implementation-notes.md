@@ -216,6 +216,28 @@ Kept by the agent, reviewed by you. One entry per working block.
 
 ## Deviations
 
+- **2026-07-09 — `sitrep.yml` moved from daily 08:30 SGT to hourly**,
+  departing from `SHAPING.md` A1.1/B1's once-a-day trigger and PRD.md's
+  "Out of Scope: Real-time / sub-minute latency... the product runs on a
+  daily 08:30 cadence, not a stream." Root cause, confirmed via `gh run
+  list --workflow=sitrep.yml`: every run in this workflow's history was
+  `workflow_dispatch` (manual) — its cron trigger had *never once* fired
+  on `schedule`, including what should have been its first-ever scheduled
+  run at 2026-07-09T00:30Z. Ruled out a repo-wide Actions problem: the
+  USGS (`*/5 * * * *`) and GDACS (`0 * * * *`) health-check workflows'
+  schedules fired reliably over the same window. Most likely explanation
+  is GitHub's documented behavior that scheduled runs at high-congestion
+  clock marks (`:00`/`:30`, shared across every repo on GitHub) can be
+  silently dropped — and a once-a-day job only gets one shot at that
+  minute, so a single drop reads as a full day of silence. Moving to
+  hourly gives 24 chances/day instead of 1; deterministic gating
+  (`needs_narration`) means most of those runs are no-ops that commit
+  nothing, so this doesn't multiply narration cost. Also noted in
+  passing, unrelated: one GDACS health-check run
+  (`28984168269`, 2026-07-09T00:00:53Z) failed at the `tsc` build step
+  with no compiler error printed to the log before exit code 1 — a single
+  occurrence amid otherwise-clean runs, not investigated further since
+  it's outside this deviation's scope.
 - **ADR 0006 said "`all_day` filtered to existing tracked Incidents'
   windows for aftershocks"** — implemented differently: `src/ingest/usgs.ts`
   fetches both `4.5_day` and `all_day` in full (deduped by id, filtered to
