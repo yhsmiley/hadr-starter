@@ -84,7 +84,7 @@ export interface Incident {
   glide: string | null;
   /** Every available feed's estimate, shown separately -- never blended (ADR 0005). */
   impactEstimates: Array<{ source: Feed; label: string; value: string }>;
-  erratumLog: EratumEntry[];
+  erratumLog: ErratumEntry[];
   /**
    * A5's output -- written by the headless `sitrep` Claude Code skill, not
    * by this codebase. `null` means "awaiting narration": either brand new
@@ -95,7 +95,7 @@ export interface Incident {
   narrative: string | null;
 }
 
-export interface EratumEntry {
+export interface ErratumEntry {
   kind: "revised" | "deleted" | "un-merged" | "re-merged" | "glide-relabel";
   atUtc: string;
   description: string;

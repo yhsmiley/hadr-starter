@@ -227,3 +227,19 @@ Kept by the agent, reviewed by you. One entry per working block.
   already computes the per-hazard-type window for matching) instead of
   being duplicated between ingestion and fusion. Chose this to avoid two
   copies of the same window logic silently drifting apart.
+- **2026-07-09 — refactoring pass.** No functional bug found in the
+  fusion/ingest/render pipeline itself (existing structure, tests, and
+  docstrings already matched `SHAPING.md`/ADRs closely). Two small
+  cleanups:
+  - `.claude/skills/{sitrep,build-plan-product}` were committed as
+    byte-identical copies of `skills/{sitrep,build-plan-product}` (same
+    git blob hashes) rather than one source of truth -- `skills/` is the
+    human-documented location (`skills/README.md`), `.claude/skills/` is
+    where the Claude Code CLI actually loads project skills from at
+    runtime, and nothing kept the two in sync but manual discipline.
+    Replaced the `.claude/skills/*` copies with symlinks into `skills/*`
+    so there is exactly one file on disk per skill and no drift risk.
+  - `src/types.ts`'s `EratumEntry` interface (backing
+    `Incident.erratumLog`) was misspelled -- missing the second "r".
+    Renamed to `ErratumEntry`; only referenced within `types.ts` itself,
+    so a mechanical, behavior-free rename.
