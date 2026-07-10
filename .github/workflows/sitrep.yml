@@ -7,8 +7,6 @@ name: Sitrep
 # "fuse" below) makes that call in code, and exposes it as a step output.
 
 on:
-  schedule:
-    - cron: "0 * * * *" # hourly -- deviation from A1.1's daily 08:30 SGT, see implementation-notes.md
   workflow_dispatch: {}
 
 concurrency:

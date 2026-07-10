@@ -6,8 +6,6 @@ name: ReliefWeb health check
 # times a day, confirmation-tier -- the slowest of the three).
 
 on:
-  schedule:
-    - cron: "0 */6 * * *" # every 6 hours -- ADR 0007's ReliefWeb cadence
   workflow_dispatch: {}
 
 concurrency:

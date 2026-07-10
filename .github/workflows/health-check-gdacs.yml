@@ -6,8 +6,6 @@ name: GDACS health check
 # not USGS's every-few-minutes cadence.
 
 on:
-  schedule:
-    - cron: "0 * * * *" # hourly -- ADR 0007's GDACS cadence
   workflow_dispatch: {}
 
 concurrency:
